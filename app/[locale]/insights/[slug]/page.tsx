@@ -75,9 +75,12 @@ export default function PostDetail({
       <section className="section">
         <div className="container" style={{ maxWidth: 780 }}>
           <div className="flex items-center gap-sm" style={{ marginBottom: 20 }}>
-            <span className="avatar" style={{ width: 46, height: 46, fontSize: '1rem', borderRadius: 12 }}>
-              {d.insights.author.split(' ').map((w) => w[0]).join('').slice(0, 2)}
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/partner-elia.jpg"
+              alt={d.insights.author}
+              style={{ width: 52, height: 52, borderRadius: '50%', objectFit: 'cover', objectPosition: 'top center', boxShadow: 'var(--shadow-sm)' }}
+            />
             <span>
               <strong style={{ display: 'block', color: 'var(--navy-900)' }}>
                 {d.insights.byLabel} {d.insights.author}

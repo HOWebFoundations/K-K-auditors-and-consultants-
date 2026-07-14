@@ -63,7 +63,7 @@ export function websiteSchema(dict: Dictionary, locale: Locale) {
   };
 }
 
-export function personSchema(p: Partner) {
+export function personSchema(p: Partner, image?: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -71,6 +71,7 @@ export function personSchema(p: Partner) {
     jobTitle: `${p.role} — ${p.designation}`,
     worksFor: { '@id': `${SITE_URL}/#organization` },
     alumniOf: p.education,
+    ...(image ? { image: `${SITE_URL}${image}` } : {}),
     hasCredential: [...p.credentials, ...p.memberships],
   };
 }

@@ -8,6 +8,12 @@ import Reveal from '@/components/Reveal';
 import JsonLd from '@/components/JsonLd';
 import { personSchema, breadcrumbSchema } from '@/lib/schema';
 
+// Partner portraits, keyed by the (locale-stable) initials.
+const partnerPhoto: Record<string, string> = {
+  EK: '/images/partner-elia.jpg',
+  JK: '/images/partner-jihad.jpg',
+};
+
 export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
@@ -26,7 +32,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
     <>
       <JsonLd
         data={[
-          ...a.partners.map((p) => personSchema(p)),
+          ...a.partners.map((p) => personSchema(p, partnerPhoto[p.initials])),
           breadcrumbSchema([
             { name: d.common.home, url: `${site.url}/${locale}` },
             { name: d.nav.about, url: `${site.url}/${locale}/about` },
@@ -89,7 +95,12 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
             {a.partners.map((p) => (
               <div className="card" key={p.name}>
                 <div className="partner">
-                  <div className="avatar" aria-hidden>{p.initials}</div>
+                  {partnerPhoto[p.initials] ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img className="avatar-photo" src={partnerPhoto[p.initials]} alt={p.name} loading="lazy" />
+                  ) : (
+                    <div className="avatar" aria-hidden>{p.initials}</div>
+                  )}
                   <div>
                     <h3 style={{ marginBottom: 2 }}>{p.name}</h3>
                     <div style={{ fontWeight: 700, color: 'var(--navy)' }}>{p.role}</div>
