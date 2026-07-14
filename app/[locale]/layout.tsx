@@ -7,7 +7,6 @@ import { getDictionary } from '@/lib/content';
 import { site } from '@/lib/site';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import JsonLd from '@/components/JsonLd';
 import { organizationSchema, websiteSchema } from '@/lib/schema';
 
@@ -82,7 +81,6 @@ export default function LocaleLayout({
         <Header locale={locale} nav={dict.nav} ctaLabel={dict.common.requestProposal} />
         <main id="main">{children}</main>
         <Footer locale={locale} dict={dict} />
-        <WhatsAppButton label={dict.common.chatOnWhatsapp} />
       </body>
     </html>
   );

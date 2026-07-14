@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Locale, isLocale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/content';
 import { href } from '@/lib/nav';
-import { site, whatsappLink, mapsEmbedSrc, mapsLink } from '@/lib/site';
+import { site, mapsEmbedSrc, mapsLink } from '@/lib/site';
 import { PageHero } from '@/components/blocks';
 import ContactForm from '@/components/ContactForm';
 import {
@@ -10,7 +10,6 @@ import {
   IconMail,
   IconMap,
   IconClock,
-  IconWhatsApp,
   IconArrow,
 } from '@/components/icons';
 
@@ -32,6 +31,8 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         title={c.title}
         subtitle={c.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.contact }]}
+        image="/images/beirut-day.jpg"
+        imageAlt={c.title}
       />
 
       <section className="section">
@@ -91,16 +92,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
               </div>
             </div>
 
-            <a
-              className="btn"
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ background: '#25d366', color: '#fff', width: '100%', marginTop: 8 }}
-            >
-              <IconWhatsApp width={20} height={20} /> {d.common.chatOnWhatsapp}
-            </a>
-            <a className="btn btn-ghost mt-1" href={mapsLink()} target="_blank" rel="noopener noreferrer" style={{ width: '100%' }}>
+            <a className="btn btn-primary mt-2" href={mapsLink()} target="_blank" rel="noopener noreferrer" style={{ width: '100%' }}>
               {d.common.getDirections}
               <IconArrow className="arrow" />
             </a>

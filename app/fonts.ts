@@ -1,19 +1,19 @@
-import { Fraunces, Inter, IBM_Plex_Sans_Arabic } from 'next/font/google';
+import { Source_Serif_4, Plus_Jakarta_Sans, IBM_Plex_Sans_Arabic } from 'next/font/google';
 
-// Editorial serif for display headlines
-export const fraunces = Fraunces({
+// Clean, corporate transitional serif for display headlines
+export const serif = Source_Serif_4({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '600', '700', '900'],
+  weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
   variable: '--font-serif-src',
 });
 
-// Clean neutral sans for body & UI
-export const inter = Inter({
+// Modern geometric sans for body & UI
+export const sans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-sans-src',
 });
 
@@ -25,4 +25,4 @@ export const plexArabic = IBM_Plex_Sans_Arabic({
   variable: '--font-ar-src',
 });
 
-export const fontVariables = `${fraunces.variable} ${inter.variable} ${plexArabic.variable}`;
+export const fontVariables = `${serif.variable} ${sans.variable} ${plexArabic.variable}`;

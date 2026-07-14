@@ -11,6 +11,13 @@ import { serviceSchema, faqSchema, breadcrumbSchema } from '@/lib/schema';
 import { IconArrow } from '@/components/icons';
 import en from '@/content/en';
 
+const serviceImg: Record<string, string> = {
+  'audit-assurance': '/images/finance-audit.jpg',
+  'tax-planning': '/images/finance-signing.jpg',
+  accounting: '/images/finance-data.jpg',
+  'business-advisory': '/images/people-advisory.jpg',
+};
+
 export function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
   for (const locale of locales) {
@@ -59,6 +66,8 @@ export default function ServiceDetail({
       <PageHero
         eyebrow={s.tagline}
         title={s.title}
+        image={serviceImg[s.slug]}
+        imageAlt={s.title}
         crumbs={[
           { name: d.common.home, href: href(locale) },
           { name: d.nav.services, href: href(locale, 'services') },

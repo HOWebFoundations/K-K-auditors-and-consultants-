@@ -32,6 +32,8 @@ export default function InsightsPage({ params }: { params: { locale: string } })
         title={d.insights.title}
         subtitle={d.insights.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.insights }]}
+        image="/images/beirut-corniche.jpg"
+        imageAlt={d.insights.title}
       />
       <section className="section">
         <div className="container grid grid-3">

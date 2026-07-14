@@ -24,19 +24,31 @@ export function PageHero({
   title,
   subtitle,
   crumbs,
+  image,
+  imageAlt,
 }: {
   eyebrow?: string;
   title: string;
   subtitle?: string;
   crumbs?: { name: string; href?: string }[];
+  image?: string;
+  imageAlt?: string;
 }) {
   return (
-    <section className="page-hero">
+    <section className={`page-hero${image ? ' has-media' : ''}`}>
       <div className="container">
-        {crumbs && <Breadcrumbs items={crumbs} />}
-        {eyebrow && <div className="eyebrow">{eyebrow}</div>}
-        <h1>{title}</h1>
-        {subtitle && <p className="lead mt-1">{subtitle}</p>}
+        <div>
+          {crumbs && <Breadcrumbs items={crumbs} />}
+          {eyebrow && <div className="eyebrow">{eyebrow}</div>}
+          <h1>{title}</h1>
+          {subtitle && <p className="lead mt-1">{subtitle}</p>}
+        </div>
+        {image && (
+          <div className="page-hero-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={image} alt={imageAlt || ''} loading="eager" />
+          </div>
+        )}
       </div>
     </section>
   );

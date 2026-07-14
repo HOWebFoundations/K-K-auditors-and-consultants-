@@ -25,6 +25,8 @@ export default function CareersPage({ params }: { params: { locale: string } }) 
         title={c.title}
         subtitle={c.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.careers }]}
+        image="/images/people-team.jpg"
+        imageAlt={c.title}
       />
       <section className="section">
         <div className="container grid grid-2" style={{ gap: 48, alignItems: 'start' }}>

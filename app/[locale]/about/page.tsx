@@ -44,6 +44,8 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
         title={a.title}
         subtitle={a.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.about }]}
+        image="/images/interior-lobby.jpg"
+        imageAlt={a.title}
       />
 
       {/* Story */}
@@ -166,9 +168,6 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           <Reveal className="figure figure-tall">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/building-light.jpg" alt="International reach" loading="lazy" />
-            <span className="figure-badge">
-              GMN International · {d.common.since} {site.gmnSince}
-            </span>
           </Reveal>
         </div>
       </section>

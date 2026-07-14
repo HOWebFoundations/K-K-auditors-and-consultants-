@@ -1031,7 +1031,7 @@ const fr: DeepPartial<Dictionary> = {
     subtitle:
       "Parlez-nous de votre entreprise et de vos besoins. Un associé vous répondra — généralement dans un délai d'un jour ouvrable.",
     formTitle: "Envoyez-nous un message",
-    formSubtitle: "Vous préférez échanger de vive voix ? Appelez-nous ou écrivez-nous sur WhatsApp.",
+    formSubtitle: "Vous préférez échanger de vive voix ? Appelez-nous ou écrivez-nous par e-mail.",
     labels: {
       name: "Nom complet",
       email: "E-mail",

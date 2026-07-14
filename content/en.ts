@@ -1027,7 +1027,7 @@ const en: Dictionary = {
     subtitle:
       'Tell us about your business and what you need. A partner will get back to you — usually within one business day.',
     formTitle: 'Send us a message',
-    formSubtitle: 'Prefer to talk? Call us or message us on WhatsApp.',
+    formSubtitle: 'Prefer to talk? Call us or email us directly.',
     labels: {
       name: 'Full name',
       email: 'Email',
