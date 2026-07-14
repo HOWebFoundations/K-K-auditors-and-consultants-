@@ -44,17 +44,20 @@ export function PageHero({
 
 export function SectionHeader({
   eyebrow,
+  marker,
   title,
   subtitle,
   center,
 }: {
   eyebrow?: string;
+  marker?: string;
   title: string;
   subtitle?: string;
   center?: boolean;
 }) {
   return (
-    <div className={center ? 'center maxw-center' : 'maxw'}>
+    <div className={`section-head${center ? ' center' : ''}`}>
+      {marker && <span className="marker">{marker}</span>}
       {eyebrow && <div className="eyebrow">{eyebrow}</div>}
       <h2 className="h2">{title}</h2>
       {subtitle && <p className="lead mt-1">{subtitle}</p>}
@@ -67,20 +70,31 @@ export function CTABand({
   body,
   primary,
   secondary,
+  image = '/images/skyline.jpg',
+  marker,
 }: {
   title: string;
   body: string;
   primary: { label: string; href: string };
   secondary?: { label: string; href: string };
+  image?: string;
+  marker?: string;
 }) {
   return (
     <section className="section">
       <div className="container">
         <div className="cta-band">
-          <div style={{ position: 'relative', zIndex: 1, maxWidth: '46ch' }}>
+          {image && (
+            <div className="cta-img" aria-hidden>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={image} alt="" loading="lazy" />
+            </div>
+          )}
+          <div style={{ maxWidth: '52ch' }}>
+            {marker && <span className="marker">{marker}</span>}
             <h2 className="h2">{title}</h2>
             <p className="lead mt-1">{body}</p>
-            <div className="btn-row mt-2">
+            <div className="btn-row mt-3">
               <Link className="btn btn-gold btn-lg" href={primary.href}>
                 {primary.label}
                 <IconArrow className="arrow" />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import '../globals.css';
+import { fontVariables } from '../fonts';
 import { locales, isLocale, localeConfig, Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/content';
 import { site } from '@/lib/site';
@@ -67,8 +68,13 @@ export default function LocaleLayout({
   const { dir, htmlLang } = localeConfig[locale];
 
   return (
-    <html lang={htmlLang} dir={dir}>
+    <html lang={htmlLang} dir={dir} className={fontVariables}>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <a className="skip-link" href="#main">
           {dict.common.skipToContent}
         </a>

@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { Locale, isLocale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/content';
 import { href } from '@/lib/nav';
-import { LogoMark } from '@/components/Logo';
+import { site } from '@/lib/site';
 import { SectionHeader, CTABand } from '@/components/blocks';
+import Reveal from '@/components/Reveal';
 import {
   iconFor,
   IconArrow,
@@ -13,7 +14,6 @@ import {
   IconBook,
   IconCheck,
 } from '@/components/icons';
-import { site } from '@/lib/site';
 
 const whyIcons = [IconShield, IconGlobe2, IconScale, IconBook];
 
@@ -24,8 +24,13 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
   return (
     <>
-      {/* Hero */}
+      {/* ---------------- Hero ---------------- */}
       <section className="hero">
+        <div className="hero-bg" aria-hidden>
+          <span className="blob b1" />
+          <span className="blob b2" />
+          <span className="grid-lines" />
+        </div>
         <div className="container hero-grid">
           <div>
             <div className="eyebrow">{d.hero.eyebrow}</div>
@@ -36,60 +41,48 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 {d.common.requestProposal}
                 <IconArrow className="arrow" />
               </Link>
-              <Link className="btn btn-ghost btn-lg" href={href(locale, 'services')}>
+              <Link className="btn btn-underline" href={href(locale, 'services')}>
                 {d.common.viewAllServices}
+                <IconArrow className="arrow" />
               </Link>
             </div>
-            <div className="flex wrap gap-sm mt-3">
+            <div className="flex wrap gap-sm mt-4">
               {d.hero.badges.map((b) => (
                 <span className="chip" key={b}>{b}</span>
               ))}
             </div>
           </div>
 
-          <div className="hero-card">
-            <div className="flex items-center between" style={{ marginBottom: 18 }}>
-              <strong style={{ color: 'var(--navy-900)', fontSize: '1.1rem' }}>
-                {d.hero.cardTitle}
-              </strong>
-              <LogoMark style={{ height: 34, color: 'var(--navy)' }} />
+          <div className="hero-figure">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/hero-towers.jpg" alt="Modern corporate towers" loading="eager" />
+            <div className="tag">
+              <div className="k">{site.yearsExperience}+ years · GMN International</div>
+              <div className="v">{d.hero.badges[1]}</div>
             </div>
-            <ul className="ticks">
-              {d.hero.cardPoints.map((p) => (
-                <li key={p}>{p}</li>
-              ))}
-            </ul>
-            <Link
-              className="btn btn-primary mt-3"
-              href={href(locale, 'about')}
-              style={{ width: '100%' }}
-            >
-              {d.nav.about}
-              <IconArrow className="arrow" />
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="section-tight bg-navy">
+      {/* ---------------- Stats ---------------- */}
+      <section className="section-tight" style={{ borderBottom: '1px solid var(--line)' }}>
         <div className="container">
-          <div className="stat-row">
+          <Reveal className="stat-row">
             {h.stats.map((s) => (
               <div className="stat" key={s.label}>
                 <div className="num">{s.num}</div>
                 <div className="lbl">{s.label}</div>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* About */}
+      {/* ---------------- About ---------------- */}
       <section className="section">
-        <div className="container grid grid-2" style={{ alignItems: 'center', gap: 48 }}>
-          <div>
-            <div className="eyebrow">{h.aboutEyebrow}</div>
+        <div className="container split split-7-5">
+          <Reveal>
+            <span className="marker">01 — {h.aboutEyebrow}</span>
             <h2 className="h2">{h.aboutTitle}</h2>
             {h.aboutBody.map((p) => (
               <p key={p} className="muted">{p}</p>
@@ -99,27 +92,28 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 <li key={p}>{p}</li>
               ))}
             </ul>
-            <Link className="btn btn-ghost mt-3" href={href(locale, 'about')}>
+            <Link className="btn btn-underline mt-3" href={href(locale, 'about')}>
               {d.common.learnMore}
               <IconArrow className="arrow" />
             </Link>
-          </div>
-          <div className="hero-figure">
-            <LogoMark className="big-mark" style={{ color: '#fff' }} />
-          </div>
+          </Reveal>
+          <Reveal className="figure figure-tall">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/boardroom.jpg" alt="K&K boardroom" loading="lazy" />
+            <span className="figure-badge">Badaro · Beirut</span>
+          </Reveal>
         </div>
       </section>
 
-      {/* Services */}
+      {/* ---------------- Services ---------------- */}
       <section className="section bg-soft">
         <div className="container">
           <SectionHeader
-            eyebrow={h.servicesEyebrow}
+            marker={`02 — ${h.servicesEyebrow}`}
             title={h.servicesTitle}
             subtitle={h.servicesSubtitle}
-            center
           />
-          <div className="grid grid-2 mt-4">
+          <Reveal stagger className="grid grid-2 mt-4">
             {d.services.items.map((s) => (
               <Link
                 key={s.slug}
@@ -135,117 +129,121 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 </span>
               </Link>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* Why K&K */}
+      {/* ---------------- Why K&K ---------------- */}
       <section className="section">
-        <div className="container">
-          <SectionHeader eyebrow={h.whyEyebrow} title={h.whyTitle} subtitle={h.whySubtitle} />
-          <div className="grid grid-2 mt-4">
-            {h.why.map((w, i) => {
-              const Icon = whyIcons[i % whyIcons.length];
-              return (
-                <div className="feature" key={w.title}>
-                  <div className="card-icon"><Icon /></div>
-                  <div>
-                    <h3>{w.title}</h3>
-                    <p>{w.body}</p>
+        <div className="container split split-5-7">
+          <Reveal className="figure figure-tall">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/meeting-glass.jpg" alt="Advisory meeting" loading="lazy" />
+          </Reveal>
+          <Reveal>
+            <span className="marker">03 — {h.whyEyebrow}</span>
+            <h2 className="h2">{h.whyTitle}</h2>
+            <p className="lead mt-1">{h.whySubtitle}</p>
+            <div className="grid" style={{ gap: 22, marginTop: 28 }}>
+              {h.why.map((w, i) => {
+                const Icon = whyIcons[i % whyIcons.length];
+                return (
+                  <div className="feature" key={w.title}>
+                    <div className="card-icon"><Icon /></div>
+                    <div>
+                      <h3 style={{ fontSize: '1.2rem' }}>{w.title}</h3>
+                      <p>{w.body}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* GMN band */}
-      <section className="section bg-navy">
-        <div className="container grid grid-2" style={{ alignItems: 'center', gap: 44 }}>
-          <div>
-            <div className="eyebrow" style={{ color: 'var(--gold)' }}>{h.gmnEyebrow}</div>
+      {/* ---------------- GMN ---------------- */}
+      <section className="section bg-soft">
+        <div className="container split">
+          <Reveal>
+            <span className="marker">04 — {h.gmnEyebrow}</span>
             <h2 className="h2">{h.gmnTitle}</h2>
-            <p style={{ color: '#cdd9ee' }}>{h.gmnBody}</p>
-            <Link className="btn btn-onnavy mt-2" href={href(locale, 'about')}>
+            <p className="muted">{h.gmnBody}</p>
+            <Link className="btn btn-ghost mt-2" href={href(locale, 'about')}>
               {d.common.learnMore}
               <IconArrow className="arrow" />
             </Link>
-          </div>
-          <div className="center">
+          </Reveal>
+          <Reveal>
             <div
-              style={{
-                display: 'inline-flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: 14,
-                border: '1px solid rgba(255,255,255,0.16)',
-                borderRadius: 18,
-                padding: '34px 46px',
-              }}
+              className="card"
+              style={{ display: 'grid', gap: 18, placeItems: 'center', textAlign: 'center', padding: '48px 34px' }}
             >
-              <span style={{ fontSize: '2.6rem', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>
+              <span style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', fontWeight: 500, color: 'var(--navy)', letterSpacing: '0.02em' }}>
                 GMN
               </span>
-              <span style={{ color: '#aebcd4', letterSpacing: '0.18em', fontSize: '0.8rem' }}>
+              <span style={{ letterSpacing: '0.24em', fontSize: '0.78rem', color: 'var(--muted)', fontWeight: 600 }}>
                 INTERNATIONAL
               </span>
-              <span className="badge badge-gold" style={{ marginTop: 6 }}>
-                <IconCheck width={14} height={14} /> {d.common.since} {site.gmnSince}
+              <hr className="rule-accent" />
+              <span className="badge badge-gold">
+                <IconCheck width={13} height={13} /> {d.common.memberOf} {d.common.since} {site.gmnSince}
               </span>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* Industries */}
-      <section className="section bg-soft">
+      {/* ---------------- Industries ---------------- */}
+      <section className="section">
         <div className="container">
           <SectionHeader
-            eyebrow={h.industriesEyebrow}
+            marker={`05 — ${h.industriesEyebrow}`}
             title={h.industriesTitle}
             subtitle={h.industriesSubtitle}
             center
           />
-          <div className="flex wrap gap-sm mt-4" style={{ justifyContent: 'center' }}>
+          <Reveal className="flex wrap gap-sm mt-4" style={{ justifyContent: 'center' }}>
             {d.clients.industries.slice(0, 14).map((ind) => (
               <span className="chip" key={ind}>{ind}</span>
             ))}
-            <Link className="chip" href={href(locale, 'clients')} style={{ color: 'var(--navy)', fontWeight: 700 }}>
-              +{Math.max(0, d.clients.industries.length - 14)} {d.common.readMore}
+            <Link className="chip" href={href(locale, 'clients')} style={{ color: 'var(--navy)', fontWeight: 600 }}>
+              +{Math.max(0, d.clients.industries.length - 14)} →
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* Insights */}
-      <section className="section">
+      {/* ---------------- Insights ---------------- */}
+      <section className="section bg-soft">
         <div className="container">
-          <div className="flex between wrap items-center" style={{ gap: 16 }}>
-            <SectionHeader eyebrow={h.insightsEyebrow} title={h.insightsTitle} subtitle={h.insightsSubtitle} />
-            <Link className="btn btn-ghost" href={href(locale, 'insights')}>
+          <div className="flex between wrap items-center" style={{ gap: 16, marginBottom: 8 }}>
+            <SectionHeader marker={`06 — ${h.insightsEyebrow}`} title={h.insightsTitle} subtitle={h.insightsSubtitle} />
+            <Link className="btn btn-underline hide-mobile" href={href(locale, 'insights')}>
               {d.common.viewAllInsights}
               <IconArrow className="arrow" />
             </Link>
           </div>
-          <div className="grid grid-3 mt-4">
+          <Reveal stagger className="grid grid-3 mt-3">
             {d.insights.posts.slice(0, 3).map((post) => (
               <Link key={post.slug} href={href(locale, `insights/${post.slug}`)} className="card card-hover">
                 <span className="badge">{post.category}</span>
-                <h3 style={{ marginTop: 14, fontSize: '1.15rem' }}>{post.title}</h3>
+                <h3 style={{ marginTop: 16, fontSize: '1.3rem' }}>{post.title}</h3>
                 <p className="muted">{post.excerpt}</p>
                 <span className="updated">{formatDate(post.date, locale)}</span>
               </Link>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <CTABand
+        marker={`— ${d.meta.name}`}
         title={h.ctaTitle}
         body={h.ctaBody}
         primary={{ label: d.common.bookConsultation, href: href(locale, 'contact') }}
         secondary={{ label: d.common.viewAllServices, href: href(locale, 'services') }}
+        image="/images/skyline.jpg"
       />
     </>
   );
@@ -253,11 +251,9 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
 function formatDate(iso: string, locale: Locale): string {
   try {
-    return new Intl.DateTimeFormat(locale, {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    }).format(new Date(iso));
+    return new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'short', day: 'numeric' }).format(
+      new Date(iso),
+    );
   } catch {
     return iso;
   }

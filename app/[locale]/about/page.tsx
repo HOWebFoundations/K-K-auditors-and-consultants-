@@ -4,9 +4,9 @@ import { getDictionary } from '@/lib/content';
 import { href } from '@/lib/nav';
 import { site } from '@/lib/site';
 import { PageHero, SectionHeader, CTABand } from '@/components/blocks';
+import Reveal from '@/components/Reveal';
 import JsonLd from '@/components/JsonLd';
 import { personSchema, breadcrumbSchema } from '@/lib/schema';
-import { IconCheck } from '@/components/icons';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
@@ -42,28 +42,34 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
 
       {/* Story */}
       <section className="section">
-        <div className="container grid grid-2" style={{ gap: 48, alignItems: 'start' }}>
-          <div>
-            <div className="eyebrow">{a.storyTitle}</div>
+        <div className="container split split-7-5">
+          <Reveal>
+            <span className="marker">01 — {a.storyTitle}</span>
             {a.story.map((p) => (
               <p key={p} className="muted">{p}</p>
             ))}
-          </div>
-          <div className="card" style={{ background: 'var(--paper-2)' }}>
-            <blockquote style={{ margin: 0 }}>
-              <p style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--navy-900)', lineHeight: 1.4 }}>
-                “{a.ethicsQuote}”
-              </p>
-              <footer className="dotline mt-2">{a.ethicsBy}</footer>
-            </blockquote>
-          </div>
+          </Reveal>
+          <Reveal className="figure figure-tall">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/meeting-glass.jpg" alt="K&K team at work" loading="lazy" />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Ethics pullquote */}
+      <section className="section-tight bg-soft">
+        <div className="container center">
+          <p className="pullquote maxw-center">
+            <span className="q">“</span>{a.ethicsQuote}<span className="q">”</span>
+          </p>
+          <p className="dotline mt-2" style={{ justifyContent: 'center' }}>{a.ethicsBy}</p>
         </div>
       </section>
 
       {/* Values */}
-      <section className="section bg-soft">
+      <section className="section">
         <div className="container">
-          <SectionHeader title={a.valuesTitle} subtitle={a.valuesSubtitle} center />
+          <SectionHeader marker="02" title={a.valuesTitle} subtitle={a.valuesSubtitle} center />
           <div className="grid grid-3 mt-4">
             {a.values.map((v) => (
               <div className="card" key={v.title}>
@@ -78,7 +84,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
       {/* Leadership */}
       <section className="section">
         <div className="container">
-          <SectionHeader title={a.leadershipTitle} subtitle={a.leadershipSubtitle} />
+          <SectionHeader marker="03" title={a.leadershipTitle} subtitle={a.leadershipSubtitle} />
           <div className="grid grid-2 mt-4">
             {a.partners.map((p) => (
               <div className="card" key={p.name}>
@@ -132,36 +138,27 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
       </section>
 
       {/* GMN */}
-      <section className="section bg-navy">
-        <div className="container grid grid-2" style={{ gap: 44, alignItems: 'center' }}>
-          <div>
-            <div className="eyebrow" style={{ color: 'var(--gold)' }}>{d.common.memberOf} GMN International</div>
+      <section className="section bg-soft">
+        <div className="container split split-7-5">
+          <Reveal>
+            <span className="marker">05 — {d.common.memberOf} GMN International</span>
             <h2 className="h2">{a.gmnTitle}</h2>
             {a.gmnBody.map((p) => (
-              <p key={p} style={{ color: '#cdd9ee' }}>{p}</p>
+              <p key={p} className="muted">{p}</p>
             ))}
-          </div>
-          <div>
-            <ul className="ticks">
+            <ul className="ticks mt-2">
               {a.gmnPoints.map((p) => (
-                <li key={p} style={{ color: '#dbe4f2' }}>{p}</li>
+                <li key={p}>{p}</li>
               ))}
             </ul>
-            <div
-              className="mt-3"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 12,
-                border: '1px solid rgba(255,255,255,0.16)',
-                borderRadius: 14,
-                padding: '16px 22px',
-              }}
-            >
-              <span style={{ fontSize: '1.8rem', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>GMN</span>
-              <span className="badge badge-gold"><IconCheck width={14} height={14} /> {d.common.since} {site.gmnSince}</span>
-            </div>
-          </div>
+          </Reveal>
+          <Reveal className="figure figure-tall">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/building-light.jpg" alt="International reach" loading="lazy" />
+            <span className="figure-badge">
+              GMN International · {d.common.since} {site.gmnSince}
+            </span>
+          </Reveal>
         </div>
       </section>
 
