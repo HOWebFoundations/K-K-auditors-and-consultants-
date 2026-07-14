@@ -5,6 +5,7 @@ import { href } from '@/lib/nav';
 import { site } from '@/lib/site';
 import { PageHero, SectionHeader, CTABand } from '@/components/blocks';
 import Reveal from '@/components/Reveal';
+import Counter from '@/components/Counter';
 import JsonLd from '@/components/JsonLd';
 import { personSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -133,9 +134,9 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
             <h2 className="h2">{a.teamTitle}</h2>
             <p className="muted">{a.teamBody}</p>
             <div className="stat-row mt-3" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
-              <div className="stat"><div className="num">{site.teamSize}</div><div className="lbl">{d.nav.about}</div></div>
-              <div className="stat"><div className="num">{site.yearsExperience}+</div><div className="lbl">Years</div></div>
-              <div className="stat"><div className="num">2</div><div className="lbl">Partners</div></div>
+              <div className="stat"><div className="num"><Counter value={String(site.teamSize)} /></div><div className="lbl">{d.home.stats[1].label}</div></div>
+              <div className="stat"><div className="num"><Counter value={`${site.yearsExperience}+`} /></div><div className="lbl">{d.home.stats[0].label}</div></div>
+              <div className="stat"><div className="num"><Counter value="2" /></div><div className="lbl">{d.about.leadershipTitle}</div></div>
             </div>
           </div>
           <div className="card">

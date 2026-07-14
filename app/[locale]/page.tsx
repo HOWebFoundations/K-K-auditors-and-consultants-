@@ -5,7 +5,17 @@ import { href } from '@/lib/nav';
 import { site } from '@/lib/site';
 import { SectionHeader, CTABand } from '@/components/blocks';
 import Reveal from '@/components/Reveal';
-import { IconArrow } from '@/components/icons';
+import Counter from '@/components/Counter';
+import CredentialStrip from '@/components/CredentialStrip';
+import {
+  IconArrow,
+  IconShield,
+  IconGlobe2,
+  IconScale,
+  IconBook,
+} from '@/components/icons';
+
+const whyIcons = [IconShield, IconGlobe2, IconScale, IconBook];
 
 export default function HomePage({ params }: { params: { locale: string } }) {
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
@@ -63,13 +73,16 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           <Reveal className="stat-row">
             {h.stats.map((s) => (
               <div className="stat" key={s.label}>
-                <div className="num">{s.num}</div>
+                <div className="num"><Counter value={s.num} /></div>
                 <div className="lbl">{s.label}</div>
               </div>
             ))}
           </Reveal>
         </div>
       </section>
+
+      {/* ---------------- Credentials strip ---------------- */}
+      <CredentialStrip caption={d.about.credentialsTitle} />
 
       {/* ---------------- Explore (teaser cards) ---------------- */}
       <section className="section">
@@ -96,6 +109,32 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 </div>
               </Link>
             ))}
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ---------------- Why K&K (compact) ---------------- */}
+      <section className="section bg-soft">
+        <div className="container">
+          <SectionHeader
+            marker={h.whyEyebrow}
+            title={h.whyTitle}
+            subtitle={h.whySubtitle}
+            center
+          />
+          <Reveal stagger className="grid grid-4 mt-4">
+            {h.why.map((w, i) => {
+              const Icon = whyIcons[i % whyIcons.length];
+              return (
+                <div className="card" key={w.title}>
+                  <div className="card-icon">
+                    <Icon />
+                  </div>
+                  <h3 style={{ fontSize: '1.2rem' }}>{w.title}</h3>
+                  <p className="muted">{w.body}</p>
+                </div>
+              );
+            })}
           </Reveal>
         </div>
       </section>
