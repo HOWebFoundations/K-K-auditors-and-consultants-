@@ -82,7 +82,7 @@ export default function CareersPage({ params }: { params: { locale: string } }) 
               <div className="card-icon"><IconMail /></div>
               <div>
                 <div className="k">{d.contact.emailLabel}</div>
-                <a className="v" href={`mailto:${site.email}`}>{site.email}</a>
+                <a className="v" href={`mailto:${site.careersEmail}`}>{site.careersEmail}</a>
               </div>
             </div>
           </Reveal>

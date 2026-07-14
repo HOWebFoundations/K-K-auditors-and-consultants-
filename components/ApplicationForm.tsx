@@ -1,8 +1,11 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { ContactDict, CareersDict } from '@/content/types';
-import { IconArrow } from './icons';
+import { IconArrow, IconMail } from './icons';
+
+const MAX_BYTES = 4 * 1024 * 1024;
+const EXT = /\.(pdf|docx?|rtf|odt)$/i;
 
 export default function ApplicationForm({
   labels,
@@ -16,22 +19,43 @@ export default function ApplicationForm({
   errorMsg: string;
 }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'ok' | 'err'>('idle');
+  const [fileName, setFileName] = useState('');
+  const [fileErr, setFileErr] = useState('');
+
+  function onFile(e: ChangeEvent<HTMLInputElement>) {
+    setFileErr('');
+    const f = e.target.files?.[0];
+    if (!f) {
+      setFileName('');
+      return;
+    }
+    if (f.size > MAX_BYTES || !EXT.test(f.name)) {
+      setFileErr(careersForm.fileError);
+      setFileName('');
+      e.target.value = '';
+      return;
+    }
+    setFileName(f.name);
+  }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (fileErr) return;
     setStatus('sending');
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
-    data.service = `Careers application${data.area ? ` — ${data.area}` : ''}`;
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error('bad status');
+      const res = await fetch('/api/careers', { method: 'POST', body: new FormData(form) });
+      if (!res.ok) {
+        if (res.status === 413 || res.status === 415) {
+          setStatus('idle');
+          setFileErr(careersForm.fileError);
+          return;
+        }
+        throw new Error('bad status');
+      }
       setStatus('ok');
       form.reset();
+      setFileName('');
     } catch {
       setStatus('err');
     }
@@ -84,12 +108,38 @@ export default function ApplicationForm({
           </select>
         </div>
       </div>
+
       <div className="field">
         <label htmlFor="message">
           {labels.message} <span className="muted">({labels.required})</span>
         </label>
         <textarea id="message" name="message" required />
       </div>
+
+      {/* CV upload */}
+      <div className="field">
+        <label htmlFor="cv">{careersForm.cvLabel}</label>
+        <div className="file-input">
+          <input
+            id="cv"
+            name="cv"
+            type="file"
+            accept=".pdf,.doc,.docx,.rtf,.odt"
+            onChange={onFile}
+          />
+          <label htmlFor="cv" className="file-btn">
+            <IconMail width={17} height={17} />
+            {careersForm.cvChoose}
+          </label>
+          <span className="file-name">{fileName || careersForm.cvHint}</span>
+        </div>
+        {fileErr && (
+          <span className="form-status err" style={{ marginTop: 8, padding: '9px 13px', display: 'block' }}>
+            {fileErr}
+          </span>
+        )}
+      </div>
+
       <button className="btn btn-primary btn-lg" type="submit" disabled={status === 'sending'}>
         {status === 'sending' ? labels.sending : labels.send}
         <IconArrow className="arrow" />

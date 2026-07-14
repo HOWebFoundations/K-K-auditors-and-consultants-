@@ -1085,15 +1085,18 @@ const en: Dictionary = {
       'We do not always advertise specific roles, but we are continually interested in talented auditors, accountants and tax professionals. Send us your details and CV, and we will be in touch when the right opportunity opens.',
     applyTitle: 'Apply now',
     applySubtitle:
-      'Tell us about yourself and the area that interests you, then email your CV — a partner will review your application.',
+      'Tell us about yourself, choose the area that interests you, and attach your CV — a partner will review your application.',
     form: {
       position: 'Area of interest',
       selectArea: 'Select an area',
-      cvNote:
-        'After submitting, please email your CV to info@kandkauditors.com with your name in the subject line.',
+      cvLabel: 'CV / résumé',
+      cvChoose: 'Choose file',
+      cvHint: 'PDF or Word · max 4 MB',
+      cvNote: 'Your application and CV go straight to our careers team.',
+      fileError: 'Please attach a PDF or Word document under 4 MB.',
       successTitle: 'Thank you — your application has been received.',
       successBody:
-        'Please email your CV to info@kandkauditors.com. A K&K partner will review it and be in touch.',
+        'A K&K partner will review your application and CV, and be in touch.',
     },
     ctaTitle: 'Apply today',
     ctaBody: 'Send your CV and a short note about yourself.',

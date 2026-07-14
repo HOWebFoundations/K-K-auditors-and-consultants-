@@ -254,7 +254,11 @@ export interface CareersDict {
   form: {
     position: string;
     selectArea: string;
+    cvLabel: string;
+    cvChoose: string;
+    cvHint: string;
     cvNote: string;
+    fileError: string;
     successTitle: string;
     successBody: string;
   };

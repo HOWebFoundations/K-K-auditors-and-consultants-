@@ -76,8 +76,14 @@ enquiries emailed, set these in Vercel → Project → Settings → Environment 
 | Variable         | Purpose                                             |
 | ---------------- | --------------------------------------------------- |
 | `RESEND_API_KEY` | [Resend](https://resend.com) API key to send email  |
-| `CONTACT_TO`     | Inbox for enquiries (default `info@kandkauditors.com`) |
+| `CONTACT_TO`     | Inbox for general enquiries (default `info@kandkauditors.com`) |
+| `CAREERS_TO`     | Dedicated careers inbox for job applications + CVs (default `careers@kandkauditors.com`) |
 | `CONTACT_FROM`   | Verified "from" address for Resend                  |
+
+The **careers application form** (`/careers`) accepts a CV upload (PDF/Word,
+≤ 4 MB) and posts it to `app/api/careers/route.ts`, which emails the
+application with the CV **attached** to `CAREERS_TO`. Without `RESEND_API_KEY`
+the submission is validated and logged (the visitor still gets a confirmation).
 
 Without these, submissions are validated and logged server-side and the visitor still
 gets a success confirmation (ideal for a preview).
