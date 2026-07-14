@@ -8,6 +8,7 @@ import { site } from '@/lib/site';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
+import ScrollFX from '@/components/ScrollFX';
 import { organizationSchema, websiteSchema } from '@/lib/schema';
 
 export function generateStaticParams() {
@@ -78,6 +79,7 @@ export default function LocaleLayout({
           {dict.common.skipToContent}
         </a>
         <JsonLd data={[organizationSchema(dict, locale), websiteSchema(dict, locale)]} />
+        <ScrollFX />
         <Header locale={locale} nav={dict.nav} ctaLabel={dict.common.requestProposal} />
         <main id="main">{children}</main>
         <Footer locale={locale} dict={dict} />

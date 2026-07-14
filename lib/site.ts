@@ -28,9 +28,14 @@ export const site = {
     poBox: 'P.O. Box 16-6969',
   },
 
-  // Approx. coordinates for the Badaro, Beirut office (used for the map embed)
-  geo: { lat: 33.8759, lng: 35.5178 },
-  mapQuery: 'Badaro Center, Ibrahim Mdawar Street, Badaro, Beirut, Lebanon',
+  // The firm's exact Google Business Profile place (from its Maps listing).
+  // `mapFtid`/`mapCid` identify the precise pin; `geo` is the Badaro coordinate
+  // used for the JSON-LD GeoCoordinates.
+  geo: { lat: 33.8757, lng: 35.5161 },
+  mapQuery: 'K&K Auditors & Consultants, Badaro, Beirut',
+  mapFtid: '0x151f1746f5ded20b:0xe886756e49057d92',
+  mapCid: '16755208580210458002',
+  mapShareUrl: 'https://maps.app.goo.gl/RRXbv1YRCQupUtWA8',
 
   hours: 'Mon–Fri, 8:30 – 17:00',
 
@@ -55,12 +60,15 @@ export function whatsappLink(text?: string): string {
 }
 
 export function mapsEmbedSrc(): string {
-  // Keyless Google Maps embed (works without an API key).
-  return `https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&output=embed`;
+  // Keyless Google Maps embed pinned to the firm's exact Business Profile,
+  // identified by name + Google feature id (ftid), so it lands on the real
+  // office rather than an approximate address search.
+  return `https://www.google.com/maps?q=${encodeURIComponent(
+    site.mapQuery,
+  )}&ftid=${site.mapFtid}&z=17&hl=en&output=embed`;
 }
 
 export function mapsLink(): string {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    site.mapQuery,
-  )}`;
+  // The firm's own Google Maps share link — opens the exact place / directions.
+  return site.mapShareUrl;
 }

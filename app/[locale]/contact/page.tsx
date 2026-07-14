@@ -31,7 +31,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         title={c.title}
         subtitle={c.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.contact }]}
-        image="/images/beirut-day.jpg"
+        image="/images/beirut-hero.jpg"
         imageAlt={c.title}
       />
 

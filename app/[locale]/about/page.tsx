@@ -60,7 +60,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           </Reveal>
           <Reveal className="figure figure-tall">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/meeting-glass.jpg" alt="K&K team at work" loading="lazy" />
+            <img src="/images/team-office.jpg" alt="K&K team at work" loading="lazy" />
           </Reveal>
         </div>
       </section>

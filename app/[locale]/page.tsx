@@ -4,6 +4,7 @@ import { getDictionary } from '@/lib/content';
 import { href } from '@/lib/nav';
 import { site } from '@/lib/site';
 import { SectionHeader, CTABand } from '@/components/blocks';
+import HeroCinematic from '@/components/HeroCinematic';
 import Reveal from '@/components/Reveal';
 import Counter from '@/components/Counter';
 import CredentialStrip from '@/components/CredentialStrip';
@@ -23,49 +24,25 @@ export default function HomePage({ params }: { params: { locale: string } }) {
   const h = d.home;
 
   const teasers = [
-    { img: '/images/people-team.jpg', title: d.nav.about, line: d.about.subtitle, to: 'about' },
-    { img: '/images/people-advisory.jpg', title: d.nav.services, line: d.services.subtitle, to: 'services' },
-    { img: '/images/finance-statements.jpg', title: d.nav.resources, line: d.resources.subtitle, to: 'resources' },
-    { img: '/images/beirut-downtown.jpg', title: d.nav.insights, line: d.insights.subtitle, to: 'insights' },
+    { img: '/images/team-office.jpg', title: d.nav.about, line: d.about.subtitle, to: 'about' },
+    { img: '/images/advisory.jpg', title: d.nav.services, line: d.services.subtitle, to: 'services' },
+    { img: '/images/finance-desk.jpg', title: d.nav.resources, line: d.resources.subtitle, to: 'resources' },
+    { img: '/images/beirut-heritage.jpg', title: d.nav.insights, line: d.insights.subtitle, to: 'insights' },
   ];
 
   return (
     <>
-      {/* ---------------- Hero ---------------- */}
-      <section className="hero">
-        <div className="hero-bg" aria-hidden>
-          <span className="blob b1" />
-          <span className="blob b2" />
-          <span className="grid-lines" />
-        </div>
-        <div className="container hero-grid">
-          <div>
-            <div className="eyebrow">{d.hero.eyebrow}</div>
-            <h1 className="display">{d.hero.title}</h1>
-            <p className="lead mt-1">{d.hero.subtitle}</p>
-            <div className="btn-row mt-3">
-              <Link className="btn btn-primary btn-lg" href={href(locale, 'contact')}>
-                {d.common.requestProposal}
-                <IconArrow className="arrow" />
-              </Link>
-              <Link className="btn btn-underline" href={href(locale, 'services')}>
-                {d.common.viewAllServices}
-                <IconArrow className="arrow" />
-              </Link>
-            </div>
-            <div className="flex wrap gap-sm mt-4">
-              {d.hero.badges.map((b) => (
-                <span className="chip" key={b}>{b}</span>
-              ))}
-            </div>
-          </div>
-
-          <div className="hero-figure">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/hero-towers.jpg" alt="Beirut skyline" loading="eager" />
-          </div>
-        </div>
-      </section>
+      {/* ---------------- Cinematic hero (video + parallax) ---------------- */}
+      <HeroCinematic
+        eyebrow={d.hero.eyebrow}
+        title={d.hero.title}
+        subtitle={d.hero.subtitle}
+        badges={d.hero.badges}
+        primary={{ label: d.common.requestProposal, href: href(locale, 'contact') }}
+        secondary={{ label: d.common.viewAllServices, href: href(locale, 'services') }}
+        poster="/images/beirut-hero.jpg"
+        video="/videos/hero-beirut.mp4"
+      />
 
       {/* ---------------- Stats strip ---------------- */}
       <section className="section-tight" style={{ borderBottom: '1px solid var(--line)' }}>
@@ -145,7 +122,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         body={h.ctaBody}
         primary={{ label: d.common.bookConsultation, href: href(locale, 'contact') }}
         secondary={{ label: d.common.viewAllServices, href: href(locale, 'services') }}
-        image="/images/skyline.jpg"
+        image="/images/beirut-night.jpg"
       />
     </>
   );

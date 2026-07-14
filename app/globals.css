@@ -326,6 +326,66 @@ html[dir="rtl"] .nav a { font-family: var(--font-ar); }
 .hero-figure .tag .v { font-size: 0.82rem; color: var(--muted); }
 .hero-figure::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(14,33,64,0.34)); }
 
+/* ---------- HERO (cinematic — video background + parallax) ---------- */
+.hero-cine {
+  position: relative; overflow: hidden; isolation: isolate;
+  min-height: clamp(540px, 86vh, 860px);
+  display: flex; align-items: center;
+  background: var(--navy-950);
+  --hero-fade: 1;
+}
+.hero-cine-media { position: absolute; inset: 0; z-index: 0; will-change: transform; }
+.hero-cine-media video, .hero-cine-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.hero-cine-scrim {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(9,20,42,0.58) 0%, rgba(9,20,42,0.14) 30%, rgba(9,20,42,0.40) 70%, rgba(9,20,42,0.88) 100%),
+    linear-gradient(90deg, rgba(9,20,42,0.74) 0%, rgba(9,20,42,0.30) 44%, transparent 80%);
+}
+html[dir="rtl"] .hero-cine-scrim { background:
+  linear-gradient(180deg, rgba(9,20,42,0.58) 0%, rgba(9,20,42,0.14) 30%, rgba(9,20,42,0.40) 70%, rgba(9,20,42,0.88) 100%),
+  linear-gradient(270deg, rgba(9,20,42,0.74) 0%, rgba(9,20,42,0.30) 44%, transparent 80%);
+}
+.hero-cine-inner {
+  position: relative; z-index: 2;
+  padding-block: clamp(72px, 12vh, 150px);
+  max-width: 60ch;
+  opacity: var(--hero-fade);
+}
+.hero-cine .eyebrow.light { color: #cbd8f0; }
+.hero-cine .eyebrow.light::before { background: rgba(255,255,255,0.55); }
+.hero-cine-title { color: #fff; text-wrap: balance; text-shadow: 0 2px 34px rgba(0,0,0,0.34);
+  font-size: clamp(2.3rem, 4.7vw, 3.95rem); line-height: 1.04; }
+.hero-cine-lead { color: #dce5f6; margin-top: 18px; font-size: clamp(1.12rem, 1.6vw, 1.4rem); max-width: 52ch; }
+/* staged entrance */
+.hero-cine .eyebrow.light, .hero-cine-title, .hero-cine-lead, .hero-cine-actions, .hero-cine-chips {
+  animation: heroRise 0.9s var(--ease) both;
+}
+.hero-cine-title { animation-delay: 0.06s; }
+.hero-cine-lead { animation-delay: 0.16s; }
+.hero-cine-actions { animation-delay: 0.26s; }
+.hero-cine-chips { animation-delay: 0.36s; }
+@keyframes heroRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+/* scroll cue */
+.hero-cine-cue {
+  position: absolute; z-index: 2; inset-block-end: 24px; left: 50%; transform: translateX(-50%);
+  width: 25px; height: 40px; border: 2px solid rgba(255,255,255,0.5); border-radius: 13px;
+  display: flex; justify-content: center; padding-top: 7px; opacity: var(--hero-fade);
+}
+.hero-cine-cue span { width: 4px; height: 8px; border-radius: 2px; background: rgba(255,255,255,0.9); animation: cue 1.7s var(--ease) infinite; }
+@keyframes cue { 0% { transform: translateY(0); opacity: 0; } 25% { opacity: 1; } 65% { opacity: 1; } 100% { transform: translateY(13px); opacity: 0; } }
+@media (max-width: 620px) { .hero-cine { min-height: 88vh; } .hero-cine-cue { display: none; } }
+
+/* Light-surface controls (buttons/chips over imagery) */
+.btn-ghost-light { color: #fff; border: 1px solid rgba(255,255,255,0.55); background: rgba(255,255,255,0.04); }
+.btn-ghost-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+.chip-light { color: #e7eefb; border-color: rgba(255,255,255,0.30); background: rgba(255,255,255,0.06); }
+
+/* Parallax layers */
+[data-parallax] { will-change: transform; }
+
 /* Image figures (general) */
 .figure { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); background: var(--paper-2); }
 .figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -548,6 +608,11 @@ html.js .reveal-stagger:not(.is-visible) > * { opacity: 0; transform: translateY
   .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
   .hero-bg .blob { animation: none; }
   .hero-figure img, .page-hero-media img, .figure img { animation: none !important; }
+  .hero-cine-media { transform: none !important; }
+  .hero-cine .eyebrow.light, .hero-cine-title, .hero-cine-lead, .hero-cine-actions, .hero-cine-chips { animation: none !important; }
+  .hero-cine-cue span { animation: none; }
+  .hero-cine-inner, .hero-cine-cue { opacity: 1 !important; }
+  [data-parallax] { transform: none !important; }
   html { scroll-behavior: auto; }
 }
 

@@ -12,10 +12,10 @@ import { IconArrow } from '@/components/icons';
 import en from '@/content/en';
 
 const serviceImg: Record<string, string> = {
-  'audit-assurance': '/images/finance-audit.jpg',
-  'tax-planning': '/images/finance-signing.jpg',
+  'audit-assurance': '/images/finance-review.jpg',
+  'tax-planning': '/images/finance-desk.jpg',
   accounting: '/images/finance-data.jpg',
-  'business-advisory': '/images/people-advisory.jpg',
+  'business-advisory': '/images/advisory.jpg',
 };
 
 export function generateStaticParams() {

@@ -22,7 +22,7 @@ export default function ClientsPage({ params }: { params: { locale: string } }) 
         title={c.title}
         subtitle={c.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.clients }]}
-        image="/images/people-handshake.jpg"
+        image="/images/advisory.jpg"
         imageAlt={c.title}
       />
 

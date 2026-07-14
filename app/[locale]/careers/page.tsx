@@ -108,7 +108,7 @@ export default function CareersPage({ params }: { params: { locale: string } }) 
         body={c.ctaBody}
         primary={{ label: c.applyTitle, href: '#apply' }}
         secondary={{ label: d.nav.about, href: href(locale, 'about') }}
-        image="/images/skyline.jpg"
+        image="/images/beirut-night.jpg"
       />
     </>
   );

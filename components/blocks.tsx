@@ -82,7 +82,7 @@ export function CTABand({
   body,
   primary,
   secondary,
-  image = '/images/skyline.jpg',
+  image = '/images/beirut-night.jpg',
   marker,
 }: {
   title: string;
@@ -97,7 +97,7 @@ export function CTABand({
       <div className="container">
         <div className="cta-band">
           {image && (
-            <div className="cta-img" aria-hidden>
+            <div className="cta-img" aria-hidden data-parallax="0.16">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={image} alt="" loading="lazy" />
             </div>
