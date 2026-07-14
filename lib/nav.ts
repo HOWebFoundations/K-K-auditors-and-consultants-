@@ -14,6 +14,7 @@ export const mainNav: NavItem[] = [
   { key: 'resources', path: 'resources' },
   { key: 'clients', path: 'clients' },
   { key: 'insights', path: 'insights' },
+  { key: 'careers', path: 'careers' },
   { key: 'contact', path: 'contact' },
 ];
 

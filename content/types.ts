@@ -240,11 +240,24 @@ export interface CareersDict {
   eyebrow: string;
   title: string;
   subtitle: string;
+  cultureTitle: string;
   body: string[];
   perksTitle: string;
   perks: string[];
+  areasTitle: string;
+  areasSubtitle: string;
+  areas: { title: string; body: string }[];
   openTitle: string;
   openBody: string;
+  applyTitle: string;
+  applySubtitle: string;
+  form: {
+    position: string;
+    selectArea: string;
+    cvNote: string;
+    successTitle: string;
+    successBody: string;
+  };
   ctaTitle: string;
   ctaBody: string;
 }

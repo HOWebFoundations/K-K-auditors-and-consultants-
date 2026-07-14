@@ -1062,6 +1062,7 @@ const en: Dictionary = {
       'K&K is a team of 14 professionals where you will not be a number. You will work directly with partners on real mandates across audit, tax and advisory, for clients in more than twenty industries.',
       'We invest in professional qualifications and international exposure through our GMN International membership.',
     ],
+    cultureTitle: 'Life at K&K',
     perksTitle: 'Why join us',
     perks: [
       'Partner-led mentorship from sworn CPAs',
@@ -1070,9 +1071,30 @@ const en: Dictionary = {
       'International exposure via GMN International',
       'A broad range of industries and engagements',
     ],
+    areasTitle: 'Where we hire',
+    areasSubtitle:
+      'We recruit across our four practices — from graduates to experienced professionals.',
+    areas: [
+      { title: 'Audit & Assurance', body: 'Trainee to senior auditors working on statutory and voluntary audits to ISA standards.' },
+      { title: 'Tax', body: 'Tax associates and consultants advising on Lebanese income tax, VAT, NSSF and payroll.' },
+      { title: 'Accounting', body: 'Accountants and bookkeepers delivering reliable management and financial reporting.' },
+      { title: 'Advisory', body: 'Analysts and advisors supporting valuation, feasibility and transaction work.' },
+    ],
     openTitle: 'Open positions',
     openBody:
-      'We are always interested in talented auditors, accountants and tax specialists. Send us your CV and tell us what you are looking for.',
+      'We do not always advertise specific roles, but we are continually interested in talented auditors, accountants and tax professionals. Send us your details and CV, and we will be in touch when the right opportunity opens.',
+    applyTitle: 'Apply now',
+    applySubtitle:
+      'Tell us about yourself and the area that interests you, then email your CV — a partner will review your application.',
+    form: {
+      position: 'Area of interest',
+      selectArea: 'Select an area',
+      cvNote:
+        'After submitting, please email your CV to info@kandkauditors.com with your name in the subject line.',
+      successTitle: 'Thank you — your application has been received.',
+      successBody:
+        'Please email your CV to info@kandkauditors.com. A K&K partner will review it and be in touch.',
+    },
     ctaTitle: 'Apply today',
     ctaBody: 'Send your CV and a short note about yourself.',
   },
