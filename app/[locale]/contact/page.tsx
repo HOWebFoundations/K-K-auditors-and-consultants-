@@ -36,7 +36,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       />
 
       <section className="section">
-        <div className="container grid" style={{ gridTemplateColumns: '1.1fr 0.9fr', gap: 48, alignItems: 'start' }}>
+        <div className="container grid-contact">
           {/* Form */}
           <div className="card">
             <h2 style={{ fontSize: '1.5rem' }}>{c.formTitle}</h2>

@@ -108,7 +108,7 @@ export default function ResourceDetail({
       />
 
       <section className="section">
-        <div className="container grid" style={{ gridTemplateColumns: '1.6fr 1fr', gap: 48, alignItems: 'start' }}>
+        <div className="container grid-sidebar">
           <article className="prose">
             <span className="updated">
               <IconClock width={15} height={15} /> {d.common.lastUpdated}: {d.privacy.updated}
@@ -146,7 +146,7 @@ export default function ResourceDetail({
             </ul>
           </article>
 
-          <aside style={{ position: 'sticky', top: 96, display: 'grid', gap: 20 }}>
+          <aside className="sticky-side" style={{ position: 'sticky', top: 96, display: 'grid', gap: 20 }}>
             <div className="card" style={{ background: 'var(--navy-900)', color: '#dbe4f2', borderColor: 'transparent' }}>
               <h3 style={{ color: '#fff' }}>{d.common.needHelp}</h3>
               <p style={{ color: '#c3cee2' }}>{d.common.needHelpBody}</p>

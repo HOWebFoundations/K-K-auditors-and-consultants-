@@ -76,7 +76,7 @@ export default function ServiceDetail({
       />
 
       <section className="section">
-        <div className="container grid" style={{ gridTemplateColumns: '1.6fr 1fr', gap: 48, alignItems: 'start' }}>
+        <div className="container grid-sidebar">
           <div className="prose">
             {s.intro.map((p) => (
               <p key={p}>{p}</p>
@@ -114,7 +114,7 @@ export default function ServiceDetail({
           </div>
 
           {/* Sidebar */}
-          <aside style={{ position: 'sticky', top: 96, display: 'grid', gap: 20 }}>
+          <aside className="sticky-side" style={{ position: 'sticky', top: 96, display: 'grid', gap: 20 }}>
             <div className="card">
               <h3 style={{ fontSize: '1.05rem' }}>{d.services.forWhoTitle}</h3>
               <ul className="ticks mt-1">

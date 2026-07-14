@@ -45,7 +45,8 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: clip; }
+body { overflow-x: clip; }
 
 body {
   margin: 0;
@@ -113,6 +114,15 @@ ul, ol { margin: 0 0 1rem; padding-inline-start: 1.2rem; }
 .split-5-7 { grid-template-columns: 42% 1fr; }
 .split-7-5 { grid-template-columns: 1fr 42%; }
 @media (max-width: 900px) { .split, .split-5-7, .split-7-5 { grid-template-columns: 1fr; gap: 34px; } }
+
+/* Main + sidebar layouts (service / resource detail) — collapse on mobile */
+.grid-sidebar { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(30px, 4vw, 48px); align-items: start; }
+@media (max-width: 920px) { .grid-sidebar { grid-template-columns: 1fr; gap: 36px; } }
+/* Contact form + details */
+.grid-contact { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(30px, 4vw, 48px); align-items: start; }
+@media (max-width: 860px) { .grid-contact { grid-template-columns: 1fr; } }
+/* Disable sticky sidebars on small screens */
+@media (max-width: 920px) { .sticky-side { position: static !important; } }
 
 /* ---------- Editorial type helpers ---------- */
 .eyebrow {
