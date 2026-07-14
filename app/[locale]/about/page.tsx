@@ -1,0 +1,176 @@
+import type { Metadata } from 'next';
+import { Locale, isLocale } from '@/lib/i18n';
+import { getDictionary } from '@/lib/content';
+import { href } from '@/lib/nav';
+import { site } from '@/lib/site';
+import { PageHero, SectionHeader, CTABand } from '@/components/blocks';
+import JsonLd from '@/components/JsonLd';
+import { personSchema, breadcrumbSchema } from '@/lib/schema';
+import { IconCheck } from '@/components/icons';
+
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+  const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
+  const d = getDictionary(locale);
+  return {
+    title: `${d.nav.about} — ${d.about.title}`,
+    description: d.about.subtitle,
+  };
+}
+
+export default function AboutPage({ params }: { params: { locale: string } }) {
+  const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
+  const d = getDictionary(locale);
+  const a = d.about;
+
+  return (
+    <>
+      <JsonLd
+        data={[
+          ...a.partners.map((p) => personSchema(p)),
+          breadcrumbSchema([
+            { name: d.common.home, url: `${site.url}/${locale}` },
+            { name: d.nav.about, url: `${site.url}/${locale}/about` },
+          ]),
+        ]}
+      />
+      <PageHero
+        eyebrow={a.eyebrow}
+        title={a.title}
+        subtitle={a.subtitle}
+        crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.about }]}
+      />
+
+      {/* Story */}
+      <section className="section">
+        <div className="container grid grid-2" style={{ gap: 48, alignItems: 'start' }}>
+          <div>
+            <div className="eyebrow">{a.storyTitle}</div>
+            {a.story.map((p) => (
+              <p key={p} className="muted">{p}</p>
+            ))}
+          </div>
+          <div className="card" style={{ background: 'var(--paper-2)' }}>
+            <blockquote style={{ margin: 0 }}>
+              <p style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--navy-900)', lineHeight: 1.4 }}>
+                “{a.ethicsQuote}”
+              </p>
+              <footer className="dotline mt-2">{a.ethicsBy}</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="section bg-soft">
+        <div className="container">
+          <SectionHeader title={a.valuesTitle} subtitle={a.valuesSubtitle} center />
+          <div className="grid grid-3 mt-4">
+            {a.values.map((v) => (
+              <div className="card" key={v.title}>
+                <h3>{v.title}</h3>
+                <p className="muted">{v.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="section">
+        <div className="container">
+          <SectionHeader title={a.leadershipTitle} subtitle={a.leadershipSubtitle} />
+          <div className="grid grid-2 mt-4">
+            {a.partners.map((p) => (
+              <div className="card" key={p.name}>
+                <div className="partner">
+                  <div className="avatar" aria-hidden>{p.initials}</div>
+                  <div>
+                    <h3 style={{ marginBottom: 2 }}>{p.name}</h3>
+                    <div style={{ fontWeight: 700, color: 'var(--navy)' }}>{p.role}</div>
+                    <div className="muted">{p.designation}</div>
+                  </div>
+                </div>
+                <p className="muted mt-2">{p.bio}</p>
+                <div className="creds">
+                  {p.credentials.map((c) => (
+                    <span className="badge" key={c}>{c}</span>
+                  ))}
+                </div>
+                <div className="creds">
+                  {p.memberships.map((m) => (
+                    <span className="badge badge-gold" key={m}>{m}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team + credentials */}
+      <section className="section bg-soft">
+        <div className="container grid grid-2" style={{ gap: 48, alignItems: 'start' }}>
+          <div>
+            <h2 className="h2">{a.teamTitle}</h2>
+            <p className="muted">{a.teamBody}</p>
+            <div className="stat-row mt-3" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
+              <div className="stat"><div className="num">{site.teamSize}</div><div className="lbl">{d.nav.about}</div></div>
+              <div className="stat"><div className="num">{site.yearsExperience}+</div><div className="lbl">Years</div></div>
+              <div className="stat"><div className="num">2</div><div className="lbl">Partners</div></div>
+            </div>
+          </div>
+          <div className="card">
+            <h3>{a.credentialsTitle}</h3>
+            <p className="muted">{a.credentialsBody}</p>
+            <ul className="ticks mt-2">
+              {a.credentialsList.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* GMN */}
+      <section className="section bg-navy">
+        <div className="container grid grid-2" style={{ gap: 44, alignItems: 'center' }}>
+          <div>
+            <div className="eyebrow" style={{ color: 'var(--gold)' }}>{d.common.memberOf} GMN International</div>
+            <h2 className="h2">{a.gmnTitle}</h2>
+            {a.gmnBody.map((p) => (
+              <p key={p} style={{ color: '#cdd9ee' }}>{p}</p>
+            ))}
+          </div>
+          <div>
+            <ul className="ticks">
+              {a.gmnPoints.map((p) => (
+                <li key={p} style={{ color: '#dbe4f2' }}>{p}</li>
+              ))}
+            </ul>
+            <div
+              className="mt-3"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 12,
+                border: '1px solid rgba(255,255,255,0.16)',
+                borderRadius: 14,
+                padding: '16px 22px',
+              }}
+            >
+              <span style={{ fontSize: '1.8rem', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>GMN</span>
+              <span className="badge badge-gold"><IconCheck width={14} height={14} /> {d.common.since} {site.gmnSince}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTABand
+        title={d.home.ctaTitle}
+        body={d.home.ctaBody}
+        primary={{ label: d.common.bookConsultation, href: href(locale, 'contact') }}
+        secondary={{ label: d.nav.services, href: href(locale, 'services') }}
+      />
+    </>
+  );
+}
