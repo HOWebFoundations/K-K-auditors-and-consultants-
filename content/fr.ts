@@ -134,6 +134,28 @@ const fr: DeepPartial<Dictionary> = {
     insightsTitle: "Actualités fiscales et réglementaires libanaises",
     insightsSubtitle:
       "Des points d'information réguliers sur la NSSF, les circulaires du ministère des Finances, la VAT et le budget annuel — rédigés par nos associés.",
+    processEyebrow: "Notre méthode",
+    processTitle: "Une méthode qui se laisse auditer",
+    processSubtitle:
+      "Chaque mission suit le même parcours rigoureux — vous savez toujours où vous en êtes, sans aucune surprise.",
+    process: [
+      {
+        title: "Comprendre",
+        body: "Nous nous immergeons dans votre activité, votre secteur et vos obligations — vos déclarations, vos risques, vos ambitions.",
+      },
+      {
+        title: "Planifier",
+        body: "Un associé cadre la mission, réunit les bons spécialistes et fixe avec vous un calendrier aux livrables clairs.",
+      },
+      {
+        title: "Exécuter",
+        body: "Des travaux menés selon les normes internationales — IFRS et ISA — avec une communication proactive plutôt que des surprises de fin d'audit.",
+      },
+      {
+        title: "Rapporter et conseiller",
+        body: "Des conclusions actionnables : rapports clairs, recommandations pratiques et accès à votre associé toute l'année.",
+      },
+    ],
     ctaTitle: "Parlons de votre entreprise",
     ctaBody:
       "Que vous ayez besoin d'un audit légal, d'une planification fiscale ou de conseils pour vous implanter au Liban, nos associés sont prêts à vous aider.",

@@ -69,7 +69,9 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
       <section className="section-tight bg-soft">
         <div className="container center">
           <p className="pullquote maxw-center">
-            <span className="q">“</span>{a.ethicsQuote}<span className="q">”</span>
+            <span className="q">{locale === 'en' ? '“' : '«'}</span>
+            {a.ethicsQuote}
+            <span className="q">{locale === 'en' ? '”' : '»'}</span>
           </p>
           <p className="dotline mt-2" style={{ justifyContent: 'center' }}>{a.ethicsBy}</p>
         </div>

@@ -130,6 +130,28 @@ const en: Dictionary = {
     insightsTitle: 'Lebanese tax & regulatory updates',
     insightsSubtitle:
       'Timely briefings on the NSSF, Ministry of Finance circulars, VAT and the annual budget — written by our partners.',
+    processEyebrow: 'How we work',
+    processTitle: 'A method you could audit',
+    processSubtitle:
+      'Every engagement follows the same disciplined arc — so you always know where you stand, and nothing arrives as a surprise.',
+    process: [
+      {
+        title: 'Understand',
+        body: 'We immerse ourselves in your business, your sector and your obligations — what you file, what you risk, what you want to achieve.',
+      },
+      {
+        title: 'Plan',
+        body: 'A partner scopes the engagement, assembles the right specialists and agrees a timeline with clear deliverables.',
+      },
+      {
+        title: 'Execute',
+        body: 'Fieldwork to international standards — IFRS and ISA — with proactive communication instead of end-of-audit surprises.',
+      },
+      {
+        title: 'Report & advise',
+        body: 'Findings you can act on: clear reports, practical recommendations and year-round access to your partner.',
+      },
+    ],
     ctaTitle: 'Let’s talk about your business',
     ctaBody:
       'Whether you need a statutory audit, tax planning, or advice on setting up in Lebanon, our partners are ready to help.',

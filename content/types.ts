@@ -82,6 +82,10 @@ export interface HomeDict {
   insightsEyebrow: string;
   insightsTitle: string;
   insightsSubtitle: string;
+  processEyebrow: string;
+  processTitle: string;
+  processSubtitle: string;
+  process: { title: string; body: string }[];
   ctaTitle: string;
   ctaBody: string;
 }

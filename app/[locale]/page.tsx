@@ -2,12 +2,11 @@ import Link from 'next/link';
 import { Locale, isLocale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/content';
 import { href } from '@/lib/nav';
-import { site } from '@/lib/site';
 import { SectionHeader, CTABand } from '@/components/blocks';
 import HeroCinematic from '@/components/HeroCinematic';
 import Reveal from '@/components/Reveal';
 import Counter from '@/components/Counter';
-import CredentialStrip from '@/components/CredentialStrip';
+import Ticker from '@/components/Ticker';
 import {
   IconArrow,
   IconShield,
@@ -22,6 +21,9 @@ export default function HomePage({ params }: { params: { locale: string } }) {
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const h = d.home;
+
+  // Arabic and French quote with guillemets; English with curly quotes.
+  const [qOpen, qClose] = locale === 'en' ? ['“', '”'] : ['«', '»'];
 
   const teasers = [
     { img: '/images/team-office.jpg', title: d.nav.about, line: d.about.subtitle, to: 'about' },
@@ -58,8 +60,19 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
-      {/* ---------------- Credentials strip ---------------- */}
-      <CredentialStrip caption={d.about.credentialsTitle} />
+      {/* ---------------- Brand ticker (services + credentials) ---------------- */}
+      <Ticker
+        items={[
+          ...d.services.items.map((s) => s.title),
+          'LACPA',
+          'GMN International',
+          'IFRS',
+          'ISA',
+          'CMA',
+          'ACCA',
+          'AOCPA',
+        ]}
+      />
 
       {/* ---------------- Explore (teaser cards) ---------------- */}
       <section className="section">
@@ -90,6 +103,26 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
+      {/* ---------------- How we work (dark chapter) ---------------- */}
+      <section className="section chapter-dark">
+        <div className="container">
+          <SectionHeader
+            marker={h.processEyebrow}
+            title={h.processTitle}
+            subtitle={h.processSubtitle}
+          />
+          <Reveal stagger className="process mt-4">
+            {h.process.map((s, i) => (
+              <div className="step" key={s.title}>
+                <div className="n">{String(i + 1).padStart(2, '0')}</div>
+                <h3>{s.title}</h3>
+                <p>{s.body}</p>
+              </div>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
       {/* ---------------- Why K&K (compact) ---------------- */}
       <section className="section bg-soft">
         <div className="container">
@@ -112,6 +145,22 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 </div>
               );
             })}
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ---------------- Editorial pull-quote ---------------- */}
+      <section className="section-tight">
+        <div className="container center">
+          <Reveal>
+            <p className="pullquote maxw-center">
+              <span className="q">{qOpen}</span>
+              {d.about.ethicsQuote}
+              <span className="q">{qClose}</span>
+            </p>
+            <p className="dotline mt-2" style={{ justifyContent: 'center' }}>
+              {d.about.ethicsBy}
+            </p>
           </Reveal>
         </div>
       </section>
