@@ -891,6 +891,52 @@ const en: Dictionary = {
       'Our firm offers broad technical expertise and deep local market knowledge in audit, tax, risk management and advisory, providing consistent quality and impeccable service to diverse clients in industries large and small, global and local.',
       'Every client keeps a senior, partner-led relationship, we are large enough to handle demanding mandates and small enough to stay personal.',
     ],
+    sectorsTitle: 'Sector expertise',
+    sectorsSubtitle:
+      'We tailor audit, tax and advisory to the realities of each industry, so the advice fits how your business actually runs.',
+    sectors: [
+      {
+        icon: 'manufacturing',
+        title: 'Manufacturing & Industry',
+        body: 'Cost accounting, inventory valuation and plant-asset audits, with the VAT and customs treatment producers and importers rely on.',
+      },
+      {
+        icon: 'realestate',
+        title: 'Real Estate & Construction',
+        body: 'Percentage-of-completion accounting, contractor and developer audits, and built-property tax across the project lifecycle.',
+      },
+      {
+        icon: 'health',
+        title: 'Healthcare & Pharma',
+        body: 'Inventory and revenue controls, related-party review and regulatory compliance for clinics, laboratories and pharmaceutical distributors.',
+      },
+      {
+        icon: 'ngo',
+        title: 'Not-for-Profit & NGOs',
+        body: 'Donor-restricted fund accounting and grant-compliance audits that satisfy international funders and Lebanese regulators alike.',
+      },
+      {
+        icon: 'finance',
+        title: 'Financial Services',
+        body: 'Regulatory reporting, client-money controls and strict independence for brokers, dealers and financial institutions.',
+      },
+      {
+        icon: 'hospitality',
+        title: 'Hospitality & Entertainment',
+        body: 'Revenue assurance, service-charge handling and seasonal cash-flow planning for hotels, resorts and venues.',
+      },
+      {
+        icon: 'trade',
+        title: 'Trade & Distribution',
+        body: 'Margin and inventory analysis, import VAT and duty, and franchise reporting for distributors, retailers and franchisees.',
+      },
+      {
+        icon: 'holding',
+        title: 'Holdings & Offshore',
+        body: 'Group consolidation and the Lebanese holding and offshore company regimes, with cross-border tax structuring.',
+      },
+    ],
+    moreTitle: 'And many more across 20+ sectors',
     industriesTitle: 'Industries we serve',
     industriesSubtitle:
       'Sector experience across the Lebanese economy and beyond.',

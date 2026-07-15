@@ -185,6 +185,10 @@ export interface ClientsDict {
   subtitle: string;
   approachTitle: string;
   approach: string[];
+  sectorsTitle: string;
+  sectorsSubtitle: string;
+  sectors: { icon: string; title: string; body: string }[];
+  moreTitle: string;
   industriesTitle: string;
   industriesSubtitle: string;
   industries: string[];

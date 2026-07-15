@@ -3,6 +3,8 @@ import { Locale, isLocale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/content';
 import { href } from '@/lib/nav';
 import { PageHero, SectionHeader, CTABand } from '@/components/blocks';
+import Reveal from '@/components/Reveal';
+import { sectorIcon } from '@/components/icons';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
@@ -43,8 +45,19 @@ export default function ClientsPage({ params }: { params: { locale: string } }) 
 
       <section className="section bg-soft">
         <div className="container">
-          <SectionHeader title={c.industriesTitle} subtitle={c.industriesSubtitle} center />
-          <div className="flex wrap gap-sm mt-4" style={{ justifyContent: 'center' }}>
+          <SectionHeader title={c.sectorsTitle} subtitle={c.sectorsSubtitle} center />
+          <Reveal stagger className="grid grid-4 mt-4">
+            {c.sectors.map((s) => (
+              <div className="card" key={s.title}>
+                <div className="card-icon">{sectorIcon(s.icon)}</div>
+                <h3 style={{ fontSize: '1.15rem' }}>{s.title}</h3>
+                <p className="muted">{s.body}</p>
+              </div>
+            ))}
+          </Reveal>
+
+          <p className="dotline mt-4" style={{ justifyContent: 'center' }}>{c.moreTitle}</p>
+          <div className="flex wrap gap-sm mt-3" style={{ justifyContent: 'center' }}>
             {c.industries.map((ind) => (
               <span className="chip" key={ind}>{ind}</span>
             ))}

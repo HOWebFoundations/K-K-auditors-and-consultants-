@@ -159,3 +159,80 @@ export const iconFor = (key: string, props?: IP) => {
       return <IconAudit {...props} />;
   }
 };
+
+/* ---------- Sector icons ---------- */
+export const IconFactory = (p: IP) => (
+  <svg {...base(p)}>
+    <path d="M3 21V10l5 3.5V10l5 3.5V7h4a1 1 0 0 1 1 1v13z" />
+    <path d="M2 21h20" />
+    <path d="M8 17h2M13 17h2" />
+  </svg>
+);
+export const IconBuilding = (p: IP) => (
+  <svg {...base(p)}>
+    <rect x="4" y="3" width="10" height="18" rx="1" />
+    <path d="M14 9h6v12" />
+    <path d="M7.5 7h1M11 7h1M7.5 11h1M11 11h1M7.5 15h1M11 15h1M17 13h.5M17 17h.5" />
+    <path d="M3 21h18" />
+  </svg>
+);
+export const IconHealth = (p: IP) => (
+  <svg {...base(p)}>
+    <rect x="3" y="3" width="18" height="18" rx="4" />
+    <path d="M12 8v8M8 12h8" />
+  </svg>
+);
+export const IconCommunity = (p: IP) => (
+  <svg {...base(p)}>
+    <circle cx="9" cy="8" r="3" />
+    <path d="M3 20a6 6 0 0 1 12 0" />
+    <path d="M16 5.2a3 3 0 0 1 0 5.6M21 20a6 6 0 0 0-4.5-5.8" />
+  </svg>
+);
+export const IconBank = (p: IP) => (
+  <svg {...base(p)}>
+    <path d="M3 10 12 4l9 6" />
+    <path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8" />
+    <path d="M3 21h18M4 10h16" />
+  </svg>
+);
+export const IconHotel = (p: IP) => (
+  <svg {...base(p)}>
+    <path d="M2 20v-5a2 2 0 0 1 2-2h13a3 3 0 0 1 3 3v4" />
+    <path d="M2 16h20" />
+    <circle cx="7" cy="10.5" r="1.6" />
+    <path d="M2 20v1M22 20v1" />
+  </svg>
+);
+export const IconTruck = (p: IP) => (
+  <svg {...base(p)}>
+    <path d="M3 6h11v9H3z" />
+    <path d="M14 9h4l3 3v3h-2" />
+    <path d="M9 15H6" />
+    <circle cx="7" cy="17.5" r="1.7" />
+    <circle cx="17" cy="17.5" r="1.7" />
+  </svg>
+);
+export const IconLayers = (p: IP) => (
+  <svg {...base(p)}>
+    <path d="M12 3 3 8l9 5 9-5-9-5Z" />
+    <path d="M3 12l9 5 9-5" />
+    <path d="M3 16l9 5 9-5" />
+  </svg>
+);
+
+const SECTOR_ICONS: Record<string, (p: IP) => JSX.Element> = {
+  manufacturing: IconFactory,
+  realestate: IconBuilding,
+  health: IconHealth,
+  ngo: IconCommunity,
+  finance: IconBank,
+  hospitality: IconHotel,
+  trade: IconTruck,
+  holding: IconLayers,
+};
+
+export function sectorIcon(key: string, props?: IP) {
+  const C = SECTOR_ICONS[key] || IconAdvisory;
+  return <C {...props} />;
+}

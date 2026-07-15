@@ -895,6 +895,52 @@ const fr: DeepPartial<Dictionary> = {
       "Notre cabinet offre une vaste expertise technique et une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil, assurant une qualité constante et un service irréprochable à une clientèle diversifiée, dans des secteurs grands et petits, internationaux et locaux.",
       "Chaque client conserve une relation avec un interlocuteur expérimenté, piloté par un associé, nous sommes assez grands pour gérer des mandats exigeants et assez petits pour rester proches.",
     ],
+    sectorsTitle: "Expertise sectorielle",
+    sectorsSubtitle:
+      "Nous adaptons l'audit, la fiscalité et le conseil aux réalités de chaque secteur, pour que nos recommandations épousent le fonctionnement réel de votre entreprise.",
+    sectors: [
+      {
+        icon: "manufacturing",
+        title: "Industrie et production",
+        body: "Comptabilité analytique, valorisation des stocks et audit des actifs industriels, avec le traitement TVA et douanier sur lequel comptent producteurs et importateurs.",
+      },
+      {
+        icon: "realestate",
+        title: "Immobilier et construction",
+        body: "Comptabilité à l'avancement, audit des entrepreneurs et promoteurs, et taxe foncière bâtie sur tout le cycle du projet.",
+      },
+      {
+        icon: "health",
+        title: "Santé et pharmacie",
+        body: "Contrôles des stocks et des revenus, revue des parties liées et conformité réglementaire pour cliniques, laboratoires et distributeurs pharmaceutiques.",
+      },
+      {
+        icon: "ngo",
+        title: "Associations et ONG",
+        body: "Comptabilité des fonds affectés par les donateurs et audits de conformité des subventions, à la satisfaction des bailleurs internationaux comme des autorités libanaises.",
+      },
+      {
+        icon: "finance",
+        title: "Services financiers",
+        body: "Reporting réglementaire, contrôle des fonds clients et indépendance stricte pour courtiers, négociants et institutions financières.",
+      },
+      {
+        icon: "hospitality",
+        title: "Hôtellerie et loisirs",
+        body: "Assurance des revenus, gestion des frais de service et planification de trésorerie saisonnière pour hôtels, complexes et lieux d'accueil.",
+      },
+      {
+        icon: "trade",
+        title: "Commerce et distribution",
+        body: "Analyse des marges et des stocks, TVA et droits à l'import, et reporting de franchise pour distributeurs, détaillants et franchisés.",
+      },
+      {
+        icon: "holding",
+        title: "Holdings et offshore",
+        body: "Consolidation de groupe et régimes libanais des holdings et sociétés offshore, avec structuration fiscale transfrontalière.",
+      },
+    ],
+    moreTitle: "Et bien d'autres, dans plus de 20 secteurs",
     industriesTitle: "Les secteurs que nous servons",
     industriesSubtitle:
       "Une expérience sectorielle dans toute l'économie libanaise et au-delà.",
