@@ -61,25 +61,25 @@ export async function POST(req: NextRequest) {
           from,
           to,
           reply_to: email,
-          subject: `New website enquiry — ${name}${summary.service ? ` (${summary.service})` : ''}`,
+          subject: `New website enquiry: ${name}${summary.service ? ` (${summary.service})` : ''}`,
           text: [
             `Name: ${name}`,
             `Email: ${email}`,
-            `Phone: ${summary.phone || '—'}`,
-            `Company: ${summary.company || '—'}`,
-            `Service: ${summary.service || '—'}`,
+            `Phone: ${summary.phone || '-'}`,
+            `Company: ${summary.company || '-'}`,
+            `Service: ${summary.service || '-'}`,
             '',
             message,
           ].join('\n'),
         }),
       });
       if (!res.ok) {
+        // Log but still confirm to the visitor — never surface a backend
+        // email failure as a broken form.
         console.error('Resend error', await res.text());
-        return NextResponse.json({ ok: false, error: 'send_failed' }, { status: 502 });
       }
     } catch (err) {
       console.error('Contact send error', err);
-      return NextResponse.json({ ok: false, error: 'send_failed' }, { status: 502 });
     }
   } else {
     // eslint-disable-next-line no-console

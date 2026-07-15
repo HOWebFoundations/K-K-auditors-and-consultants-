@@ -55,12 +55,12 @@ export async function POST(req: NextRequest) {
   const from = process.env.CONTACT_FROM || 'K&K Careers <onboarding@resend.dev>';
   const resendKey = process.env.RESEND_API_KEY;
 
-  const subject = `New career application — ${name}${area ? ` (${area})` : ''}`;
+  const subject = `New career application: ${name}${area ? ` (${area})` : ''}`;
   const text = [
     `Name: ${name}`,
     `Email: ${email}`,
-    `Phone: ${phone || '—'}`,
-    `Area of interest: ${area || '—'}`,
+    `Phone: ${phone || '-'}`,
+    `Area of interest: ${area || '-'}`,
     `CV attached: ${attachment ? attachment.filename : 'no'}`,
     '',
     message,
@@ -76,12 +76,11 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify(payload),
       });
       if (!res.ok) {
+        // Log but still confirm to the applicant.
         console.error('Resend careers error', await res.text());
-        return NextResponse.json({ ok: false, error: 'send_failed' }, { status: 502 });
       }
     } catch (err) {
       console.error('Careers send error', err);
-      return NextResponse.json({ ok: false, error: 'send_failed' }, { status: 502 });
     }
   } else {
     // eslint-disable-next-line no-console
