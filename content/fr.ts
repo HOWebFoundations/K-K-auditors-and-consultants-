@@ -59,20 +59,20 @@ const fr: DeepPartial<Dictionary> = {
   },
 
   hero: {
-    eyebrow: "Audit · Fiscalité · Conseil — Beyrouth, Liban",
+    eyebrow: "Audit · Fiscalité · Conseil, Beyrouth, Liban",
     title: "Le cabinet d'audit et de conseil au service des entreprises libanaises ambitieuses",
     subtitle:
-      "K&K Auditors & Consultants est un cabinet à service complet d'experts-comptables assermentés à Badaro, Beyrouth — alliant une connaissance approfondie du terrain aux normes internationales grâce à notre adhésion à GMN International.",
+      "K&K Auditors & Consultants est un cabinet à service complet d'experts-comptables assermentés à Badaro, Beyrouth, alliant une connaissance approfondie du terrain aux normes internationales grâce à notre adhésion à GMN International.",
     badges: [
       "Experts-comptables assermentés · Membres de la LACPA",
-      "GMN International — membre exclusif au Liban",
+      "GMN International, membre exclusif au Liban",
       "Plus de 25 ans d'expérience",
     ],
     cardTitle: "Pourquoi les entreprises choisissent K&K",
     cardPoints: [
       "États financiers audités selon les normes IFRS et ISA",
       "Expertise en fiscalité libanaise, VAT, NSSF et paie",
-      "Un interlocuteur unique et expérimenté — piloté par un associé",
+      "Un interlocuteur unique et expérimenté, piloté par un associé",
       "Confidentialité, indépendance et éthique avant tout",
     ],
   },
@@ -89,12 +89,12 @@ const fr: DeepPartial<Dictionary> = {
     aboutTitle: "Un cabinet comptable à service complet au service du Liban et au-delà",
     aboutBody: [
       "K&K est un cabinet de comptabilité et d'audit à service complet au service de clients dans tout le Liban et à l'étranger. Nous offrons un accompagnement professionnel et personnalisé sur un large éventail de besoins financiers et commerciaux.",
-      "Dirigé par deux experts-comptables assermentés et une équipe de 14 personnes, nous associons une vaste expertise technique à une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil — pour une qualité constante auprès de clients grands et petits, internationaux et locaux.",
+      "Dirigé par deux experts-comptables assermentés et une équipe de 14 personnes, nous associons une vaste expertise technique à une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil, pour une qualité constante auprès de clients grands et petits, internationaux et locaux.",
     ],
     aboutPoints: [
       "L'associé gérant est expert-comptable assermenté et membre de la LACPA",
       "Représentant exclusif de GMN International au Liban",
-      "L'éthique avant le profit — fidèles à nos clients et à notre profession",
+      "L'éthique avant le profit, fidèles à nos clients et à notre profession",
     ],
     servicesEyebrow: "Ce que nous faisons",
     servicesTitle: "Des services conçus autour de votre entreprise",
@@ -103,11 +103,11 @@ const fr: DeepPartial<Dictionary> = {
     whyEyebrow: "Pourquoi K&K",
     whyTitle: "La crédibilité qu'un cabinet de premier plan se doit d'offrir",
     whySubtitle:
-      "Nous affirmons moins et prouvons davantage — avec des professionnels diplômés, une affiliation internationale et un corpus véritablement utile de connaissances en fiscalité libanaise.",
+      "Nous affirmons moins et prouvons davantage, avec des professionnels diplômés, une affiliation internationale et un corpus véritablement utile de connaissances en fiscalité libanaise.",
     why: [
       {
         title: "Des associés diplômés",
-        body: "Experts-comptables assermentés et membres de la LACPA, titulaires des diplômes CMA, ACCA CertIFR, d'audit judiciaire et d'évaluation d'entreprise — une expertise réelle, pas une brochure.",
+        body: "Experts-comptables assermentés et membres de la LACPA, titulaires des diplômes CMA, ACCA CertIFR, d'audit judiciaire et d'évaluation d'entreprise, une expertise réelle, pas une brochure.",
       },
       {
         title: "Normes internationales, connaissance locale",
@@ -119,13 +119,13 @@ const fr: DeepPartial<Dictionary> = {
       },
       {
         title: "Une expertise pointue en fiscalité libanaise",
-        body: "Impôt sur le revenu, VAT, NSSF, paie et taxe municipale — nous suivons chaque circulaire et chaque décret pour que votre entreprise reste en conformité.",
+        body: "Impôt sur le revenu, VAT, NSSF, paie et taxe municipale, nous suivons chaque circulaire et chaque décret pour que votre entreprise reste en conformité.",
       },
     ],
     gmnEyebrow: "Portée internationale",
     gmnTitle: "Représentant exclusif de GMN International au Liban",
     gmnBody:
-      "Depuis juin 2012, K&K a été choisi pour représenter GMN International exclusivement au Liban — une association de cabinets comptables juridiquement indépendants et soigneusement sélectionnés, dont le siège est à Londres et qui a été fondée dans les années 1970. Cette adhésion offre à nos clients un soutien en comptabilité, audit, fiscalité et conseil dans le monde entier, avec le même soin et le même savoir-faire qu'au niveau local.",
+      "Depuis juin 2012, K&K a été choisi pour représenter GMN International exclusivement au Liban, une association de cabinets comptables juridiquement indépendants et soigneusement sélectionnés, dont le siège est à Londres et qui a été fondée dans les années 1970. Cette adhésion offre à nos clients un soutien en comptabilité, audit, fiscalité et conseil dans le monde entier, avec le même soin et le même savoir-faire qu'au niveau local.",
     industriesEyebrow: "Secteurs",
     industriesTitle: "Une expérience approfondie dans plus de 20 secteurs",
     industriesSubtitle:
@@ -133,15 +133,15 @@ const fr: DeepPartial<Dictionary> = {
     insightsEyebrow: "Actualités",
     insightsTitle: "Actualités fiscales et réglementaires libanaises",
     insightsSubtitle:
-      "Des points d'information réguliers sur la NSSF, les circulaires du ministère des Finances, la VAT et le budget annuel — rédigés par nos associés.",
+      "Des points d'information réguliers sur la NSSF, les circulaires du ministère des Finances, la VAT et le budget annuel, rédigés par nos associés.",
     processEyebrow: "Notre méthode",
     processTitle: "Une méthode qui se laisse auditer",
     processSubtitle:
-      "Chaque mission suit le même parcours rigoureux — vous savez toujours où vous en êtes, sans aucune surprise.",
+      "Chaque mission suit le même parcours rigoureux, vous savez toujours où vous en êtes, sans aucune surprise.",
     process: [
       {
         title: "Comprendre",
-        body: "Nous nous immergeons dans votre activité, votre secteur et vos obligations — vos déclarations, vos risques, vos ambitions.",
+        body: "Nous nous immergeons dans votre activité, votre secteur et vos obligations, vos déclarations, vos risques, vos ambitions.",
       },
       {
         title: "Planifier",
@@ -149,7 +149,7 @@ const fr: DeepPartial<Dictionary> = {
       },
       {
         title: "Exécuter",
-        body: "Des travaux menés selon les normes internationales — IFRS et ISA — avec une communication proactive plutôt que des surprises de fin d'audit.",
+        body: "Des travaux menés selon les normes internationales, IFRS et ISA, avec une communication proactive plutôt que des surprises de fin d'audit.",
       },
       {
         title: "Rapporter et conseiller",
@@ -169,7 +169,7 @@ const fr: DeepPartial<Dictionary> = {
     storyTitle: "Qui nous sommes",
     story: [
       "K&K est un cabinet de comptabilité et d'audit à service complet au service de clients dans tout le Liban et à l'étranger, dédié à fournir des services et un accompagnement professionnels et personnalisés sur un large éventail de besoins financiers et commerciaux.",
-      "Notre cabinet offre une vaste expertise technique et une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil — assurant une qualité constante et un service irréprochable à une clientèle diversifiée, dans des secteurs grands et petits, internationaux et locaux.",
+      "Notre cabinet offre une vaste expertise technique et une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil, assurant une qualité constante et un service irréprochable à une clientèle diversifiée, dans des secteurs grands et petits, internationaux et locaux.",
       "Nous sommes dirigés par deux experts-comptables assermentés et une équipe de 14 professionnels, et nous sommes le représentant exclusif de GMN International au Liban.",
     ],
     valuesTitle: "Ce que nous défendons",
@@ -203,7 +203,7 @@ const fr: DeepPartial<Dictionary> = {
         bio: "Elia dirige l'activité d'audit et de conseil du cabinet, fort de plus de 25 ans d'expérience. Expert-comptable assermenté, il est titulaire d'un Master en Management et Organisation de Jean Moulin Lyon 3 University (France) et de qualifications spécialisées en comptabilité de gestion, information financière internationale, audit judiciaire et évaluation d'entreprise.",
         credentials: [
           "CMA (Australie)",
-          "ACCA — CertIFR",
+          "ACCA, CertIFR",
           "Diplôme d'audit judiciaire",
           "Diplôme d'évaluation d'entreprise",
           "MSc Management et Organisation, Lyon 3",
@@ -228,22 +228,22 @@ const fr: DeepPartial<Dictionary> = {
     ],
     teamTitle: "Une équipe de 14 professionnels",
     teamBody:
-      "Au-delà de nos associés, K&K est une équipe de 14 comptables, auditeurs et fiscalistes — une profondeur suffisante pour servir des mandats exigeants, et une taille assez réduite pour que chaque client conserve une relation personnelle avec un interlocuteur expérimenté.",
+      "Au-delà de nos associés, K&K est une équipe de 14 comptables, auditeurs et fiscalistes, une profondeur suffisante pour servir des mandats exigeants, et une taille assez réduite pour que chaque client conserve une relation personnelle avec un interlocuteur expérimenté.",
     credentialsTitle: "Qualifications et normes",
     credentialsBody:
       "Nous travaillons selon les normes internationales reconnues et détenons les inscriptions professionnelles qu'un cabinet financier de premier plan se doit de démontrer.",
     credentialsList: [
-      "Expert-comptable assermenté — inscrit à l'Association libanaise des experts-comptables (LACPA)",
+      "Expert-comptable assermenté, inscrit à l'Association libanaise des experts-comptables (LACPA)",
       "Audits menés selon les Normes internationales d'audit (ISA)",
       "États financiers établis selon les normes IFRS",
       "Indépendance et confidentialité sur chaque mission",
       "Membre de l'ICMA et de l'AOCPA",
     ],
-    gmnTitle: "GMN International — notre réseau mondial",
+    gmnTitle: "GMN International, notre réseau mondial",
     gmnBody: [
       "K&K Auditors and Consultants a été choisi pour représenter GMN International exclusivement au Liban, à compter de juin 2012.",
-      "GMNI est une association de cabinets comptables professionnels de qualité fondée dans les années 1970 — des cabinets soigneusement sélectionnés, établis et respectés dans leur propre pays. Son siège social est à Londres, au Royaume-Uni, et elle fonctionne comme une association de cabinets comptables juridiquement indépendants.",
-      "Sa mission est d'être une association de premier plan regroupant des cabinets comptables de qualité dans le monde entier, offrant des prestations enrichies au niveau local au bénéfice des cabinets, de leurs clients et de leur personnel — sans compromettre la souveraineté et l'indépendance professionnelle de chaque cabinet.",
+      "GMNI est une association de cabinets comptables professionnels de qualité fondée dans les années 1970, des cabinets soigneusement sélectionnés, établis et respectés dans leur propre pays. Son siège social est à Londres, au Royaume-Uni, et elle fonctionne comme une association de cabinets comptables juridiquement indépendants.",
+      "Sa mission est d'être une association de premier plan regroupant des cabinets comptables de qualité dans le monde entier, offrant des prestations enrichies au niveau local au bénéfice des cabinets, de leurs clients et de leur personnel, sans compromettre la souveraineté et l'indépendance professionnelle de chaque cabinet.",
     ],
     gmnPoints: [
       "Soutien en comptabilité, audit, fiscalité et conseil dans le monde entier",
@@ -256,7 +256,7 @@ const fr: DeepPartial<Dictionary> = {
     eyebrow: "Nos services",
     title: "Audit, fiscalité et conseil à service complet",
     subtitle:
-      "Quatre pôles d'expertise couvrant l'ensemble du cycle de vie financier d'une entreprise libanaise — chacun piloté par un associé et livré selon les normes internationales.",
+      "Quatre pôles d'expertise couvrant l'ensemble du cycle de vie financier d'une entreprise libanaise, chacun piloté par un associé et livré selon les normes internationales.",
     includesTitle: "Ce qui est inclus",
     processTitle: "Notre méthode",
     forWhoTitle: "À qui cela s'adresse",
@@ -268,10 +268,10 @@ const fr: DeepPartial<Dictionary> = {
         title: "Audit et Assurance",
         tagline: "Des états financiers audités auxquels vous et vos parties prenantes pouvez vous fier",
         summary:
-          "Audits légaux et volontaires, examens limités et compilations, et audits de régimes d'avantages sociaux — menés selon les Normes internationales d'audit.",
+          "Audits légaux et volontaires, examens limités et compilations, et audits de régimes d'avantages sociaux, menés selon les Normes internationales d'audit.",
         intro: [
-          "Un audit est bien plus qu'une obligation légale — c'est la crédibilité qui permet aux banques, investisseurs, partenaires et autorités de faire confiance à vos chiffres. K&K fournit une assurance indépendante et rigoureuse selon les Normes internationales d'audit (ISA), avec des états financiers établis selon les normes IFRS.",
-          "En tant qu'experts-comptables assermentés et membres de la LACPA, notre signature a du poids auprès des banques libanaises, de l'administration fiscale et des contreparties internationales. Les sociétés anonymes libanaises (SAL) doivent faire auditer leurs états financiers chaque année par un commissaire aux comptes, et les sociétés holding et offshore doivent également désigner un commissaire aux comptes — nous intervenons à chacun de ces titres.",
+          "Un audit est bien plus qu'une obligation légale, c'est la crédibilité qui permet aux banques, investisseurs, partenaires et autorités de faire confiance à vos chiffres. K&K fournit une assurance indépendante et rigoureuse selon les Normes internationales d'audit (ISA), avec des états financiers établis selon les normes IFRS.",
+          "En tant qu'experts-comptables assermentés et membres de la LACPA, notre signature a du poids auprès des banques libanaises, de l'administration fiscale et des contreparties internationales. Les sociétés anonymes libanaises (SAL) doivent faire auditer leurs états financiers chaque année par un commissaire aux comptes, et les sociétés holding et offshore doivent également désigner un commissaire aux comptes, nous intervenons à chacun de ces titres.",
         ],
         includes: [
           "Audit légal des états financiers annuels",
@@ -308,9 +308,9 @@ const fr: DeepPartial<Dictionary> = {
         title: "Planification et conformité fiscales",
         tagline: "Restez en conformité et ne payez pas plus que nécessaire",
         summary:
-          "Impôt sur le revenu, VAT, paie et taxe foncière sur les propriétés bâties — ainsi que la représentation et les négociations avec l'administration fiscale libanaise.",
+          "Impôt sur le revenu, VAT, paie et taxe foncière sur les propriétés bâties, ainsi que la représentation et les négociations avec l'administration fiscale libanaise.",
         intro: [
-          "La réglementation fiscale libanaise évolue en permanence, à travers des circulaires, des décrets et les lois de finances annuelles. K&K maintient votre entreprise en conformité et optimisée pour chaque impôt auquel vous êtes soumis — et vous représente directement devant l'administration fiscale.",
+          "La réglementation fiscale libanaise évolue en permanence, à travers des circulaires, des décrets et les lois de finances annuelles. K&K maintient votre entreprise en conformité et optimisée pour chaque impôt auquel vous êtes soumis, et vous représente directement devant l'administration fiscale.",
           "Nous vous conseillons sur la structure adaptée à votre activité, préparons et déposons vos déclarations, et défendons votre position lors des redressements et des négociations.",
         ],
         includes: [
@@ -351,7 +351,7 @@ const fr: DeepPartial<Dictionary> = {
           "Tenue de comptabilité externalisée, comptabilité de gestion et reporting financier qui vous fournissent des chiffres précis et éclairants pour piloter votre entreprise.",
         intro: [
           "Les bonnes décisions commencent par des chiffres fiables. K&K assure la comptabilité et la tenue de livres d'entreprises allant de la start-up à l'entreprise bien établie, en produisant une information financière précise et éclairante, dans les délais.",
-          "Nous adaptons la mission à votre taille — de la tenue de comptabilité entièrement externalisée au reporting de gestion périodique et au soutien de votre équipe financière interne.",
+          "Nous adaptons la mission à votre taille, de la tenue de comptabilité entièrement externalisée au reporting de gestion périodique et au soutien de votre équipe financière interne.",
         ],
         includes: [
           "Tenue de comptabilité externalisée et tenue du grand livre",
@@ -404,7 +404,7 @@ const fr: DeepPartial<Dictionary> = {
           "Restructuration et amélioration de la performance",
         ],
         process: [
-          { title: "Comprendre", body: "Nous allons au cœur de votre objectif — croissance, financement, transaction ou décision." },
+          { title: "Comprendre", body: "Nous allons au cœur de votre objectif, croissance, financement, transaction ou décision." },
           { title: "Analyser", body: "Nous construisons les chiffres, l'évaluation ou le modèle qui éclairent le choix." },
           { title: "Conseiller", body: "Nous vous donnons une recommandation claire et défendable, et vous aidons à l'exécuter." },
         ],
@@ -431,9 +431,9 @@ const fr: DeepPartial<Dictionary> = {
     eyebrow: "Faire des affaires au Liban",
     title: "Ressources fiscales et commerciales libanaises",
     subtitle:
-      "Des guides clairs et pratiques sur la création d'une société, l'impôt sur le revenu, la VAT, la NSSF, les retenues à la source et bien plus — l'essentiel pour faire des affaires au Liban, rédigé par nos associés.",
+      "Des guides clairs et pratiques sur la création d'une société, l'impôt sur le revenu, la VAT, la NSSF, les retenues à la source et bien plus, l'essentiel pour faire des affaires au Liban, rédigé par nos associés.",
     intro:
-      "Ces guides transposent l'intégralité de notre manuel « Doing Business in Lebanon » sur des pages web claires et à jour. Chacun répond d'abord à la question, puis approfondit — avec les taux, seuils et règles libanais réels sur lesquels nos clients nous interrogent.",
+      "Ces guides transposent l'intégralité de notre manuel « Doing Business in Lebanon » sur des pages web claires et à jour. Chacun répond d'abord à la question, puis approfondit, avec les taux, seuils et règles libanais réels sur lesquels nos clients nous interrogent.",
     answerLabel: "En bref",
     items: [
       {
@@ -448,7 +448,7 @@ const fr: DeepPartial<Dictionary> = {
           {
             h: "L'économie",
             body: [
-              "Le Liban est une république démocratique parlementaire sur la Méditerranée orientale, avec Beyrouth pour capitale et la livre libanaise (LBP) pour monnaie. L'économie est orientée services — les services représentent environ 60% du PIB — avec le commerce, le tourisme, les services financiers, la santé et l'éducation comme principaux sous-secteurs.",
+              "Le Liban est une république démocratique parlementaire sur la Méditerranée orientale, avec Beyrouth pour capitale et la livre libanaise (LBP) pour monnaie. L'économie est orientée services, les services représentent environ 60% du PIB, avec le commerce, le tourisme, les services financiers, la santé et l'éducation comme principaux sous-secteurs.",
               "Depuis fin 2019, le Liban traverse une grave crise financière et une transition vers de nouvelles références de taux de change, ce qui rend un conseil actuel et ancré sur le terrain plus important que jamais. C'est précisément là qu'un cabinet local aux normes internationales apporte de la valeur.",
             ],
           },
@@ -470,7 +470,7 @@ const fr: DeepPartial<Dictionary> = {
           {
             h: "Bases de la comptabilité et de la conformité",
             body: [
-              "Toutes les entreprises doivent tenir des registres financiers adéquats — en arabe, français ou anglais — selon la comptabilité d'exercice et les Normes internationales d'information financière (IFRS). Les déclarations d'impôt sur les salaires, de VAT, d'impôt sur les sociétés et de taxe foncière sur les propriétés bâties se font toutes par voie électronique via le ministère des Finances (finance.gov.lb).",
+              "Toutes les entreprises doivent tenir des registres financiers adéquats, en arabe, français ou anglais, selon la comptabilité d'exercice et les Normes internationales d'information financière (IFRS). Les déclarations d'impôt sur les salaires, de VAT, d'impôt sur les sociétés et de taxe foncière sur les propriétés bâties se font toutes par voie électronique via le ministère des Finances (finance.gov.lb).",
             ],
             note: "L'environnement du taux de change et budgétaire du Liban évolue rapidement depuis 2019. Confirmez toujours les chiffres actuels auprès de K&K ou de l'autorité compétente avant d'agir.",
           },
@@ -479,14 +479,14 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Les étrangers peuvent-ils détenir une entreprise au Liban ?", a: "Oui. La plupart des entités peuvent être détenues à 100% par des étrangers (à quelques exceptions près, comme l'immobilier et la représentation commerciale exclusive). Les sociétés à actionnaire unique ne sont pas autorisées, sauf la SARL/LLC et la société offshore." },
           { q: "Dans quelle langue la comptabilité doit-elle être tenue ?", a: "Les registres financiers peuvent être tenus en arabe, français ou anglais, selon la comptabilité d'exercice et les normes IFRS." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Code de commerce libanais", "Administration centrale de la statistique (CAS)"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Code de commerce libanais", "Administration centrale de la statistique (CAS)"],
       },
       {
         slug: "company-formation-lebanon",
         title: "Création d'entreprise au Liban",
         category: "Structuration",
         summary:
-          "SAL, SARL, holding, offshore, succursales et bureaux de représentation — quelle entité choisir et comment la constituer.",
+          "SAL, SARL, holding, offshore, succursales et bureaux de représentation, quelle entité choisir et comment la constituer.",
         answer:
           "Le droit libanais offre plusieurs entités : la société anonyme (SAL, capital minimum LBP 30 millions), la société à responsabilité limitée (SARL/LLC, capital minimum LBP 5 millions), les sociétés holding et offshore, les succursales et bureaux de représentation de sociétés étrangères, les sociétés de personnes et les entreprises individuelles. L'immatriculation se fait auprès du tribunal de commerce dans les deux mois suivant le début de l'activité, et la plupart des entités peuvent être détenues à 100% par des étrangers.",
         sections: [
@@ -498,20 +498,20 @@ const fr: DeepPartial<Dictionary> = {
                 ["Société anonyme (SAL)", "LBP 30 millions", "Conseil de 3 à 12 membres (majorité libanaise) ; audit annuel obligatoire ; requise pour les banques et assureurs"],
                 ["Responsabilité limitée (SARL/LLC)", "LBP 5 millions", "1 à 20 associés ; peut être détenue à 100% par des étrangers ; capital en « parts »"],
                 ["Société holding", "LBP 30 millions", "Immatriculée comme SAL ; détient et gère des participations ; régime fiscal spécial"],
-                ["Société offshore", "—", "Activité hors du Liban ; actionnaire unique autorisé ; régime fiscal spécial"],
-                ["Succursale d'une société étrangère", "—", "Aucune exigence de capital ; bénéfices imposés à 17%"],
-                ["Bureau de représentation", "—", "Aucune activité génératrice de bénéfices ; non soumis à l'impôt sur le revenu"],
+                ["Société offshore", ",", "Activité hors du Liban ; actionnaire unique autorisé ; régime fiscal spécial"],
+                ["Succursale d'une société étrangère", ",", "Aucune exigence de capital ; bénéfices imposés à 17%"],
+                ["Bureau de représentation", ",", "Aucune activité génératrice de bénéfices ; non soumis à l'impôt sur le revenu"],
               ],
             },
           },
           {
-            h: "SAL — société anonyme",
+            h: "SAL, société anonyme",
             body: [
               "La SAL peut exercer toutes sortes d'activités et les actionnaires ne sont responsables qu'à hauteur de leurs souscriptions. Le capital minimum est de LBP 30 millions, la gestion est confiée à un conseil d'administration de 3 à 12 membres (en majorité libanais, bien que le président puisse être étranger avec les autorisations requises), et les états financiers doivent être audités chaque année par un commissaire aux comptes. Cette forme est légalement obligatoire pour les banques, les assureurs et les autres établissements financiers.",
             ],
           },
           {
-            h: "SARL / LLC — société à responsabilité limitée",
+            h: "SARL / LLC, société à responsabilité limitée",
             body: [
               "La SARL offre la même protection en matière de responsabilité que la SAL, avec un capital minimum plus faible de LBP 5 millions. Le capital est divisé en « parts » plutôt qu'en actions, elle peut compter d'un à vingt associés et peut être entièrement détenue par des étrangers. La cession de parts requiert le consentement des associés représentant au moins les trois quarts du capital. Les activités d'assurance, de banque, de gestion de fonds et de transport aérien ne peuvent pas utiliser cette forme.",
             ],
@@ -535,30 +535,30 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Une société peut-elle avoir un propriétaire unique ?", a: "Les sociétés à actionnaire unique ne sont en général pas autorisées, mais une SARL (LLC) peut être fondée par un associé unique, et une société offshore par un actionnaire unique." },
           { q: "Combien de temps prend l'immatriculation ?", a: "De 10 à 15 jours environ une fois les documents dûment authentifiés ; une SAL peut prendre environ une semaine." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Code de commerce libanais (art. 26 et 29)", "Décrets législatifs 45/1983 et 46/1983"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Code de commerce libanais (art. 26 et 29)", "Décrets législatifs 45/1983 et 46/1983"],
       },
       {
         slug: "income-tax-lebanon",
         title: "L'impôt sur le revenu au Liban",
         category: "Fiscalité",
         summary:
-          "Les trois catégories d'impôt sur le revenu — bénéfices, salaires et capitaux mobiliers — et qui paie quoi.",
+          "Les trois catégories d'impôt sur le revenu, bénéfices, salaires et capitaux mobiliers, et qui paie quoi.",
         answer:
-          "Le Liban n'impose pas le revenu selon un traitement unique. La loi sur l'impôt sur le revenu répartit le revenu en trois chapitres — les bénéfices des professions industrielles, commerciales et non commerciales ; les salaires, traitements et pensions ; et les revenus de capitaux mobiliers — chacun imposé séparément selon ses propres règles. Les bénéfices des sociétés selon la méthode du bénéfice réel sont imposés à 17%, tandis que les entreprises individuelles et les sociétés de personnes sont imposées à des taux progressifs de 4%–25%.",
+          "Le Liban n'impose pas le revenu selon un traitement unique. La loi sur l'impôt sur le revenu répartit le revenu en trois chapitres, les bénéfices des professions industrielles, commerciales et non commerciales ; les salaires, traitements et pensions ; et les revenus de capitaux mobiliers, chacun imposé séparément selon ses propres règles. Les bénéfices des sociétés selon la méthode du bénéfice réel sont imposés à 17%, tandis que les entreprises individuelles et les sociétés de personnes sont imposées à des taux progressifs de 4%–25%.",
         sections: [
           {
             h: "Les trois chapitres de l'impôt sur le revenu",
             body: [
-              "Lorsqu'un contribuable perçoit des revenus de différentes sources, chaque type est imposé selon le chapitre dont il relève — il n'existe pas d'impôt sur le revenu unique et agrégé :",
+              "Lorsqu'un contribuable perçoit des revenus de différentes sources, chaque type est imposé selon le chapitre dont il relève, il n'existe pas d'impôt sur le revenu unique et agrégé :",
             ],
             list: [
-              "Chapitre I — bénéfices des activités industrielles, commerciales et non commerciales (libérales).",
-              "Chapitre II — salaires, traitements et pensions (retenus par l'employeur).",
-              "Chapitre III — revenus de capitaux mobiliers (dividendes, tantièmes, intérêts d'obligations et de bons du Trésor).",
+              "Chapitre I, bénéfices des activités industrielles, commerciales et non commerciales (libérales).",
+              "Chapitre II, salaires, traitements et pensions (retenus par l'employeur).",
+              "Chapitre III, revenus de capitaux mobiliers (dividendes, tantièmes, intérêts d'obligations et de bons du Trésor).",
             ],
           },
           {
-            h: "Impôt sur les bénéfices — réel ou forfaitaire",
+            h: "Impôt sur les bénéfices, réel ou forfaitaire",
             body: [
               "Les bénéfices des sociétés sont établis selon la méthode du bénéfice réel ou du bénéfice forfaitaire, selon la taille et la structure de l'entreprise :",
             ],
@@ -584,13 +584,13 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Quel est le taux de l'impôt sur les bénéfices des sociétés ?", a: "Selon la méthode du bénéfice réel, les bénéfices des sociétés sont imposés à un taux forfaitaire de 17%. Les entreprises individuelles et les sociétés de personnes sont imposées sur des bénéfices forfaitaires à des taux progressifs de 4%–25%." },
           { q: "Quand suis-je résident fiscal du Liban ?", a: "Si vous y disposez d'un lieu d'activité ou d'un foyer familial permanent, ou si vous êtes présent plus de 183 jours sur toute période de 12 mois." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Loi libanaise sur l'impôt sur le revenu", "Ministère des Finances libanais"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Loi libanaise sur l'impôt sur le revenu", "Ministère des Finances libanais"],
       },
       {
         slug: "corporate-income-tax-lebanon",
         title: "L'impôt sur les sociétés au Liban",
         category: "Fiscalité",
-        summary: "Comment les sociétés et les succursales sont imposées sur leurs bénéfices — et qui est exonéré.",
+        summary: "Comment les sociétés et les succursales sont imposées sur leurs bénéfices, et qui est exonéré.",
         answer:
           "Les sociétés libanaises (SARL, SAL) et les succursales de sociétés étrangères sont imposées sur les bénéfices nets à 17% selon la méthode du bénéfice réel. Les dividendes distribués supportent une retenue à la source de 10%. Les sociétés holding et offshore sont exonérées d'impôt sur les sociétés et acquittent à la place un impôt annuel forfaitaire, tandis que certains organismes (éducatifs, à but non lucratif, certains transports) sont exonérés de façon permanente.",
         sections: [
@@ -605,7 +605,7 @@ const fr: DeepPartial<Dictionary> = {
                 ["Bénéfices de la société (bénéfice réel)", "17% sur le bénéfice net imposable"],
                 ["Bénéfices de succursale", "17%, plus distribution réputée de dividendes imposée à 10%"],
                 ["Distributions de dividendes", "Retenue de 10% (réductible à 5% sous conditions)"],
-                ["Sociétés holding et offshore", "Exonérées — impôt annuel forfaitaire de LBP 50 millions"],
+                ["Sociétés holding et offshore", "Exonérées, impôt annuel forfaitaire de LBP 50 millions"],
                 ["Entreprises individuelles / sociétés de personnes", "Bénéfice forfaitaire, progressif 4%–25%"],
               ],
             },
@@ -634,14 +634,14 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Comment les succursales de sociétés étrangères sont-elles imposées ?", a: "À 17%, et leurs bénéfices sont réputés distribués sous forme de dividendes soumis à une taxe supplémentaire de distribution de dividendes de 10%." },
           { q: "Les sociétés holding et offshore sont-elles imposées sur les bénéfices ?", a: "Non. Elles sont exonérées d'impôt sur les sociétés et acquittent à la place un impôt annuel forfaitaire de LBP 50 millions." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Loi libanaise sur l'impôt sur le revenu", "Loi de finances 2022"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Loi libanaise sur l'impôt sur le revenu", "Loi de finances 2022"],
       },
       {
         slug: "withholding-tax-lebanon",
         title: "Les retenues à la source au Liban",
         category: "Fiscalité",
         summary:
-          "Retenues sur les non-résidents, les intérêts, les dividendes et les capitaux mobiliers — taux, formulaires et échéances.",
+          "Retenues sur les non-résidents, les intérêts, les dividendes et les capitaux mobiliers, taux, formulaires et échéances.",
         answer:
           "Le Liban applique plusieurs retenues à la source : les non-résidents sont soumis à un taux effectif de 3.4% sur les ventes de matériels et d'équipements et de 8.5% sur les services ; les intérêts sur comptes bancaires et bons du Trésor sont imposés à 10% ; les dividendes à 10% (réductible à 5%) ; et les revenus de capitaux mobiliers à 10%. La retenue sur les non-résidents est déclarée trimestriellement (formulaire G10) et annuellement (formulaire G5).",
         sections: [
@@ -653,8 +653,8 @@ const fr: DeepPartial<Dictionary> = {
             table: {
               head: ["Retenue", "Taux"],
               rows: [
-                ["Non-résident — vente de matériels et équipements", "3.4%"],
-                ["Non-résident — services", "8.5%"],
+                ["Non-résident, vente de matériels et équipements", "3.4%"],
+                ["Non-résident, services", "8.5%"],
                 ["Intérêts (comptes bancaires et bons du Trésor)", "10% (non remboursable)"],
                 ["Dividendes", "10% (réductible à 5%)"],
                 ["Revenus de capitaux mobiliers", "10%"],
@@ -664,7 +664,7 @@ const fr: DeepPartial<Dictionary> = {
           {
             h: "Intérêts, dividendes et capitaux mobiliers",
             body: [
-              "Les intérêts perçus sur les comptes auprès de banques libanaises et sur les bons du Trésor sont soumis à une retenue à la source de 10%, non remboursable et non reportable. Les dividendes versés aux actionnaires résidents et non-résidents font l'objet d'une retenue de 10% (réductible à 5% sous conditions spécifiques). Une taxe de 10% s'applique aussi plus largement aux revenus de capitaux mobiliers — dividendes et intérêts distribués, tantièmes des administrateurs et des actionnaires, distributions de réserves ou de bénéfices, et intérêts sur les prêts consentis aux sociétés.",
+              "Les intérêts perçus sur les comptes auprès de banques libanaises et sur les bons du Trésor sont soumis à une retenue à la source de 10%, non remboursable et non reportable. Les dividendes versés aux actionnaires résidents et non-résidents font l'objet d'une retenue de 10% (réductible à 5% sous conditions spécifiques). Une taxe de 10% s'applique aussi plus largement aux revenus de capitaux mobiliers, dividendes et intérêts distribués, tantièmes des administrateurs et des actionnaires, distributions de réserves ou de bénéfices, et intérêts sur les prêts consentis aux sociétés.",
             ],
           },
           {
@@ -679,7 +679,7 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Quelle est la retenue à la source sur les non-résidents ?", a: "Un taux effectif de 3.4% sur les ventes de matériels et d'équipements et de 8.5% sur les services, déclaré trimestriellement (G10) et annuellement (G5)." },
           { q: "Comment les intérêts et les dividendes sont-ils imposés ?", a: "Les intérêts sur comptes bancaires et bons du Trésor sont imposés à 10% (non remboursable) ; les dividendes à 10%, réductible à 5% sous conditions spécifiques." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Loi de finances 2022", "Décisions MoF 322 et 323 (2023)"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Loi de finances 2022", "Décisions MoF 322 et 323 (2023)"],
       },
       {
         slug: "vat-in-lebanon",
@@ -707,13 +707,13 @@ const fr: DeepPartial<Dictionary> = {
           {
             h: "Immatriculation et déclarations",
             body: [
-              "Les entreprises dont le chiffre d'affaires imposable dépasse le seuil d'immatriculation doivent s'immatriculer, facturer la VAT sur les livraisons imposables, émettre des factures conformes et déposer des déclarations périodiques (généralement trimestrielles) — en acquittant la VAT nette due ou en réclamant un remboursement. Les déclarations de VAT sont déposées par voie électronique.",
+              "Les entreprises dont le chiffre d'affaires imposable dépasse le seuil d'immatriculation doivent s'immatriculer, facturer la VAT sur les livraisons imposables, émettre des factures conformes et déposer des déclarations périodiques (généralement trimestrielles), en acquittant la VAT nette due ou en réclamant un remboursement. Les déclarations de VAT sont déposées par voie électronique.",
             ],
           },
           {
             h: "Factures en devises",
             body: [
-              "Le 27 avril 2023, le ministère des Finances a publié le Décret 11230, modifiant l'article 18 de la loi VAT 7308. Lorsqu'un prix est libellé en devise, et jusqu'à l'établissement d'un taux de change unifié, la contre-valeur servant au calcul de la VAT est déterminée au taux Sayrafa, puis au taux de marché — et non à l'ancien taux officiel.",
+              "Le 27 avril 2023, le ministère des Finances a publié le Décret 11230, modifiant l'article 18 de la loi VAT 7308. Lorsqu'un prix est libellé en devise, et jusqu'à l'établissement d'un taux de change unifié, la contre-valeur servant au calcul de la VAT est déterminée au taux Sayrafa, puis au taux de marché, et non à l'ancien taux officiel.",
             ],
             note: "Le seuil d'immatriculation et les règles de taux de change évoluent dans le temps. Confirmez les seuils et taux actuels auprès du ministère des Finances ou de K&K.",
           },
@@ -723,7 +723,7 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Qu'est-ce qui est exonéré ou détaxé ?", a: "Les exportations et le transport international sont détaxés ; la banque, les services financiers et l'assurance sont exonérés." },
           { q: "Comment la VAT est-elle calculée sur les factures en devises ?", a: "Depuis le Décret 11230 (avril 2023), au taux Sayrafa puis au taux de marché, et non à l'ancien taux officiel." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Loi VAT n° 7308 (art. 18)", "Décret MoF 11230 (2023)"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Loi VAT n° 7308 (art. 18)", "Décret MoF 11230 (2023)"],
       },
       {
         slug: "nssf-end-of-service-lebanon",
@@ -764,7 +764,7 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Quels sont les taux de cotisation à la NSSF ?", a: "Employeur : 8% maladie et maternité (max LBP 90 millions/mois), 6% prestations familiales (max LBP 12 millions/mois), 8.5% des revenus annuels pour la fin de service (sans plafond). Salarié : 3% maladie et maternité (max LBP 90 millions/mois)." },
           { q: "Quels pays ont un accord de totalisation avec le Liban ?", a: "La France, la Belgique, l'Italie et le Royaume-Uni." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Caisse nationale de sécurité sociale (NSSF)", "Loi libanaise sur la sécurité sociale"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Caisse nationale de sécurité sociale (NSSF)", "Loi libanaise sur la sécurité sociale"],
       },
       {
         slug: "payroll-tax-lebanon",
@@ -772,7 +772,7 @@ const fr: DeepPartial<Dictionary> = {
         category: "Paie",
         summary: "Impôt progressif sur les salaires, règle de territorialité, permis de travail et bases du droit du travail.",
         answer:
-          "Les employeurs retiennent et déclarent l'impôt sur les salaires à des taux progressifs de 2% à 25%. L'impôt sur les salaires suit le principe de territorialité — les salaires sont imposés au Liban lorsque le bénéficiaire y est résident, que le service y est exécuté, ou que le salaire est mis à la charge d'une entité libanaise. Les cotisations NSSF sont déclarées parallèlement.",
+          "Les employeurs retiennent et déclarent l'impôt sur les salaires à des taux progressifs de 2% à 25%. L'impôt sur les salaires suit le principe de territorialité, les salaires sont imposés au Liban lorsque le bénéficiaire y est résident, que le service y est exécuté, ou que le salaire est mis à la charge d'une entité libanaise. Les cotisations NSSF sont déclarées parallèlement.",
         sections: [
           {
             h: "Impôt progressif sur les salaires (2%–25%)",
@@ -798,7 +798,7 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Quels sont les taux de l'impôt sur les salaires au Liban ?", a: "L'impôt sur les salaires est prélevé à des taux progressifs de 2% à 25%, retenu et déclaré par l'employeur." },
           { q: "Quand un salaire est-il imposable au Liban ?", a: "Selon le principe de territorialité : lorsque le salarié est résident au Liban, que le service y est exécuté, ou que le salaire est mis à la charge d'une entité libanaise." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Loi libanaise sur l'impôt sur le revenu", "Code du travail libanais"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Loi libanaise sur l'impôt sur le revenu", "Code du travail libanais"],
       },
       {
         slug: "property-municipal-other-taxes-lebanon",
@@ -812,7 +812,7 @@ const fr: DeepPartial<Dictionary> = {
           {
             h: "Taxe foncière sur les propriétés bâties (BPT)",
             body: [
-              "La BPT est un impôt annuel progressif compris entre 4% et 14% des produits locatifs nets — les produits locatifs bruts diminués des déductions admises telles que l'amortissement et les frais de gestion. Elle est déclarée par voie électronique.",
+              "La BPT est un impôt annuel progressif compris entre 4% et 14% des produits locatifs nets, les produits locatifs bruts diminués des déductions admises telles que l'amortissement et les frais de gestion. Elle est déclarée par voie électronique.",
             ],
           },
           {
@@ -840,13 +840,13 @@ const fr: DeepPartial<Dictionary> = {
           { q: "Quel est le taux de la taxe foncière sur les propriétés bâties ?", a: "Un impôt annuel progressif de 4% à 14% sur les produits locatifs nets." },
           { q: "À combien s'élève la taxe municipale sur les loyers ?", a: "7% du loyer dû pour les bureaux et 6% pour les habitations." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Ministère des Finances libanais", "Douanes libanaises"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Ministère des Finances libanais", "Douanes libanaises"],
       },
       {
         slug: "offshore-holding-companies-lebanon",
         title: "Sociétés offshore et holding au Liban",
         category: "Structuration",
-        summary: "Les régimes spéciaux des sociétés holding et offshore — et l'impôt forfaitaire annuel de LBP 50 millions.",
+        summary: "Les régimes spéciaux des sociétés holding et offshore, et l'impôt forfaitaire annuel de LBP 50 millions.",
         answer:
           "Les sociétés holding et offshore libanaises sont immatriculées comme sociétés anonymes (SAL) mais sont exonérées d'impôt sur les sociétés et de taxe sur les dividendes. À la place, chacune acquitte un impôt annuel forfaitaire de LBP 50 millions (depuis 2022). Toutes deux n'ont besoin que d'un seul commissaire aux comptes, et les contrats offshore relatifs à une activité à l'étranger sont exonérés du droit de timbre libanais.",
         sections: [
@@ -864,7 +864,7 @@ const fr: DeepPartial<Dictionary> = {
           {
             h: "Sociétés offshore",
             body: [
-              "Régie par le Décret législatif 46, une société offshore libanaise est une société anonyme qui exerce exclusivement des activités hors du Liban — négociation et signature de contrats exécutés à l'étranger, et préparation d'études et de consultations utilisées à l'étranger. Elle peut être fondée par un actionnaire unique, n'a besoin que d'un seul commissaire aux comptes, et ses contrats offshore sont exonérés du droit de timbre libanais.",
+              "Régie par le Décret législatif 46, une société offshore libanaise est une société anonyme qui exerce exclusivement des activités hors du Liban, négociation et signature de contrats exécutés à l'étranger, et préparation d'études et de consultations utilisées à l'étranger. Elle peut être fondée par un actionnaire unique, n'a besoin que d'un seul commissaire aux comptes, et ses contrats offshore sont exonérés du droit de timbre libanais.",
             ],
             table: {
               head: ["Véhicule", "Impôt sur les sociétés", "Impôt annuel", "Commissaire aux comptes"],
@@ -873,14 +873,14 @@ const fr: DeepPartial<Dictionary> = {
                 ["Société offshore", "Exonéré", "Forfait de LBP 50 millions", "Un"],
               ],
             },
-            note: "Ces régimes comportent des conditions et les chiffres évoluent dans le temps. Prenez conseil avant toute constitution — K&K structure régulièrement des véhicules holding et offshore.",
+            note: "Ces régimes comportent des conditions et les chiffres évoluent dans le temps. Prenez conseil avant toute constitution, K&K structure régulièrement des véhicules holding et offshore.",
           },
         ],
         faq: [
           { q: "Comment les sociétés holding et offshore sont-elles imposées ?", a: "Toutes deux sont exonérées d'impôt sur les sociétés et de taxe sur les dividendes, et acquittent à la place un impôt annuel forfaitaire de LBP 50 millions." },
           { q: "Une société offshore peut-elle avoir un actionnaire unique ?", a: "Oui. Les sociétés offshore peuvent être fondées par un actionnaire unique et ne requièrent qu'un seul commissaire aux comptes." },
         ],
-        sources: ["K&K — Doing Business in Lebanon (mise à jour avril 2024)", "Décret législatif 46/1983 (Offshore)", "Loi de finances 2022"],
+        sources: ["K&K, Doing Business in Lebanon (mise à jour avril 2024)", "Décret législatif 46/1983 (Offshore)", "Loi de finances 2022"],
       },
     ],
   },
@@ -889,11 +889,11 @@ const fr: DeepPartial<Dictionary> = {
     eyebrow: "Nos clients",
     title: "La confiance de plus de 20 secteurs",
     subtitle:
-      "Des entreprises gérées par leur propriétaire aux groupes établis, ONG et sociétés offshore — nous apportons le même soin et les mêmes normes à chaque client.",
+      "Des entreprises gérées par leur propriétaire aux groupes établis, ONG et sociétés offshore, nous apportons le même soin et les mêmes normes à chaque client.",
     approachTitle: "Notre approche",
     approach: [
       "Notre cabinet offre une vaste expertise technique et une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil, assurant une qualité constante et un service irréprochable à une clientèle diversifiée, dans des secteurs grands et petits, internationaux et locaux.",
-      "Chaque client conserve une relation avec un interlocuteur expérimenté, piloté par un associé — nous sommes assez grands pour gérer des mandats exigeants et assez petits pour rester proches.",
+      "Chaque client conserve une relation avec un interlocuteur expérimenté, piloté par un associé, nous sommes assez grands pour gérer des mandats exigeants et assez petits pour rester proches.",
     ],
     industriesTitle: "Les secteurs que nous servons",
     industriesSubtitle:
@@ -929,7 +929,7 @@ const fr: DeepPartial<Dictionary> = {
     eyebrow: "Actualités",
     title: "Actualités fiscales et réglementaires libanaises",
     subtitle:
-      "Des points d'information réguliers et factuels sur la NSSF, les circulaires du ministère des Finances, la VAT et le budget annuel — rédigés par nos associés.",
+      "Des points d'information réguliers et factuels sur la NSSF, les circulaires du ministère des Finances, la VAT et le budget annuel, rédigés par nos associés.",
     author: "Elia Krayem",
     authorRole: "Associé gérant, expert-comptable assermenté",
     byLabel: "Par",
@@ -959,7 +959,7 @@ const fr: DeepPartial<Dictionary> = {
       },
       {
         slug: "nssf-contributions-foreign-currency-salaries",
-        title: "NSSF — Explication des cotisations sur les traitements et salaires",
+        title: "NSSF, Explication des cotisations sur les traitements et salaires",
         date: "2023-09-19",
         category: "NSSF",
         excerpt:
@@ -987,7 +987,7 @@ const fr: DeepPartial<Dictionary> = {
         excerpt:
           "Le plafond de couverture de l'assurance maladie a été relevé, à compter de septembre 2023.",
         body: [
-          "Le Décret n° 11928 a relevé le plafond de couverture de l'assurance maladie de la NSSF de LBP 5.6 millions à LBP 18 millions par mois, à compter de septembre 2023 — un changement important de l'assiette de cotisation.",
+          "Le Décret n° 11928 a relevé le plafond de couverture de l'assurance maladie de la NSSF de LBP 5.6 millions à LBP 18 millions par mois, à compter de septembre 2023, un changement important de l'assiette de cotisation.",
         ],
       },
       {
@@ -1013,7 +1013,7 @@ const fr: DeepPartial<Dictionary> = {
       },
       {
         slug: "mof-decree-11230-vat-sayrafa",
-        title: "Décret MoF n° 11230 — VAT au taux Sayrafa",
+        title: "Décret MoF n° 11230, VAT au taux Sayrafa",
         date: "2023-04-27",
         category: "VAT",
         excerpt:
@@ -1024,7 +1024,7 @@ const fr: DeepPartial<Dictionary> = {
       },
       {
         slug: "nssf-decree-11228-school-allowances",
-        title: "Décret NSSF n° 11228 — Allocations scolaires",
+        title: "Décret NSSF n° 11228, Allocations scolaires",
         date: "2023-04-26",
         category: "NSSF",
         excerpt:
@@ -1035,7 +1035,7 @@ const fr: DeepPartial<Dictionary> = {
       },
       {
         slug: "decree-11226-minimum-salary",
-        title: "Décret n° 11226 — Augmentation du salaire minimum",
+        title: "Décret n° 11226, Augmentation du salaire minimum",
         date: "2023-04-18",
         category: "Paie",
         excerpt:
@@ -1051,7 +1051,7 @@ const fr: DeepPartial<Dictionary> = {
     eyebrow: "Contact",
     title: "Parlons-en",
     subtitle:
-      "Parlez-nous de votre entreprise et de vos besoins. Un associé vous répondra — généralement dans un délai d'un jour ouvrable.",
+      "Parlez-nous de votre entreprise et de vos besoins. Un associé vous répondra, généralement dans un délai d'un jour ouvrable.",
     formTitle: "Envoyez-nous un message",
     formSubtitle: "Vous préférez échanger de vive voix ? Appelez-nous ou écrivez-nous par e-mail.",
     labels: {
@@ -1066,7 +1066,7 @@ const fr: DeepPartial<Dictionary> = {
       sending: "Envoi en cours…",
       required: "obligatoire",
     },
-    successTitle: "Merci — votre message a été envoyé.",
+    successTitle: "Merci, votre message a été envoyé.",
     successBody: "Un associé de K&K vous contactera sous peu.",
     errorMsg: "Une erreur s'est produite. Veuillez réessayer, ou nous écrire directement.",
     privacyNote:
@@ -1098,7 +1098,7 @@ const fr: DeepPartial<Dictionary> = {
       "Un large éventail de secteurs et de missions",
     ],
     areasTitle: "Nos recrutements",
-    areasSubtitle: "Nous recrutons dans nos quatre métiers — du jeune diplômé au professionnel expérimenté.",
+    areasSubtitle: "Nous recrutons dans nos quatre métiers, du jeune diplômé au professionnel expérimenté.",
     areas: [
       { title: "Audit & Assurance", body: "Des auditeurs débutants aux auditeurs seniors, sur des audits légaux et volontaires selon les normes ISA." },
       { title: "Fiscalité", body: "Des collaborateurs et consultants fiscaux conseillant sur l'impôt sur le revenu libanais, la VAT, la NSSF et la paie." },
@@ -1109,7 +1109,7 @@ const fr: DeepPartial<Dictionary> = {
     openBody:
       "Nous n'affichons pas toujours de postes précis, mais nous sommes continuellement intéressés par des auditeurs, comptables et fiscalistes talentueux. Envoyez-nous vos coordonnées et votre CV : nous vous contacterons dès qu'une opportunité se présente.",
     applyTitle: "Postuler",
-    applySubtitle: "Parlez-nous de vous, choisissez le domaine qui vous intéresse et joignez votre CV — un associé examinera votre candidature.",
+    applySubtitle: "Parlez-nous de vous, choisissez le domaine qui vous intéresse et joignez votre CV, un associé examinera votre candidature.",
     form: {
       position: "Domaine d'intérêt",
       selectArea: "Choisissez un domaine",
@@ -1118,7 +1118,7 @@ const fr: DeepPartial<Dictionary> = {
       cvHint: "PDF ou Word · 4 Mo max",
       cvNote: "Votre candidature et votre CV parviennent directement à notre équipe recrutement.",
       fileError: "Merci de joindre un document PDF ou Word de moins de 4 Mo.",
-      successTitle: "Merci — votre candidature a bien été reçue.",
+      successTitle: "Merci, votre candidature a bien été reçue.",
       successBody: "Un associé de K&K examinera votre candidature et votre CV, et vous recontactera.",
     },
     ctaTitle: "Postulez dès aujourd'hui",
@@ -1134,13 +1134,13 @@ const fr: DeepPartial<Dictionary> = {
       {
         h: "Qui nous sommes",
         body: [
-          "K&K Auditors & Consultants Civil Co. (« K&K », « nous ») est un cabinet d'audit, de fiscalité et de conseil situé à Badaro, Beyrouth, Liban. Nous nous engageons à protéger la confidentialité des informations qui nous sont confiées — un principe au cœur de notre profession.",
+          "K&K Auditors & Consultants Civil Co. (« K&K », « nous ») est un cabinet d'audit, de fiscalité et de conseil situé à Badaro, Beyrouth, Liban. Nous nous engageons à protéger la confidentialité des informations qui nous sont confiées, un principe au cœur de notre profession.",
         ],
       },
       {
         h: "Informations que nous collectons",
         body: [
-          "Lorsque vous nous contactez via ce site web, nous collectons les informations que vous fournissez — telles que votre nom, votre e-mail, votre numéro de téléphone, votre société et votre message — afin de pouvoir répondre à votre demande. Nous pouvons également collecter des données analytiques anonymes de base sur la façon dont les visiteurs utilisent le site.",
+          "Lorsque vous nous contactez via ce site web, nous collectons les informations que vous fournissez, telles que votre nom, votre e-mail, votre numéro de téléphone, votre société et votre message, afin de pouvoir répondre à votre demande. Nous pouvons également collecter des données analytiques anonymes de base sur la façon dont les visiteurs utilisent le site.",
         ],
       },
       {
@@ -1172,14 +1172,14 @@ const fr: DeepPartial<Dictionary> = {
 
   footer: {
     desc:
-      "Un cabinet à service complet d'experts-comptables assermentés à Badaro, Beyrouth — audit, fiscalité et conseil aux normes internationales, et membre exclusif de GMN International au Liban.",
+      "Un cabinet à service complet d'experts-comptables assermentés à Badaro, Beyrouth, audit, fiscalité et conseil aux normes internationales, et membre exclusif de GMN International au Liban.",
     companyTitle: "Cabinet",
     servicesTitle: "Services",
     resourcesTitle: "Ressources",
     contactTitle: "Contact",
     rights: "Tous droits réservés.",
     disclaimer:
-      "Les informations de ce site constituent une information générale, et non un conseil fiscal ou juridique. Les taux et les règles évoluent — confirmez votre situation auprès de K&K ou de l'autorité compétente.",
+      "Les informations de ce site constituent une information générale, et non un conseil fiscal ou juridique. Les taux et les règles évoluent, confirmez votre situation auprès de K&K ou de l'autorité compétente.",
     privacy: "Confidentialité et cookies",
     followUs: "Suivez-nous",
   },

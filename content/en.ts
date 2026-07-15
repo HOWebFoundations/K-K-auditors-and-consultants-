@@ -55,20 +55,20 @@ const en: Dictionary = {
   },
 
   hero: {
-    eyebrow: 'Audit · Tax · Advisory — Beirut, Lebanon',
+    eyebrow: 'Audit · Tax · Advisory, Beirut, Lebanon',
     title: 'The audit and advisory firm behind Lebanon’s ambitious businesses',
     subtitle:
-      'K&K Auditors & Consultants is a full-service firm of sworn Certified Public Accountants in Badaro, Beirut — combining deep local knowledge with international standards through our GMN International membership.',
+      'K&K Auditors & Consultants is a full-service firm of sworn Certified Public Accountants in Badaro, Beirut, combining deep local knowledge with international standards through our GMN International membership.',
     badges: [
       'Sworn CPAs · LACPA members',
-      'GMN International — exclusive Lebanon member',
+      'GMN International, exclusive Lebanon member',
       '25+ years of experience',
     ],
     cardTitle: 'Why firms choose K&K',
     cardPoints: [
       'Audited financial statements to IFRS and ISA standards',
       'Lebanese tax, VAT, NSSF and payroll expertise',
-      'A single, senior point of contact — partner-led',
+      'A single, senior point of contact, partner-led',
       'Confidential, independent and ethics-first',
     ],
   },
@@ -85,12 +85,12 @@ const en: Dictionary = {
     aboutTitle: 'A full-service accounting firm serving Lebanon and beyond',
     aboutBody: [
       'K&K CPAs is a full-service accounting and auditing firm serving clients throughout Lebanon and abroad. We provide professional, personalized guidance across a wide range of financial and business needs.',
-      'Led by two sworn Certified Public Accountants and a team of 14, we pair broad technical expertise with deep local market knowledge in audit, tax, risk management and advisory — delivering consistent quality to clients large and small, global and local.',
+      'Led by two sworn Certified Public Accountants and a team of 14, we pair broad technical expertise with deep local market knowledge in audit, tax, risk management and advisory, delivering consistent quality to clients large and small, global and local.',
     ],
     aboutPoints: [
       'Managing Partner is a Sworn CPA and LACPA member',
       'Exclusive representative of GMN International in Lebanon',
-      'Ethics before profit — loyal to our clients and profession',
+      'Ethics before profit, loyal to our clients and profession',
     ],
     servicesEyebrow: 'What we do',
     servicesTitle: 'Services built around your business',
@@ -99,11 +99,11 @@ const en: Dictionary = {
     whyEyebrow: 'Why K&K',
     whyTitle: 'The credibility a leading firm should offer',
     whySubtitle:
-      'We assert less and prove more — with credentialed people, international affiliation and a genuinely useful body of Lebanese tax knowledge.',
+      'We assert less and prove more, with credentialed people, international affiliation and a genuinely useful body of Lebanese tax knowledge.',
     why: [
       {
         title: 'Credentialed partners',
-        body: 'Sworn CPAs and LACPA members holding CMA, ACCA CertIFR, forensic-audit and business-valuation diplomas — real expertise, not a brochure.',
+        body: 'Sworn CPAs and LACPA members holding CMA, ACCA CertIFR, forensic-audit and business-valuation diplomas: real expertise, not a brochure.',
       },
       {
         title: 'International standards, local knowledge',
@@ -115,13 +115,13 @@ const en: Dictionary = {
       },
       {
         title: 'Deep Lebanese tax expertise',
-        body: 'Income tax, VAT, NSSF, payroll and municipal tax — we track every circular and decree so your business stays compliant.',
+        body: 'Income tax, VAT, NSSF, payroll and municipal tax: we track every circular and decree so your business stays compliant.',
       },
     ],
     gmnEyebrow: 'International reach',
     gmnTitle: 'Exclusive representative of GMN International in Lebanon',
     gmnBody:
-      'Since June 2012, K&K has been selected to represent GMN International exclusively in Lebanon — an association of legally independent, carefully selected accounting firms, headquartered in London and formed in the 1970s. Membership gives our clients accountancy, audit, tax and consultancy support worldwide, with the same care and skill you find locally.',
+      'Since June 2012, K&K has been selected to represent GMN International exclusively in Lebanon, an association of legally independent, carefully selected accounting firms, headquartered in London and formed in the 1970s. Membership gives our clients accountancy, audit, tax and consultancy support worldwide, with the same care and skill you find locally.',
     industriesEyebrow: 'Sectors',
     industriesTitle: 'Deep experience across 20+ industries',
     industriesSubtitle:
@@ -129,15 +129,15 @@ const en: Dictionary = {
     insightsEyebrow: 'Insights',
     insightsTitle: 'Lebanese tax & regulatory updates',
     insightsSubtitle:
-      'Timely briefings on the NSSF, Ministry of Finance circulars, VAT and the annual budget — written by our partners.',
+      'Timely briefings on the NSSF, Ministry of Finance circulars, VAT and the annual budget, written by our partners.',
     processEyebrow: 'How we work',
     processTitle: 'A method you could audit',
     processSubtitle:
-      'Every engagement follows the same disciplined arc — so you always know where you stand, and nothing arrives as a surprise.',
+      'Every engagement follows the same disciplined arc, so you always know where you stand, and nothing arrives as a surprise.',
     process: [
       {
         title: 'Understand',
-        body: 'We immerse ourselves in your business, your sector and your obligations — what you file, what you risk, what you want to achieve.',
+        body: 'We immerse ourselves in your business, your sector and your obligations, what you file, what you risk, what you want to achieve.',
       },
       {
         title: 'Plan',
@@ -145,7 +145,7 @@ const en: Dictionary = {
       },
       {
         title: 'Execute',
-        body: 'Fieldwork to international standards — IFRS and ISA — with proactive communication instead of end-of-audit surprises.',
+        body: 'Fieldwork to international standards, IFRS and ISA, with proactive communication instead of end-of-audit surprises.',
       },
       {
         title: 'Report & advise',
@@ -165,7 +165,7 @@ const en: Dictionary = {
     storyTitle: 'Who we are',
     story: [
       'K&K CPAs is a full-service accounting and auditing firm serving clients throughout Lebanon and abroad, dedicated to providing professional, personalized services and guidance across a wide range of financial and business needs.',
-      'Our firm offers broad technical expertise and deep local market knowledge in audit, tax, risk management and advisory — providing consistent quality and impeccable service to diverse clients in industries large and small, global and local.',
+      'Our firm offers broad technical expertise and deep local market knowledge in audit, tax, risk management and advisory, providing consistent quality and impeccable service to diverse clients in industries large and small, global and local.',
       'We are led by two sworn Certified Public Accountants and a team of 14 professionals, and we are the exclusive representative of GMN International in Lebanon.',
     ],
     valuesTitle: 'What we stand for',
@@ -199,7 +199,7 @@ const en: Dictionary = {
         bio: 'Elia leads the firm’s audit and advisory practice with more than 25 years of experience. A Sworn CPA, he holds a Master’s in Management & Organisation from Jean Moulin Lyon 3 University (France) and specialist qualifications in management accounting, international financial reporting, forensic audit and business valuation.',
         credentials: [
           'CMA (Australia)',
-          'ACCA — CertIFR',
+          'ACCA, CertIFR',
           'Forensic Audit Diploma',
           'Business Valuation Diploma',
           'MSc Management & Organisation, Lyon 3',
@@ -224,22 +224,22 @@ const en: Dictionary = {
     ],
     teamTitle: 'A team of 14 professionals',
     teamBody:
-      'Beyond our partners, K&K is a team of 14 accountants, auditors and tax specialists — enough depth to serve demanding mandates, small enough that every client keeps a senior, personal relationship.',
+      'Beyond our partners, K&K is a team of 14 accountants, auditors and tax specialists, enough depth to serve demanding mandates, small enough that every client keeps a senior, personal relationship.',
     credentialsTitle: 'Credentials & standards',
     credentialsBody:
       'We work to recognised international standards and hold the professional registrations that a top-tier finance firm should demonstrate.',
     credentialsList: [
-      'Sworn CPA — registered with the Lebanese Association of CPAs (LACPA)',
+      'Sworn CPA, registered with the Lebanese Association of CPAs (LACPA)',
       'Audits conducted to International Standards on Auditing (ISA)',
       'Financial statements prepared under IFRS',
       'Independence and confidentiality on every engagement',
       'Member of ICMA and AOCPA',
     ],
-    gmnTitle: 'GMN International — our global network',
+    gmnTitle: 'GMN International, our global network',
     gmnBody: [
       'K&K Auditors and Consultants was selected to represent GMN International exclusively in Lebanon, starting June 2012.',
-      'GMNI is an association of quality professional accounting firms formed in the 1970s — carefully selected firms, established and respected in their own countries. Its registered office is in London, United Kingdom, and it operates as an association of legally independent accounting firms.',
-      'Its mission is to be a leading association of quality accounting firms worldwide, providing enhanced service offerings locally for the benefit of firms, their clients and their staff — without compromising each firm’s sovereignty and professional independence.',
+      'GMNI is an association of quality professional accounting firms formed in the 1970s, carefully selected firms, established and respected in their own countries. Its registered office is in London, United Kingdom, and it operates as an association of legally independent accounting firms.',
+      'Its mission is to be a leading association of quality accounting firms worldwide, providing enhanced service offerings locally for the benefit of firms, their clients and their staff, without compromising each firm’s sovereignty and professional independence.',
     ],
     gmnPoints: [
       'Accountancy, audit, tax and consultancy support worldwide',
@@ -252,7 +252,7 @@ const en: Dictionary = {
     eyebrow: 'Our services',
     title: 'Full-service audit, tax and advisory',
     subtitle:
-      'Four core practices covering the complete financial lifecycle of a Lebanese business — each led by a partner and delivered to international standards.',
+      'Four core practices covering the complete financial lifecycle of a Lebanese business, each led by a partner and delivered to international standards.',
     includesTitle: 'What’s included',
     processTitle: 'How we work',
     forWhoTitle: 'Who it’s for',
@@ -264,10 +264,10 @@ const en: Dictionary = {
         title: 'Audit & Assurance',
         tagline: 'Audited financial statements you and your stakeholders can trust',
         summary:
-          'Statutory and voluntary audits, reviews and compilations, and employee benefit-plan audits — conducted to International Standards on Auditing.',
+          'Statutory and voluntary audits, reviews and compilations, and employee benefit-plan audits, conducted to International Standards on Auditing.',
         intro: [
-          'An audit is more than a statutory requirement — it is the credibility that lets banks, investors, partners and regulators trust your numbers. K&K delivers independent, rigorous assurance to International Standards on Auditing (ISA), with financial statements prepared under IFRS.',
-          'As sworn CPAs and LACPA members, our sign-off carries weight with Lebanese banks, the tax authorities and international counterparties alike. Lebanese joint-stock companies (SAL) must have their financial statements audited annually by a principal auditor, and holding and offshore companies require an auditor too — we act in each of these capacities.',
+          'An audit is more than a statutory requirement, it is the credibility that lets banks, investors, partners and regulators trust your numbers. K&K delivers independent, rigorous assurance to International Standards on Auditing (ISA), with financial statements prepared under IFRS.',
+          'As sworn CPAs and LACPA members, our sign-off carries weight with Lebanese banks, the tax authorities and international counterparties alike. Lebanese joint-stock companies (SAL) must have their financial statements audited annually by a principal auditor, and holding and offshore companies require an auditor too, we act in each of these capacities.',
         ],
         includes: [
           'Statutory audit of annual financial statements',
@@ -304,9 +304,9 @@ const en: Dictionary = {
         title: 'Tax Planning & Compliance',
         tagline: 'Stay compliant and pay no more than you should',
         summary:
-          'Income tax, VAT, payroll and built-property tax — plus representation and negotiations with the Lebanese tax authorities.',
+          'Income tax, VAT, payroll and built-property tax, plus representation and negotiations with the Lebanese tax authorities.',
         intro: [
-          'Lebanese tax rules change constantly, through circulars, decrees and annual budget laws. K&K keeps your business compliant and efficient across every tax you face — and represents you directly before the tax administration.',
+          'Lebanese tax rules change constantly, through circulars, decrees and annual budget laws. K&K keeps your business compliant and efficient across every tax you face, and represents you directly before the tax administration.',
           'We advise on the right structure for your activity, prepare and file returns, and defend your position in assessments and negotiations.',
         ],
         includes: [
@@ -347,7 +347,7 @@ const en: Dictionary = {
           'Outsourced bookkeeping, management accounts and financial reporting that give you accurate, insightful numbers to run your business.',
         intro: [
           'Good decisions start with reliable numbers. K&K provides accounting and bookkeeping for businesses from start-ups to established enterprises, producing accurate and insightful financial information on a timely basis.',
-          'We tailor the engagement to your size — from full outsourced bookkeeping to periodic management reporting and support for your in-house finance team.',
+          'We tailor the engagement to your size, from full outsourced bookkeeping to periodic management reporting and support for your in-house finance team.',
         ],
         includes: [
           'Outsourced bookkeeping and ledger maintenance',
@@ -400,7 +400,7 @@ const en: Dictionary = {
           'Restructuring and performance improvement',
         ],
         process: [
-          { title: 'Understand', body: 'We get to the heart of your goal — growth, finance, a transaction or a decision.' },
+          { title: 'Understand', body: 'We get to the heart of your goal, growth, finance, a transaction or a decision.' },
           { title: 'Analyse', body: 'We build the numbers, the valuation or the model that informs the choice.' },
           { title: 'Advise', body: 'We give you a clear, defensible recommendation and help you execute.' },
         ],
@@ -427,9 +427,9 @@ const en: Dictionary = {
     eyebrow: 'Doing business in Lebanon',
     title: 'Lebanese tax & business resources',
     subtitle:
-      'Clear, practical guides to setting up a company, income tax, VAT, NSSF, withholding and more — the essentials of doing business in Lebanon, written by our partners.',
+      'Clear, practical guides to setting up a company, income tax, VAT, NSSF, withholding and more, the essentials of doing business in Lebanon, written by our partners.',
     intro:
-      'These guides bring our full “Doing Business in Lebanon” handbook onto plain, up-to-date web pages. Each answers the question first, then goes deeper — with the real Lebanese rates, thresholds and rules our clients ask about.',
+      'These guides bring our full “Doing Business in Lebanon” handbook onto plain, up-to-date web pages. Each answers the question first, then goes deeper, with the real Lebanese rates, thresholds and rules our clients ask about.',
     answerLabel: 'In short',
     items: [
       {
@@ -444,7 +444,7 @@ const en: Dictionary = {
           {
             h: 'The economy',
             body: [
-              'Lebanon is a parliamentary democratic republic on the eastern Mediterranean, with Beirut as its capital and the Lebanese pound (LBP) as its currency. The economy is service-oriented — services account for roughly 60% of GDP — with commerce, tourism, financial services, healthcare and education as major sub-sectors.',
+              'Lebanon is a parliamentary democratic republic on the eastern Mediterranean, with Beirut as its capital and the Lebanese pound (LBP) as its currency. The economy is service-oriented, services account for roughly 60% of GDP, with commerce, tourism, financial services, healthcare and education as major sub-sectors.',
               'Since late 2019 Lebanon has been navigating a severe financial crisis and a move to new exchange-rate references, which makes current, on-the-ground advice more important than ever. This is precisely where a local firm with international standards adds value.',
             ],
           },
@@ -466,7 +466,7 @@ const en: Dictionary = {
           {
             h: 'Accounting & compliance basics',
             body: [
-              'All business enterprises must keep adequate financial records — in Arabic, French or English — on an accrual basis and following International Financial Reporting Standards (IFRS). Payroll tax, VAT, corporate income tax and built-property-tax declarations are all filed electronically via the Ministry of Finance (finance.gov.lb).',
+              'All business enterprises must keep adequate financial records, in Arabic, French or English, on an accrual basis and following International Financial Reporting Standards (IFRS). Payroll tax, VAT, corporate income tax and built-property-tax declarations are all filed electronically via the Ministry of Finance (finance.gov.lb).',
             ],
             note: 'Lebanon’s exchange-rate and fiscal environment has been changing rapidly since 2019. Always confirm current figures with K&K or the relevant authority before acting.',
           },
@@ -475,14 +475,14 @@ const en: Dictionary = {
           { q: 'Can foreigners own a business in Lebanon?', a: 'Yes. Most entities can be fully foreign-owned (with limited exceptions such as real estate and exclusive commercial representation). One-shareholder companies are not permitted except for the SARL/LLC and offshore company.' },
           { q: 'What language must accounts be kept in?', a: 'Financial records may be maintained in Arabic, French or English, on an accrual basis and following IFRS.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'Lebanese Code of Commerce', 'Central Administration for Statistics (CAS)'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'Lebanese Code of Commerce', 'Central Administration for Statistics (CAS)'],
       },
       {
         slug: 'company-formation-lebanon',
         title: 'Company Formation in Lebanon',
         category: 'Structuring',
         summary:
-          'SAL, SARL, holding, offshore, branches and representative offices — which entity to choose and how to set it up.',
+          'SAL, SARL, holding, offshore, branches and representative offices, which entity to choose and how to set it up.',
         answer:
           'Lebanese law offers several entities: the joint-stock company (SAL, minimum capital LBP 30 million), the limited liability company (SARL/LLC, minimum capital LBP 5 million), holding and offshore companies, branches and representative offices of foreign companies, partnerships and sole proprietorships. Registration is made at the commercial court within two months of starting business, and most entities can be fully foreign-owned.',
         sections: [
@@ -494,20 +494,20 @@ const en: Dictionary = {
                 ['Joint-stock company (SAL)', 'LBP 30 million', 'Board of 3–12 (majority Lebanese); annual audit mandatory; required for banks & insurers'],
                 ['Limited liability (SARL/LLC)', 'LBP 5 million', '1–20 partners; can be fully foreign-owned; capital in “parts”'],
                 ['Holding company', 'LBP 30 million', 'Registered as SAL; owns/manages participations; special tax regime'],
-                ['Offshore company', '—', 'Activity outside Lebanon; single shareholder allowed; special tax regime'],
-                ['Branch of a foreign company', '—', 'No capital requirement; profits taxed at 17%'],
-                ['Representative office', '—', 'No profit-generating activity; not subject to income tax'],
+                ['Offshore company', ',', 'Activity outside Lebanon; single shareholder allowed; special tax regime'],
+                ['Branch of a foreign company', ',', 'No capital requirement; profits taxed at 17%'],
+                ['Representative office', ',', 'No profit-generating activity; not subject to income tax'],
               ],
             },
           },
           {
-            h: 'SAL — joint-stock company',
+            h: 'SAL, joint-stock company',
             body: [
               'The SAL can engage in all kinds of business activity and shareholders are liable only up to their subscriptions. Minimum capital is LBP 30 million, management is entrusted to a board of 3 to 12 members (the majority Lebanese, though the chairman may be foreign with the right permits), and the financial statements must be audited annually by a principal auditor. This form is legally required for banks, insurers and other financial institutions.',
             ],
           },
           {
-            h: 'SARL / LLC — limited liability company',
+            h: 'SARL / LLC, limited liability company',
             body: [
               'The SARL offers the same liability protection as the SAL with a lower minimum capital of LBP 5 million. Capital is divided into “parts” rather than shares, it can have from one up to twenty partners and can be fully owned by foreigners. Transfers of parts require the consent of partners representing at least three-quarters of the capital. Insurance, banking, fund management and air-transport activities cannot use this form.',
             ],
@@ -531,30 +531,30 @@ const en: Dictionary = {
           { q: 'Can a company have a single owner?', a: 'One-shareholder companies are generally not allowed, but a SARL (LLC) can be founded by a single partner, and an offshore company by a single shareholder.' },
           { q: 'How long does registration take?', a: 'Roughly 10–15 days once documents are properly authenticated; a SAL can take about a week.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'Lebanese Code of Commerce (art. 26 & 29)', 'Legislative Decrees 45/1983 & 46/1983'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'Lebanese Code of Commerce (art. 26 & 29)', 'Legislative Decrees 45/1983 & 46/1983'],
       },
       {
         slug: 'income-tax-lebanon',
         title: 'Income Tax in Lebanon',
         category: 'Tax',
         summary:
-          'The three income-tax schedules — profits, salaries and movable capital — and who pays what.',
+          'The three income-tax schedules, profits, salaries and movable capital, and who pays what.',
         answer:
-          'Lebanon does not tax income under a single treatment. The income tax law divides income into three chapters — profits from industrial, commercial and non-commercial professions; salaries, wages and pensions; and revenues from movable capital — each taxed separately under its own rules. Company profits under the real-profit method are taxed at 17%, while sole proprietorships and partnerships are taxed at progressive rates of 4%–25%.',
+          'Lebanon does not tax income under a single treatment. The income tax law divides income into three chapters, profits from industrial, commercial and non-commercial professions; salaries, wages and pensions; and revenues from movable capital, each taxed separately under its own rules. Company profits under the real-profit method are taxed at 17%, while sole proprietorships and partnerships are taxed at progressive rates of 4%–25%.',
         sections: [
           {
             h: 'The three income-tax chapters',
             body: [
-              'Where a taxpayer has income from different sources, each type is taxed according to the chapter it falls under — there is no single, aggregated income tax:',
+              'Where a taxpayer has income from different sources, each type is taxed according to the chapter it falls under, there is no single, aggregated income tax:',
             ],
             list: [
-              'Chapter I — profits from industrial, commercial and non-commercial (professional) activities.',
-              'Chapter II — salaries, wages and pension salaries (withheld by the employer).',
-              'Chapter III — revenues from movable capital (dividends, board appropriations, interest on bonds and treasury bills).',
+              'Chapter I, profits from industrial, commercial and non-commercial (professional) activities.',
+              'Chapter II, salaries, wages and pension salaries (withheld by the employer).',
+              'Chapter III, revenues from movable capital (dividends, board appropriations, interest on bonds and treasury bills).',
             ],
           },
           {
-            h: 'Tax on profits — real vs deemed',
+            h: 'Tax on profits, real vs deemed',
             body: [
               'Corporate profits are assessed under either the real-profit or the deemed-profit method, depending on the size and structure of the business:',
             ],
@@ -580,13 +580,13 @@ const en: Dictionary = {
           { q: 'What is the corporate profit tax rate?', a: 'Under the real-profit method, company profits are taxed at a flat 17%. Sole proprietorships and partnerships are taxed on deemed profits at progressive rates of 4%–25%.' },
           { q: 'When am I a tax resident of Lebanon?', a: 'If you have a place of business or a permanent family home in Lebanon, or are present for more than 183 days in any 12-month period.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'Lebanese Income Tax Law', 'Lebanese Ministry of Finance'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'Lebanese Income Tax Law', 'Lebanese Ministry of Finance'],
       },
       {
         slug: 'corporate-income-tax-lebanon',
         title: 'Corporate Income Tax in Lebanon',
         category: 'Tax',
-        summary: 'How companies and branches are taxed on their profits — and who is exempt.',
+        summary: 'How companies and branches are taxed on their profits, and who is exempt.',
         answer:
           'Lebanese companies (SARL, SAL) and branches of foreign companies are taxed on net profits at 17% under the real-profit method. Distributed dividends carry a 10% withholding tax. Holding and offshore companies are exempt from corporate income tax and instead pay a lump-sum annual tax, while certain bodies (educational, non-profit, some transport) are permanently exempt.',
         sections: [
@@ -601,7 +601,7 @@ const en: Dictionary = {
                 ['Company profits (real profit)', '17% on net taxable profit'],
                 ['Branch profits', '17%, plus deemed dividend distribution taxed at 10%'],
                 ['Dividend distributions', '10% withholding (may reduce to 5% under conditions)'],
-                ['Holding & offshore companies', 'Exempt — lump-sum annual tax of LBP 50 million'],
+                ['Holding & offshore companies', 'Exempt, lump-sum annual tax of LBP 50 million'],
                 ['Sole proprietorships / partnerships', 'Deemed profit, progressive 4%–25%'],
               ],
             },
@@ -630,14 +630,14 @@ const en: Dictionary = {
           { q: 'How are branches of foreign companies taxed?', a: 'At 17%, and their profits are deemed distributed as dividends subject to a further 10% dividend distribution tax.' },
           { q: 'Are holding and offshore companies taxed on profits?', a: 'No. They are exempt from corporate income tax and instead pay a lump-sum annual tax of LBP 50 million.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'Lebanese Income Tax Law', 'Budget Law 2022'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'Lebanese Income Tax Law', 'Budget Law 2022'],
       },
       {
         slug: 'withholding-tax-lebanon',
         title: 'Withholding Taxes in Lebanon',
         category: 'Tax',
         summary:
-          'Non-resident, interest, dividend and movable-capital withholding — rates, forms and deadlines.',
+          'Non-resident, interest, dividend and movable-capital withholding, rates, forms and deadlines.',
         answer:
           'Lebanon applies several withholding taxes: non-residents are subject to an effective 3.4% on sales of materials and equipment and 8.5% on services; interest on bank accounts and treasury bonds is taxed at 10%; dividends at 10% (reducible to 5%); and income from movable capital at 10%. Non-resident withholding is filed quarterly (form G10) and annually (form G5).',
         sections: [
@@ -649,8 +649,8 @@ const en: Dictionary = {
             table: {
               head: ['Withholding', 'Rate'],
               rows: [
-                ['Non-resident — sale of materials & equipment', '3.4%'],
-                ['Non-resident — services', '8.5%'],
+                ['Non-resident, sale of materials & equipment', '3.4%'],
+                ['Non-resident, services', '8.5%'],
                 ['Interest (bank accounts & treasury bonds)', '10% (non-refundable)'],
                 ['Dividends', '10% (may reduce to 5%)'],
                 ['Movable capital income', '10%'],
@@ -660,7 +660,7 @@ const en: Dictionary = {
           {
             h: 'Interest, dividends & movable capital',
             body: [
-              'Interest earned on accounts at Lebanese banks and on treasury bonds is subject to a 10% withholding tax that is non-refundable and cannot be carried forward. Dividends paid to resident and non-resident shareholders are withheld at 10% (reducible to 5% under specific conditions). A 10% tax also applies more broadly to income from movable capital — distributed dividends and interest, directors’ and shareholders’ fees, distributions of reserves or profits, and interest on loans to corporations.',
+              'Interest earned on accounts at Lebanese banks and on treasury bonds is subject to a 10% withholding tax that is non-refundable and cannot be carried forward. Dividends paid to resident and non-resident shareholders are withheld at 10% (reducible to 5% under specific conditions). A 10% tax also applies more broadly to income from movable capital, distributed dividends and interest, directors’ and shareholders’ fees, distributions of reserves or profits, and interest on loans to corporations.',
             ],
           },
           {
@@ -675,7 +675,7 @@ const en: Dictionary = {
           { q: 'What is the withholding tax on non-residents?', a: 'An effective 3.4% on sales of materials and equipment and 8.5% on services, filed quarterly (G10) and annually (G5).' },
           { q: 'How are interest and dividends taxed?', a: 'Interest on bank accounts and treasury bonds is taxed at 10% (non-refundable); dividends at 10%, reducible to 5% under specific conditions.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'Budget Law 2022', 'MoF Decisions 322 & 323 (2023)'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'Budget Law 2022', 'MoF Decisions 322 & 323 (2023)'],
       },
       {
         slug: 'vat-in-lebanon',
@@ -703,13 +703,13 @@ const en: Dictionary = {
           {
             h: 'Registration & returns',
             body: [
-              'Businesses whose taxable turnover exceeds the registration threshold must register, charge VAT on taxable supplies, issue compliant invoices and file periodic (generally quarterly) returns — paying the net VAT due or claiming a refund. VAT returns are filed electronically.',
+              'Businesses whose taxable turnover exceeds the registration threshold must register, charge VAT on taxable supplies, issue compliant invoices and file periodic (generally quarterly) returns, paying the net VAT due or claiming a refund. VAT returns are filed electronically.',
             ],
           },
           {
             h: 'Invoices in foreign currency',
             body: [
-              'On 27 April 2023 the Ministry of Finance published Decree 11230, amending Article 18 of VAT Law 7308. Where a price is denominated in foreign currency, and until a unified exchange rate is established, the counter-value for calculating VAT is determined using the Sayrafa rate, then the market rate — not the old official rate.',
+              'On 27 April 2023 the Ministry of Finance published Decree 11230, amending Article 18 of VAT Law 7308. Where a price is denominated in foreign currency, and until a unified exchange rate is established, the counter-value for calculating VAT is determined using the Sayrafa rate, then the market rate, not the old official rate.',
             ],
             note: 'The registration threshold and exchange-rate rules change over time. Confirm current thresholds and rates with the Ministry of Finance or K&K.',
           },
@@ -719,7 +719,7 @@ const en: Dictionary = {
           { q: 'What is exempt or zero-rated?', a: 'Exports and international transport are zero-rated; banking, financial services and insurance are exempt.' },
           { q: 'How is VAT calculated on foreign-currency invoices?', a: 'Since Decree 11230 (April 2023), using the Sayrafa rate then the market rate, not the old official rate.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'VAT Law No. 7308 (art. 18)', 'MoF Decree 11230 (2023)'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'VAT Law No. 7308 (art. 18)', 'MoF Decree 11230 (2023)'],
       },
       {
         slug: 'nssf-end-of-service-lebanon',
@@ -760,7 +760,7 @@ const en: Dictionary = {
           { q: 'What are the NSSF contribution rates?', a: 'Employer: 8% sickness & maternity (max LBP 90m/month), 6% family benefits (max LBP 12m/month), 8.5% of annual earnings for end-of-service (no ceiling). Employee: 3% sickness & maternity (max LBP 90m/month).' },
           { q: 'Which countries have a totalization agreement with Lebanon?', a: 'France, Belgium, Italy and the United Kingdom.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'National Social Security Fund (NSSF)', 'Lebanese Social Security Law'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'National Social Security Fund (NSSF)', 'Lebanese Social Security Law'],
       },
       {
         slug: 'payroll-tax-lebanon',
@@ -768,7 +768,7 @@ const en: Dictionary = {
         category: 'Payroll',
         summary: 'Progressive payroll tax, the territoriality rule, work permits and labour basics.',
         answer:
-          'Employers withhold and declare payroll tax on salaries at progressive rates of 2% to 25%. Payroll tax follows the territoriality principle — salaries are taxed in Lebanon when the beneficiary is resident, the service is performed in Lebanon, or the salary is charged to a Lebanese entity. NSSF contributions are declared alongside.',
+          'Employers withhold and declare payroll tax on salaries at progressive rates of 2% to 25%. Payroll tax follows the territoriality principle, salaries are taxed in Lebanon when the beneficiary is resident, the service is performed in Lebanon, or the salary is charged to a Lebanese entity. NSSF contributions are declared alongside.',
         sections: [
           {
             h: 'Progressive payroll tax (2%–25%)',
@@ -794,7 +794,7 @@ const en: Dictionary = {
           { q: 'What are the payroll tax rates in Lebanon?', a: 'Payroll tax is levied at progressive rates from 2% to 25%, withheld and declared by the employer.' },
           { q: 'When is a salary taxable in Lebanon?', a: 'Under the territoriality principle: when the employee is resident in Lebanon, the service is performed in Lebanon, or the salary is charged to a Lebanese entity.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'Lebanese Income Tax Law', 'Lebanese Labour Law'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'Lebanese Income Tax Law', 'Lebanese Labour Law'],
       },
       {
         slug: 'property-municipal-other-taxes-lebanon',
@@ -808,7 +808,7 @@ const en: Dictionary = {
           {
             h: 'Built-property tax (BPT)',
             body: [
-              'The BPT is an annual progressive tax ranging between 4% and 14% of net rental proceeds — gross rental proceeds less allowable deductions such as depreciation and management costs. It is filed electronically.',
+              'The BPT is an annual progressive tax ranging between 4% and 14% of net rental proceeds, gross rental proceeds less allowable deductions such as depreciation and management costs. It is filed electronically.',
             ],
           },
           {
@@ -836,13 +836,13 @@ const en: Dictionary = {
           { q: 'What is the built-property tax rate?', a: 'An annual progressive tax of 4% to 14% on net rental proceeds.' },
           { q: 'How much is municipal tax on rent?', a: '7% of the rent payable on offices and 6% on residences.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'Lebanese Ministry of Finance', 'Lebanese Customs'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'Lebanese Ministry of Finance', 'Lebanese Customs'],
       },
       {
         slug: 'offshore-holding-companies-lebanon',
         title: 'Offshore & Holding Companies in Lebanon',
         category: 'Structuring',
-        summary: 'The special regimes for holding and offshore companies — and the LBP 50 million lump-sum tax.',
+        summary: 'The special regimes for holding and offshore companies, and the LBP 50 million lump-sum tax.',
         answer:
           'Lebanese holding and offshore companies are registered as joint-stock companies (SAL) but are exempt from corporate income tax and dividend tax. Instead, each pays a lump-sum annual tax of LBP 50 million (since 2022). Both need only one auditor, and offshore contracts relating to activity abroad are exempt from Lebanese stamp duty.',
         sections: [
@@ -860,7 +860,7 @@ const en: Dictionary = {
           {
             h: 'Offshore companies',
             body: [
-              'Governed by Legislative Decree 46, a Lebanese offshore company is a joint-stock company that engages exclusively in activities outside Lebanon — negotiating and signing contracts executed abroad, and preparing studies and consultations used abroad. It can be founded by a single shareholder, needs only one auditor, and its offshore contracts are exempt from Lebanese stamp duty.',
+              'Governed by Legislative Decree 46, a Lebanese offshore company is a joint-stock company that engages exclusively in activities outside Lebanon, negotiating and signing contracts executed abroad, and preparing studies and consultations used abroad. It can be founded by a single shareholder, needs only one auditor, and its offshore contracts are exempt from Lebanese stamp duty.',
             ],
             table: {
               head: ['Vehicle', 'Corporate tax', 'Annual tax', 'Auditor'],
@@ -869,14 +869,14 @@ const en: Dictionary = {
                 ['Offshore company', 'Exempt', 'LBP 50 million lump-sum', 'One'],
               ],
             },
-            note: 'These regimes carry conditions and figures change over time. Take advice before incorporating — K&K structures holding and offshore vehicles regularly.',
+            note: 'These regimes carry conditions and figures change over time. Take advice before incorporating, K&K structures holding and offshore vehicles regularly.',
           },
         ],
         faq: [
           { q: 'How are holding and offshore companies taxed?', a: 'Both are exempt from corporate income tax and dividend tax, and instead pay a lump-sum annual tax of LBP 50 million.' },
           { q: 'Can an offshore company have one shareholder?', a: 'Yes. Offshore companies can be founded by a single shareholder and require only one auditor.' },
         ],
-        sources: ['K&K — Doing Business in Lebanon (updated April 2024)', 'Legislative Decree 46/1983 (Offshore)', 'Budget Law 2022'],
+        sources: ['K&K, Doing Business in Lebanon (updated April 2024)', 'Legislative Decree 46/1983 (Offshore)', 'Budget Law 2022'],
       },
     ],
   },
@@ -885,11 +885,11 @@ const en: Dictionary = {
     eyebrow: 'Our clients',
     title: 'Trusted across 20+ industries',
     subtitle:
-      'From owner-managed businesses to established groups, NGOs and offshore companies — we bring the same care and standards to every client.',
+      'From owner-managed businesses to established groups, NGOs and offshore companies, we bring the same care and standards to every client.',
     approachTitle: 'Our approach',
     approach: [
       'Our firm offers broad technical expertise and deep local market knowledge in audit, tax, risk management and advisory, providing consistent quality and impeccable service to diverse clients in industries large and small, global and local.',
-      'Every client keeps a senior, partner-led relationship — we are large enough to handle demanding mandates and small enough to stay personal.',
+      'Every client keeps a senior, partner-led relationship, we are large enough to handle demanding mandates and small enough to stay personal.',
     ],
     industriesTitle: 'Industries we serve',
     industriesSubtitle:
@@ -925,7 +925,7 @@ const en: Dictionary = {
     eyebrow: 'Insights',
     title: 'Lebanese tax & regulatory updates',
     subtitle:
-      'Timely, factual briefings on the NSSF, Ministry of Finance circulars, VAT and the annual budget — written by our partners.',
+      'Timely, factual briefings on the NSSF, Ministry of Finance circulars, VAT and the annual budget, written by our partners.',
     author: 'Elia Krayem',
     authorRole: 'Managing Partner, Sworn CPA',
     byLabel: 'By',
@@ -955,7 +955,7 @@ const en: Dictionary = {
       },
       {
         slug: 'nssf-contributions-foreign-currency-salaries',
-        title: 'NSSF — Explaining Fund Contributions for Salaries & Wages',
+        title: 'NSSF, Explaining Fund Contributions for Salaries & Wages',
         date: '2023-09-19',
         category: 'NSSF',
         excerpt:
@@ -983,7 +983,7 @@ const en: Dictionary = {
         excerpt:
           'The medical insurance coverage ceiling was increased, effective September 2023.',
         body: [
-          'Decree No. 11928 increased the NSSF medical insurance coverage ceiling from LBP 5.6 million to LBP 18 million monthly, effective September 2023 — a significant change to the contribution base.',
+          'Decree No. 11928 increased the NSSF medical insurance coverage ceiling from LBP 5.6 million to LBP 18 million monthly, effective September 2023, a significant change to the contribution base.',
         ],
       },
       {
@@ -1009,7 +1009,7 @@ const en: Dictionary = {
       },
       {
         slug: 'mof-decree-11230-vat-sayrafa',
-        title: 'MoF Decree No. 11230 — VAT at Sayrafa Rate',
+        title: 'MoF Decree No. 11230, VAT at Sayrafa Rate',
         date: '2023-04-27',
         category: 'VAT',
         excerpt:
@@ -1020,7 +1020,7 @@ const en: Dictionary = {
       },
       {
         slug: 'nssf-decree-11228-school-allowances',
-        title: 'NSSF Decree No. 11228 — School Allowances',
+        title: 'NSSF Decree No. 11228, School Allowances',
         date: '2023-04-26',
         category: 'NSSF',
         excerpt:
@@ -1031,7 +1031,7 @@ const en: Dictionary = {
       },
       {
         slug: 'decree-11226-minimum-salary',
-        title: 'Decree No. 11226 — Minimum Salary Increase',
+        title: 'Decree No. 11226, Minimum Salary Increase',
         date: '2023-04-18',
         category: 'Payroll',
         excerpt:
@@ -1047,7 +1047,7 @@ const en: Dictionary = {
     eyebrow: 'Contact',
     title: 'Let’s talk',
     subtitle:
-      'Tell us about your business and what you need. A partner will get back to you — usually within one business day.',
+      'Tell us about your business and what you need. A partner will get back to you, usually within one business day.',
     formTitle: 'Send us a message',
     formSubtitle: 'Prefer to talk? Call us or email us directly.',
     labels: {
@@ -1062,7 +1062,7 @@ const en: Dictionary = {
       sending: 'Sending…',
       required: 'required',
     },
-    successTitle: 'Thank you — your message has been sent.',
+    successTitle: 'Thank you, your message has been sent.',
     successBody: 'A K&K partner will be in touch shortly.',
     errorMsg: 'Something went wrong. Please try again, or email us directly.',
     privacyNote:
@@ -1095,7 +1095,7 @@ const en: Dictionary = {
     ],
     areasTitle: 'Where we hire',
     areasSubtitle:
-      'We recruit across our four practices — from graduates to experienced professionals.',
+      'We recruit across our four practices, from graduates to experienced professionals.',
     areas: [
       { title: 'Audit & Assurance', body: 'Trainee to senior auditors working on statutory and voluntary audits to ISA standards.' },
       { title: 'Tax', body: 'Tax associates and consultants advising on Lebanese income tax, VAT, NSSF and payroll.' },
@@ -1107,7 +1107,7 @@ const en: Dictionary = {
       'We do not always advertise specific roles, but we are continually interested in talented auditors, accountants and tax professionals. Send us your details and CV, and we will be in touch when the right opportunity opens.',
     applyTitle: 'Apply now',
     applySubtitle:
-      'Tell us about yourself, choose the area that interests you, and attach your CV — a partner will review your application.',
+      'Tell us about yourself, choose the area that interests you, and attach your CV, a partner will review your application.',
     form: {
       position: 'Area of interest',
       selectArea: 'Select an area',
@@ -1116,7 +1116,7 @@ const en: Dictionary = {
       cvHint: 'PDF or Word · max 4 MB',
       cvNote: 'Your application and CV go straight to our careers team.',
       fileError: 'Please attach a PDF or Word document under 4 MB.',
-      successTitle: 'Thank you — your application has been received.',
+      successTitle: 'Thank you, your application has been received.',
       successBody:
         'A K&K partner will review your application and CV, and be in touch.',
     },
@@ -1133,13 +1133,13 @@ const en: Dictionary = {
       {
         h: 'Who we are',
         body: [
-          'K&K Auditors & Consultants Civil Co. (“K&K”, “we”) is an audit, tax and advisory firm based in Badaro, Beirut, Lebanon. We are committed to protecting the confidentiality of the information entrusted to us — a principle at the heart of our profession.',
+          'K&K Auditors & Consultants Civil Co. (“K&K”, “we”) is an audit, tax and advisory firm based in Badaro, Beirut, Lebanon. We are committed to protecting the confidentiality of the information entrusted to us, a principle at the heart of our profession.',
         ],
       },
       {
         h: 'Information we collect',
         body: [
-          'When you contact us through this website, we collect the details you provide — such as your name, email, phone number, company and message — so that we can respond to your enquiry. We may also collect basic, anonymous analytics about how visitors use the site.',
+          'When you contact us through this website, we collect the details you provide, such as your name, email, phone number, company and message, so that we can respond to your enquiry. We may also collect basic, anonymous analytics about how visitors use the site.',
         ],
       },
       {
@@ -1171,14 +1171,14 @@ const en: Dictionary = {
 
   footer: {
     desc:
-      'A full-service firm of sworn Certified Public Accountants in Badaro, Beirut — audit, tax and advisory to international standards, and the exclusive Lebanon member of GMN International.',
+      'A full-service firm of sworn Certified Public Accountants in Badaro, Beirut, audit, tax and advisory to international standards, and the exclusive Lebanon member of GMN International.',
     companyTitle: 'Company',
     servicesTitle: 'Services',
     resourcesTitle: 'Resources',
     contactTitle: 'Contact',
     rights: 'All rights reserved.',
     disclaimer:
-      'The guidance on this site is general information, not tax or legal advice. Rates and rules change — confirm your position with K&K or the relevant authority.',
+      'The guidance on this site is general information, not tax or legal advice. Rates and rules change, confirm your position with K&K or the relevant authority.',
     privacy: 'Privacy & Cookies',
     followUs: 'Follow us',
   },

@@ -28,7 +28,7 @@ export default function Header({
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href={href(locale)} aria-label="K&K — home">
+        <Link href={href(locale)} aria-label="K&K home">
           <Logo />
         </Link>
 

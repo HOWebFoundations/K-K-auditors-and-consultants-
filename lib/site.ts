@@ -16,8 +16,8 @@ export const site = {
   mobile: '+961 3 329079',
   phoneHref: '+9611393821',
   whatsapp: '9613329079', // wa.me target (mobile, no +/spaces)
-  email: 'info@kandkauditors.com',
-  careersEmail: 'careers@kandkauditors.com',
+  email: 'k-k@k-kauditconsult.com',
+  careersEmail: 'k-k@k-kauditconsult.com',
 
   address: {
     line1: 'Badaro Center, 9th Floor, Office 38',

@@ -19,7 +19,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   return {
-    title: `${d.nav.about} — ${d.about.title}`,
+    title: `${d.nav.about} | ${d.about.title}`,
     description: d.about.subtitle,
   };
 }
@@ -53,7 +53,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
       <section className="section">
         <div className="container split split-7-5">
           <Reveal>
-            <span className="marker">01 — {a.storyTitle}</span>
+            <span className="marker">01 · {a.storyTitle}</span>
             {a.story.map((p) => (
               <p key={p} className="muted">{p}</p>
             ))}
@@ -157,7 +157,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
       <section className="section bg-soft">
         <div className="container split split-7-5">
           <Reveal>
-            <span className="marker">05 — {d.common.memberOf} GMN International</span>
+            <span className="marker">05 · {d.common.memberOf} GMN International</span>
             <h2 className="h2">{a.gmnTitle}</h2>
             {a.gmnBody.map((p) => (
               <p key={p} className="muted">{p}</p>

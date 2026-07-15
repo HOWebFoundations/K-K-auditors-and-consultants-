@@ -30,8 +30,8 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(site.url),
     title: {
-      default: `${dict.meta.name} — ${dict.meta.tagline}`,
-      template: `%s — ${dict.meta.name}`,
+      default: `${dict.meta.name} |${dict.meta.tagline}`,
+      template: `%s |${dict.meta.name}`,
     },
     description: dict.meta.description,
     alternates: {
@@ -41,14 +41,14 @@ export async function generateMetadata({
     openGraph: {
       type: 'website',
       siteName: dict.meta.name,
-      title: `${dict.meta.name} — ${dict.meta.tagline}`,
+      title: `${dict.meta.name} |${dict.meta.tagline}`,
       description: dict.meta.description,
       url: `${site.url}/${locale}`,
       locale,
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${dict.meta.name} — ${dict.meta.tagline}`,
+      title: `${dict.meta.name} |${dict.meta.tagline}`,
       description: dict.meta.description,
     },
     robots: { index: true, follow: true },

@@ -35,7 +35,7 @@ export function generateMetadata({
   const d = getDictionary(locale);
   const s = d.services.items.find((x) => x.slug === params.slug);
   if (!s) return {};
-  return { title: `${s.title} — ${d.nav.services}`, description: s.summary };
+  return { title: `${s.title} | ${d.nav.services}`, description: s.summary };
 }
 
 export default function ServiceDetail({

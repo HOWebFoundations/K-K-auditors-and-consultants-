@@ -166,7 +166,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       </section>
 
       <CTABand
-        marker={`— ${d.meta.name}`}
+        marker={d.meta.name}
         title={h.ctaTitle}
         body={h.ctaBody}
         primary={{ label: d.common.bookConsultation, href: href(locale, 'contact') }}

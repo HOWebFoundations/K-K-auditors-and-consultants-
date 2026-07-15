@@ -1,13 +1,7 @@
-import { Source_Serif_4, Plus_Jakarta_Sans, IBM_Plex_Sans_Arabic } from 'next/font/google';
+import { Plus_Jakarta_Sans, IBM_Plex_Sans_Arabic } from 'next/font/google';
 
-// Clean, corporate transitional serif for display headlines
-export const serif = Source_Serif_4({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-serif-src',
-});
+// Headlines use Times New Roman (a system serif) — set directly in globals.css,
+// so no web font is loaded for the serif family.
 
 // Modern geometric sans for body & UI
 export const sans = Plus_Jakarta_Sans({
@@ -25,4 +19,4 @@ export const plexArabic = IBM_Plex_Sans_Arabic({
   variable: '--font-ar-src',
 });
 
-export const fontVariables = `${serif.variable} ${sans.variable} ${plexArabic.variable}`;
+export const fontVariables = `${sans.variable} ${plexArabic.variable}`;

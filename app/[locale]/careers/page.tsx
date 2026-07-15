@@ -103,7 +103,7 @@ export default function CareersPage({ params }: { params: { locale: string } }) 
       </section>
 
       <CTABand
-        marker={`— ${d.meta.name}`}
+        marker={d.meta.name}
         title={c.ctaTitle}
         body={c.ctaBody}
         primary={{ label: c.applyTitle, href: '#apply' }}
