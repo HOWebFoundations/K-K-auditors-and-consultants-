@@ -79,6 +79,9 @@ export default function LocaleLayout({
           {dict.common.skipToContent}
         </a>
         <JsonLd data={[organizationSchema(dict, locale), websiteSchema(dict, locale)]} />
+        <div className="scroll-progress" aria-hidden>
+          <span id="scroll-progress-bar" />
+        </div>
         <ScrollFX />
         <Header locale={locale} nav={dict.nav} ctaLabel={dict.common.requestProposal} />
         <main id="main">{children}</main>

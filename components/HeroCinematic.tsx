@@ -33,12 +33,14 @@ export default function HeroCinematic({
 }) {
   const rootRef = useRef<HTMLElement>(null);
   const mediaRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const root = rootRef.current;
     const media = mediaRef.current;
+    const inner = innerRef.current;
     const vid = videoRef.current;
 
     if (reduce) {
@@ -54,9 +56,14 @@ export default function HeroCinematic({
       raf = requestAnimationFrame(() => {
         raf = 0;
         const y = window.scrollY;
-        if (y > window.innerHeight) return; // stop working once scrolled past
-        media.style.transform = `translate3d(0, ${(y * 0.3).toFixed(1)}px, 0) scale(1.08)`;
-        root.style.setProperty('--hero-fade', String(Math.max(0, 1 - y / 560)));
+        const vh = window.innerHeight;
+        if (y > vh) return; // stop working once scrolled past the hero
+        // Footage drifts and slowly pushes in; content moves at a different
+        // rate and fades — a layered, cinematic parallax.
+        const scale = (1.08 + Math.min(y, vh) * 0.00024).toFixed(3);
+        media.style.transform = `translate3d(0, ${(y * 0.34).toFixed(1)}px, 0) scale(${scale})`;
+        if (inner) inner.style.transform = `translate3d(0, ${(y * 0.18).toFixed(1)}px, 0)`;
+        root.style.setProperty('--hero-fade', String(Math.max(0, 1 - y / 520)));
       });
     };
     onScroll();
@@ -90,7 +97,7 @@ export default function HeroCinematic({
       </div>
       <div className="hero-cine-scrim" aria-hidden />
 
-      <div className="container hero-cine-inner">
+      <div className="container hero-cine-inner" ref={innerRef}>
         <div className="eyebrow light">{eyebrow}</div>
         <h1 className="display hero-cine-title">{title}</h1>
         <p className="lead hero-cine-lead">{subtitle}</p>

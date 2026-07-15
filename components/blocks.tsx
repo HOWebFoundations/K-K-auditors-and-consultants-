@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import { IconArrow } from './icons';
+import Reveal from './Reveal';
 
 export function Breadcrumbs({
   items,
@@ -68,12 +69,12 @@ export function SectionHeader({
   center?: boolean;
 }) {
   return (
-    <div className={`section-head${center ? ' center' : ''}`}>
+    <Reveal className={`section-head${center ? ' center' : ''}`}>
       {marker && <span className="marker">{marker}</span>}
       {eyebrow && <div className="eyebrow">{eyebrow}</div>}
       <h2 className="h2">{title}</h2>
       {subtitle && <p className="lead mt-1">{subtitle}</p>}
-    </div>
+    </Reveal>
   );
 }
 
@@ -97,12 +98,12 @@ export function CTABand({
       <div className="container">
         <div className="cta-band">
           {image && (
-            <div className="cta-img" aria-hidden data-parallax="0.16">
+            <div className="cta-img" aria-hidden data-parallax="0.24">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={image} alt="" loading="lazy" />
             </div>
           )}
-          <div style={{ maxWidth: '52ch' }}>
+          <Reveal style={{ maxWidth: '52ch' }}>
             {marker && <span className="marker">{marker}</span>}
             <h2 className="h2">{title}</h2>
             <p className="lead mt-1">{body}</p>
@@ -117,7 +118,7 @@ export function CTABand({
                 </Link>
               )}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
