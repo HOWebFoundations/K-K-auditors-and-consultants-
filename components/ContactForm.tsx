@@ -51,6 +51,11 @@ export default function ContactForm({
 
   return (
     <form onSubmit={onSubmit} noValidate>
+      {/* Honeypot: hidden from people; if a bot fills it, the server drops the message. */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, overflow: 'hidden' }}>
+        <label htmlFor="company_website">Leave this field empty</label>
+        <input id="company_website" name="company_website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
       {status === 'err' && (
         <div className="form-status err" role="alert">
           {errorMsg}

@@ -25,6 +25,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: 'invalid_form' }, { status: 400 });
   }
 
+  // Honeypot: accept silently and drop if a bot filled the hidden field.
+  if (String(form.get('company_website') || '').trim()) {
+    return NextResponse.json({ ok: true });
+  }
+
   const name = String(form.get('name') || '').trim();
   const email = String(form.get('email') || '').trim();
   const phone = String(form.get('phone') || '').trim();

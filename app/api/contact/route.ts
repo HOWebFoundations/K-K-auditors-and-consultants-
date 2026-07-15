@@ -10,6 +10,7 @@ interface Payload {
   company?: string;
   service?: string;
   message?: string;
+  company_website?: string; // honeypot
 }
 
 function isEmail(v: string): boolean {
@@ -22,6 +23,12 @@ export async function POST(req: NextRequest) {
     data = (await req.json()) as Payload;
   } catch {
     return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+  }
+
+  // Honeypot: a real person never fills this hidden field. Accept silently and
+  // drop, so bots get a success response and no email is sent.
+  if ((data.company_website || '').trim()) {
+    return NextResponse.json({ ok: true });
   }
 
   const name = (data.name || '').trim();

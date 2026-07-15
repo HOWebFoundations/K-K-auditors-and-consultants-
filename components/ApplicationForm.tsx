@@ -72,6 +72,11 @@ export default function ApplicationForm({
 
   return (
     <form onSubmit={onSubmit} noValidate>
+      {/* Honeypot: hidden from people; a filled value marks the submission as spam. */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, overflow: 'hidden' }}>
+        <label htmlFor="company_website">Leave this field empty</label>
+        <input id="company_website" name="company_website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
       {status === 'err' && (
         <div className="form-status err" role="alert">
           {errorMsg}
