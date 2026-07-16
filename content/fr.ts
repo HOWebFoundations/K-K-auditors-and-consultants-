@@ -81,15 +81,14 @@ const fr: DeepPartial<Dictionary> = {
     statsTitle: "Un cabinet doté d'une réelle substance",
     stats: [
       { num: "25+", label: "Années d'expérience cumulée" },
-      { num: "14", label: "Professionnels dans l'équipe" },
-      { num: "20+", label: "Secteurs desservis" },
       { num: "2012", label: "Membre de GMN International depuis" },
+      { num: "20+", label: "Secteurs desservis" },
     ],
     aboutEyebrow: "Qui nous sommes",
     aboutTitle: "Un cabinet comptable à service complet au service du Liban et au-delà",
     aboutBody: [
       "K&K est un cabinet de comptabilité et d'audit à service complet au service de clients dans tout le Liban et à l'étranger. Nous offrons un accompagnement professionnel et personnalisé sur un large éventail de besoins financiers et commerciaux.",
-      "Dirigé par deux experts-comptables assermentés et une équipe de 14 personnes, nous associons une vaste expertise technique à une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil, pour une qualité constante auprès de clients grands et petits, internationaux et locaux.",
+      "Dirigé par deux experts-comptables assermentés et une équipe dédiée, nous associons une vaste expertise technique à une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil, pour une qualité constante auprès de clients grands et petits, internationaux et locaux.",
     ],
     aboutPoints: [
       "L'associé gérant est expert-comptable assermenté et membre de la LACPA",
@@ -170,7 +169,7 @@ const fr: DeepPartial<Dictionary> = {
     story: [
       "K&K est un cabinet de comptabilité et d'audit à service complet au service de clients dans tout le Liban et à l'étranger, dédié à fournir des services et un accompagnement professionnels et personnalisés sur un large éventail de besoins financiers et commerciaux.",
       "Notre cabinet offre une vaste expertise technique et une connaissance approfondie du marché local en audit, fiscalité, gestion des risques et conseil, assurant une qualité constante et un service irréprochable à une clientèle diversifiée, dans des secteurs grands et petits, internationaux et locaux.",
-      "Nous sommes dirigés par deux experts-comptables assermentés et une équipe de 14 professionnels, et nous sommes le représentant exclusif de GMN International au Liban.",
+      "Nous sommes dirigés par deux experts-comptables assermentés et une équipe dédiée de spécialistes, et nous sommes le représentant exclusif de GMN International au Liban.",
     ],
     valuesTitle: "Ce que nous défendons",
     valuesSubtitle: "Trois principes guident chacune de nos missions.",
@@ -190,7 +189,7 @@ const fr: DeepPartial<Dictionary> = {
     ],
     ethicsQuote:
       "Notre éthique passe avant notre profit ; nous sommes fidèles à nos clients et à notre profession.",
-    ethicsBy: "Le point de vue de K&K",
+    ethicsBy: "Les associés",
     leadershipTitle: "Direction",
     leadershipSubtitle:
       "Deux associés gérants comptant chacun plus de 25 ans d'expérience.",
@@ -226,9 +225,9 @@ const fr: DeepPartial<Dictionary> = {
         education: "Sagesse University, Liban",
       },
     ],
-    teamTitle: "Une équipe de 14 professionnels",
+    teamTitle: "Notre équipe de spécialistes",
     teamBody:
-      "Au-delà de nos associés, K&K est une équipe de 14 comptables, auditeurs et fiscalistes, une profondeur suffisante pour servir des mandats exigeants, et une taille assez réduite pour que chaque client conserve une relation personnelle avec un interlocuteur expérimenté.",
+      "Au-delà de nos associés, K&K réunit des comptables, auditeurs et fiscalistes, une profondeur suffisante pour servir des mandats exigeants, et une proximité qui permet à chaque client de conserver une relation personnelle avec un interlocuteur expérimenté.",
     credentialsTitle: "Qualifications et normes",
     credentialsBody:
       "Nous travaillons selon les normes internationales reconnues et détenons les inscriptions professionnelles qu'un cabinet financier de premier plan se doit de démontrer.",
@@ -1123,6 +1122,7 @@ const fr: DeepPartial<Dictionary> = {
     phoneLabel: "Téléphone",
     emailLabel: "E-mail",
     mapTitle: "Trouver notre bureau à Badaro, Beyrouth",
+    moreServices: ["CNSS", "Conseil"],
   },
 
   careers: {
@@ -1131,10 +1131,10 @@ const fr: DeepPartial<Dictionary> = {
     subtitle:
       "Nous nous battons pour attirer les talents. Si vous êtes comptable, auditeur ou fiscaliste et souhaitez de vraies responsabilités et le mentorat d'experts-comptables assermentés, nous aimerions vous rencontrer.",
     body: [
-      "K&K est une équipe de 14 professionnels où vous ne serez pas un numéro. Vous travaillerez directement avec les associés sur de vrais mandats en audit, fiscalité et conseil, pour des clients de plus de vingt secteurs.",
+      "Chez K&K, vous ne serez pas un numéro. Vous travaillerez directement avec les associés sur de vrais mandats en audit, fiscalité et conseil, pour des clients de plus de vingt secteurs.",
       "Nous investissons dans les qualifications professionnelles et l'ouverture internationale grâce à notre adhésion à GMN International.",
     ],
-    cultureTitle: "La vie chez K&K",
+    cultureTitle: "Évoluez avec K&K",
     perksTitle: "Pourquoi nous rejoindre",
     perks: [
       "Un mentorat piloté par des associés experts-comptables assermentés",

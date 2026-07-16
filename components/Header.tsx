@@ -33,15 +33,23 @@ export default function Header({
         </Link>
 
         <nav className="nav" aria-label="Primary">
-          {mainNav.map((item) => (
-            <Link
-              key={item.key}
-              href={href(locale, item.path)}
-              className={isActive(item.path) ? 'active' : ''}
-            >
-              {nav[item.key as NavKey]}
-            </Link>
-          ))}
+          {mainNav.map((item) => {
+            const classes = [
+              isActive(item.path) ? 'active' : '',
+              item.key === 'contact' ? 'nav-strong' : '',
+            ]
+              .filter(Boolean)
+              .join(' ');
+            return (
+              <Link
+                key={item.key}
+                href={href(locale, item.path)}
+                className={classes}
+              >
+                {nav[item.key as NavKey]}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="header-actions">

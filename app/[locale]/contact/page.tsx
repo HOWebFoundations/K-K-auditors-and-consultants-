@@ -33,6 +33,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.contact }]}
         image="/images/beirut-hero.jpg"
         imageAlt={c.title}
+        video="/videos/hero-beirut.mp4"
       />
 
       <section className="section">
@@ -44,7 +45,10 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
             <div className="mt-2">
               <ContactForm
                 labels={c.labels}
-                services={d.services.items.map((s) => ({ slug: s.slug, title: s.title }))}
+                services={[
+                  ...d.services.items.map((s) => ({ slug: s.slug, title: s.title })),
+                  ...c.moreServices.map((t, i) => ({ slug: `more-${i}`, title: t })),
+                ]}
                 privacyNote={c.privacyNote}
                 successTitle={c.successTitle}
                 successBody={c.successBody}

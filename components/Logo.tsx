@@ -50,9 +50,9 @@ export default function Logo({
     <span className={`logo${onNavy ? ' on-navy' : ''}`} aria-label={ariaLabel}>
       <LogoMark className="logo-mark" />
       {showWord && (
-        <span className="logo-word">
-          <span className="l1">K&amp;K | Auditors &amp; Consultants</span>
-          <span className="l2">Civil Co.</span>
+        <span className="logo-word" dir="ltr">
+          <span className="l1">K&amp;K Auditors</span>
+          <span className="l2">&amp; Consultants</span>
         </span>
       )}
     </span>

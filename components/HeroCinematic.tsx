@@ -98,7 +98,7 @@ export default function HeroCinematic({
       <div className="hero-cine-scrim" aria-hidden />
 
       <div className="container hero-cine-inner" ref={innerRef}>
-        <div className="eyebrow light">{eyebrow}</div>
+        {eyebrow ? <div className="eyebrow light">{eyebrow}</div> : null}
         <h1 className="display hero-cine-title">{title}</h1>
         <p className="lead hero-cine-lead">{subtitle}</p>
         <div className="btn-row mt-3 hero-cine-actions">
@@ -118,10 +118,6 @@ export default function HeroCinematic({
             </span>
           ))}
         </div>
-      </div>
-
-      <div className="hero-cine-cue" aria-hidden>
-        <span />
       </div>
     </section>
   );

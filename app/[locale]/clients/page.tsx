@@ -36,9 +36,9 @@ export default function ClientsPage({ params }: { params: { locale: string } }) 
               <p key={p} className="muted">{p}</p>
             ))}
           </div>
-          <div className="card" style={{ background: 'var(--paper-2)' }}>
+          <div className="card bg-navy" style={{ borderColor: 'rgba(255,255,255,0.12)' }}>
             <h3>{c.proofTitle}</h3>
-            <p className="muted">{c.proofBody}</p>
+            <p className="muted" style={{ color: '#c6d2e8' }}>{c.proofBody}</p>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import { IconArrow } from './icons';
 import Reveal from './Reveal';
+import BgVideo from './BgVideo';
 
 export function Breadcrumbs({
   items,
@@ -13,7 +14,11 @@ export function Breadcrumbs({
       {items.map((it, i) => (
         <span key={i}>
           {it.href ? <Link href={it.href}>{it.name}</Link> : <span>{it.name}</span>}
-          {i < items.length - 1 && <span className="sep"> / </span>}
+          {i < items.length - 1 && (
+            <span className="sep" aria-hidden>
+              {' → '}
+            </span>
+          )}
         </span>
       ))}
     </nav>
@@ -27,6 +32,7 @@ export function PageHero({
   crumbs,
   image,
   imageAlt,
+  video,
 }: {
   eyebrow?: string;
   title: string;
@@ -34,9 +40,11 @@ export function PageHero({
   crumbs?: { name: string; href?: string }[];
   image?: string;
   imageAlt?: string;
+  video?: string;
 }) {
+  const hasMedia = Boolean(image || video);
   return (
-    <section className={`page-hero${image ? ' has-media' : ''}`}>
+    <section className={`page-hero${hasMedia ? ' has-media' : ''}`}>
       <div className="container">
         <div>
           {crumbs && <Breadcrumbs items={crumbs} />}
@@ -44,10 +52,14 @@ export function PageHero({
           <h1>{title}</h1>
           {subtitle && <p className="lead mt-1">{subtitle}</p>}
         </div>
-        {image && (
+        {hasMedia && (
           <div className="page-hero-media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt={imageAlt || ''} loading="eager" />
+            {video ? (
+              <BgVideo src={video} poster={image} className="hero-media-video" />
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={image} alt={imageAlt || ''} loading="eager" />
+            )}
           </div>
         )}
       </div>

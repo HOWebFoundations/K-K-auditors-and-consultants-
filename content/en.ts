@@ -77,15 +77,14 @@ const en: Dictionary = {
     statsTitle: 'A firm with real substance',
     stats: [
       { num: '25+', label: 'Years of combined experience' },
-      { num: '14', label: 'Professionals on the team' },
-      { num: '20+', label: 'Industries served' },
       { num: '2012', label: 'GMN International member since' },
+      { num: '20+', label: 'Industries served' },
     ],
     aboutEyebrow: 'Who we are',
     aboutTitle: 'A full-service accounting firm serving Lebanon and beyond',
     aboutBody: [
       'K&K CPAs is a full-service accounting and auditing firm serving clients throughout Lebanon and abroad. We provide professional, personalized guidance across a wide range of financial and business needs.',
-      'Led by two sworn Certified Public Accountants and a team of 14, we pair broad technical expertise with deep local market knowledge in audit, tax, risk management and advisory, delivering consistent quality to clients large and small, global and local.',
+      'Led by two sworn Certified Public Accountants and a dedicated team, we pair broad technical expertise with deep local market knowledge in audit, tax, risk management and advisory, delivering consistent quality to clients large and small, global and local.',
     ],
     aboutPoints: [
       'Managing Partner is a Sworn CPA and LACPA member',
@@ -166,7 +165,7 @@ const en: Dictionary = {
     story: [
       'K&K CPAs is a full-service accounting and auditing firm serving clients throughout Lebanon and abroad, dedicated to providing professional, personalized services and guidance across a wide range of financial and business needs.',
       'Our firm offers broad technical expertise and deep local market knowledge in audit, tax, risk management and advisory, providing consistent quality and impeccable service to diverse clients in industries large and small, global and local.',
-      'We are led by two sworn Certified Public Accountants and a team of 14 professionals, and we are the exclusive representative of GMN International in Lebanon.',
+      'We are led by two sworn Certified Public Accountants and a dedicated team of specialists, and we are the exclusive representative of GMN International in Lebanon.',
     ],
     valuesTitle: 'What we stand for',
     valuesSubtitle: 'Three principles guide every engagement.',
@@ -186,7 +185,7 @@ const en: Dictionary = {
     ],
     ethicsQuote:
       'Our ethics come prior to our profit; we are loyal to our clients and our profession.',
-    ethicsBy: 'The K&K perspective',
+    ethicsBy: 'The partners',
     leadershipTitle: 'Leadership',
     leadershipSubtitle:
       'Two managing partners with more than 25 years of experience each.',
@@ -222,9 +221,9 @@ const en: Dictionary = {
         education: 'Sagesse University, Lebanon',
       },
     ],
-    teamTitle: 'A team of 14 professionals',
+    teamTitle: 'Our specialist team',
     teamBody:
-      'Beyond our partners, K&K is a team of 14 accountants, auditors and tax specialists, enough depth to serve demanding mandates, small enough that every client keeps a senior, personal relationship.',
+      'Beyond our partners, K&K brings together accountants, auditors and tax specialists, deep enough to serve demanding mandates, personal enough that every client keeps a senior relationship.',
     credentialsTitle: 'Credentials & standards',
     credentialsBody:
       'We work to recognised international standards and hold the professional registrations that a top-tier finance firm should demonstrate.',
@@ -1119,18 +1118,19 @@ const en: Dictionary = {
     phoneLabel: 'Phone',
     emailLabel: 'Email',
     mapTitle: 'Find our office in Badaro, Beirut',
+    moreServices: ['NSSF', 'Consultancy'],
   },
 
   careers: {
     eyebrow: 'Careers',
-    title: 'Build your career at K&K',
+    title: 'Build your Career at K&K',
     subtitle:
       'We compete hard for talent. If you are an accountant, auditor or tax professional who wants real responsibility and mentorship from sworn CPAs, we would like to hear from you.',
     body: [
-      'K&K is a team of 14 professionals where you will not be a number. You will work directly with partners on real mandates across audit, tax and advisory, for clients in more than twenty industries.',
+      'At K&K you will not be a number. You will work directly with partners on real mandates across audit, tax and advisory, for clients in more than twenty industries.',
       'We invest in professional qualifications and international exposure through our GMN International membership.',
     ],
-    cultureTitle: 'Life at K&K',
+    cultureTitle: 'Grow with K&K',
     perksTitle: 'Why join us',
     perks: [
       'Partner-led mentorship from sworn CPAs',

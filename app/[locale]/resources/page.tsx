@@ -23,7 +23,7 @@ export default function ResourcesPage({ params }: { params: { locale: string } }
         title={d.resources.title}
         subtitle={d.resources.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.resources }]}
-        image="/images/cedars.jpg"
+        image="/images/tax-compliance.jpg"
         imageAlt={d.resources.title}
       />
       <section className="section">

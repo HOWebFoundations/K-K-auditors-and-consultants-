@@ -22,13 +22,10 @@ export default function HomePage({ params }: { params: { locale: string } }) {
   const d = getDictionary(locale);
   const h = d.home;
 
-  // Arabic and French quote with guillemets; English with curly quotes.
-  const [qOpen, qClose] = locale === 'en' ? ['“', '”'] : ['«', '»'];
-
   const teasers = [
     { img: '/images/team-office.jpg', title: d.nav.about, line: d.about.subtitle, to: 'about' },
     { img: '/images/advisory.jpg', title: d.nav.services, line: d.services.subtitle, to: 'services' },
-    { img: '/images/finance-desk.jpg', title: d.nav.resources, line: d.resources.subtitle, to: 'resources' },
+    { img: '/images/tax-still.jpg', title: d.nav.resources, line: d.resources.subtitle, to: 'resources' },
     { img: '/images/beirut-heritage.jpg', title: d.nav.insights, line: d.insights.subtitle, to: 'insights' },
   ];
 
@@ -36,7 +33,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
     <>
       {/* ---------------- Cinematic hero (video + parallax) ---------------- */}
       <HeroCinematic
-        eyebrow={d.hero.eyebrow}
+        eyebrow=""
         title={d.hero.title}
         subtitle={d.hero.subtitle}
         badges={d.hero.badges}
@@ -49,7 +46,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       {/* ---------------- Stats strip ---------------- */}
       <section className="section-tight" style={{ borderBottom: '1px solid var(--line)' }}>
         <div className="container">
-          <Reveal className="stat-row">
+          <Reveal className="stat-row stat-center">
             {h.stats.map((s) => (
               <div className="stat" key={s.label}>
                 <div className="num"><Counter value={s.num} /></div>
@@ -145,22 +142,6 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 </div>
               );
             })}
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ---------------- Editorial pull-quote ---------------- */}
-      <section className="section-tight">
-        <div className="container center">
-          <Reveal>
-            <p className="pullquote maxw-center">
-              <span className="q">{qOpen}</span>
-              {d.about.ethicsQuote}
-              <span className="q">{qClose}</span>
-            </p>
-            <p className="dotline mt-2" style={{ justifyContent: 'center' }}>
-              {d.about.ethicsBy}
-            </p>
           </Reveal>
         </div>
       </section>

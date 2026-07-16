@@ -68,7 +68,7 @@ export function personSchema(p: Partner, image?: string) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: p.name,
-    jobTitle: `${p.role} — ${p.designation}`,
+    jobTitle: `${p.role}, ${p.designation}`,
     worksFor: { '@id': `${SITE_URL}/#organization` },
     alumniOf: p.education,
     ...(image ? { image: `${SITE_URL}${image}` } : {}),

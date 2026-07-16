@@ -242,6 +242,7 @@ export interface ContactDict {
   phoneLabel: string;
   emailLabel: string;
   mapTitle: string;
+  moreServices: string[];
 }
 
 export interface CareersDict {

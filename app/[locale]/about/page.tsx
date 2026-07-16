@@ -5,7 +5,6 @@ import { href } from '@/lib/nav';
 import { site } from '@/lib/site';
 import { PageHero, SectionHeader, CTABand } from '@/components/blocks';
 import Reveal from '@/components/Reveal';
-import Counter from '@/components/Counter';
 import JsonLd from '@/components/JsonLd';
 import { personSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -49,53 +48,10 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
         imageAlt={a.title}
       />
 
-      {/* Story */}
-      <section className="section">
-        <div className="container split split-7-5">
-          <Reveal>
-            <span className="marker">01 · {a.storyTitle}</span>
-            {a.story.map((p) => (
-              <p key={p} className="muted">{p}</p>
-            ))}
-          </Reveal>
-          <Reveal className="figure figure-tall">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/team-office.jpg" alt="K&K team at work" loading="lazy" />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Ethics pullquote */}
-      <section className="section-tight bg-soft">
-        <div className="container center">
-          <p className="pullquote maxw-center">
-            <span className="q">{locale === 'en' ? '“' : '«'}</span>
-            {a.ethicsQuote}
-            <span className="q">{locale === 'en' ? '”' : '»'}</span>
-          </p>
-          <p className="dotline mt-2" style={{ justifyContent: 'center' }}>{a.ethicsBy}</p>
-        </div>
-      </section>
-
-      {/* Values */}
+      {/* Leadership — photos at the top, with names, titles and credentials */}
       <section className="section">
         <div className="container">
-          <SectionHeader marker="02" title={a.valuesTitle} subtitle={a.valuesSubtitle} center />
-          <div className="grid grid-3 mt-4">
-            {a.values.map((v) => (
-              <div className="card" key={v.title}>
-                <h3>{v.title}</h3>
-                <p className="muted">{v.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="section">
-        <div className="container">
-          <SectionHeader marker="03" title={a.leadershipTitle} subtitle={a.leadershipSubtitle} />
+          <SectionHeader title={a.leadershipTitle} subtitle={a.leadershipSubtitle} center />
           <div className="grid grid-2 mt-4">
             {a.partners.map((p) => (
               <div className="card" key={p.name}>
@@ -129,35 +85,73 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
-      {/* Team + credentials */}
+      {/* Story — text left, photo right */}
       <section className="section bg-soft">
-        <div className="container grid grid-2" style={{ gap: 48, alignItems: 'start' }}>
-          <div>
-            <h2 className="h2">{a.teamTitle}</h2>
-            <p className="muted">{a.teamBody}</p>
-            <div className="stat-row mt-3" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
-              <div className="stat"><div className="num"><Counter value={String(site.teamSize)} /></div><div className="lbl">{d.home.stats[1].label}</div></div>
-              <div className="stat"><div className="num"><Counter value={`${site.yearsExperience}+`} /></div><div className="lbl">{d.home.stats[0].label}</div></div>
-              <div className="stat"><div className="num"><Counter value="2" /></div><div className="lbl">{d.about.leadershipTitle}</div></div>
-            </div>
+        <div className="container split split-7-5">
+          <Reveal>
+            <span className="marker">{a.storyTitle}</span>
+            {a.story.map((p) => (
+              <p key={p} className="muted">{p}</p>
+            ))}
+          </Reveal>
+          <Reveal className="figure figure-tall">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/team-office.jpg" alt="K&K team at work" loading="lazy" />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Ethics pullquote */}
+      <section className="section-tight">
+        <div className="container center">
+          <p className="pullquote maxw-center">
+            <span className="q">{locale === 'en' ? '“' : '«'}</span>
+            {a.ethicsQuote}
+            <span className="q">{locale === 'en' ? '”' : '»'}</span>
+          </p>
+          <p className="dotline mt-2" style={{ justifyContent: 'center' }}>{a.ethicsBy}</p>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="section">
+        <div className="container">
+          <SectionHeader title={a.valuesTitle} subtitle={a.valuesSubtitle} center />
+          <div className="grid grid-3 mt-4">
+            {a.values.map((v) => (
+              <div className="card" key={v.title}>
+                <h3>{v.title}</h3>
+                <p className="muted">{v.body}</p>
+              </div>
+            ))}
           </div>
-          <div className="card">
-            <h3>{a.credentialsTitle}</h3>
+        </div>
+      </section>
+
+      {/* Credentials — photo left, text right (alternating layout) */}
+      <section className="section bg-soft">
+        <div className="container split split-5-7">
+          <Reveal className="figure figure-tall">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/finance-desk.jpg" alt={a.credentialsTitle} loading="lazy" />
+          </Reveal>
+          <Reveal>
+            <h2 className="h2">{a.credentialsTitle}</h2>
             <p className="muted">{a.credentialsBody}</p>
             <ul className="ticks mt-2">
               {a.credentialsList.map((c) => (
                 <li key={c}>{c}</li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* GMN */}
-      <section className="section bg-soft">
+      {/* GMN — text left, photo right (alternating layout) */}
+      <section className="section">
         <div className="container split split-7-5">
           <Reveal>
-            <span className="marker">05 · {d.common.memberOf} GMN International</span>
+            <span className="marker">{d.common.memberOf} GMN International</span>
             <h2 className="h2">{a.gmnTitle}</h2>
             {a.gmnBody.map((p) => (
               <p key={p} className="muted">{p}</p>
