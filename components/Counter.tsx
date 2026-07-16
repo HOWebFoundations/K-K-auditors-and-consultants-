@@ -21,6 +21,10 @@ export default function Counter({ value }: { value: string }) {
     const prefix = m[1];
     const target = parseInt(m[2].replace(/,/g, ''), 10);
     const suffix = m[3];
+    // Only group with thousands separators if the source did (so a year like
+    // "2012" never renders as "2,012").
+    const grouped = m[2].includes(',');
+    const fmt = (n: number) => (grouped ? n.toLocaleString() : String(n));
     let done = false;
 
     const io = new IntersectionObserver(
@@ -34,7 +38,7 @@ export default function Counter({ value }: { value: string }) {
               if (!startTs) startTs = ts;
               const t = Math.min(1, (ts - startTs) / dur);
               const eased = 1 - Math.pow(1 - t, 3);
-              setDisplay(`${prefix}${Math.round(target * eased).toLocaleString()}${suffix}`);
+              setDisplay(`${prefix}${fmt(Math.round(target * eased))}${suffix}`);
               if (t < 1) requestAnimationFrame(step);
             };
             requestAnimationFrame(step);

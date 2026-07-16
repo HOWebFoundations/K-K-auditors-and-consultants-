@@ -179,6 +179,15 @@ export interface ResourcesDict {
   items: ResourceItem[];
 }
 
+export interface Sector {
+  slug: string;
+  icon: string;
+  title: string;
+  body: string;
+  intro: string[];
+  offerings: string[];
+  considerations: string[];
+}
 export interface ClientsDict {
   eyebrow: string;
   title: string;
@@ -187,7 +196,12 @@ export interface ClientsDict {
   approach: string[];
   sectorsTitle: string;
   sectorsSubtitle: string;
-  sectors: { icon: string; title: string; body: string }[];
+  sectors: Sector[];
+  sectorOfferingsTitle: string;
+  sectorConsiderationsTitle: string;
+  sectorExploreLabel: string;
+  sectorRelatedTitle: string;
+  sectorIntroKicker: string;
   moreTitle: string;
   industriesTitle: string;
   industriesSubtitle: string;

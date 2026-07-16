@@ -51,8 +51,8 @@ export default function Logo({
       <LogoMark className="logo-mark" />
       {showWord && (
         <span className="logo-word" dir="ltr">
-          <span className="l1">K&amp;K Auditors</span>
-          <span className="l2">&amp; Consultants</span>
+          <span className="l1">K&amp;K | Auditors &amp; Consultants</span>
+          <span className="l2">Civil Co.</span>
         </span>
       )}
     </span>

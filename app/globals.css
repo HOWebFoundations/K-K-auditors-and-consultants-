@@ -102,6 +102,10 @@ ul, ol { margin: 0 0 1rem; padding-inline-start: 1.2rem; }
 .bg-tint { background: var(--blue-50); }
 .bg-navy { background: var(--navy-950); color: #cdd8ea; }
 .bg-navy h1, .bg-navy h2, .bg-navy h3 { color: #fff; }
+/* .card sets its own light background at a later line; this two-class selector
+   wins on specificity so a "card bg-navy" actually renders navy. */
+.card.bg-navy { background: var(--navy-950); color: #cdd8ea; }
+.card.bg-navy h1, .card.bg-navy h2, .card.bg-navy h3 { color: #fff; }
 
 .grid { display: grid; gap: 30px; }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
@@ -128,18 +132,18 @@ ul, ol { margin: 0 0 1rem; padding-inline-start: 1.2rem; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--font-sans);
-  font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--gold-600); margin-bottom: 20px;
+  font-size: 0.95rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold-600); margin-bottom: 18px;
 }
 html[dir="rtl"] .eyebrow { letter-spacing: 0.05em; font-family: var(--font-ar); }
-.eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--gold); }
+.eyebrow::before { content: ""; width: 42px; height: 2px; background: var(--gold); }
 
 .display {
   font-size: clamp(2.5rem, 5.6vw, 4.6rem);
   font-weight: 600; line-height: 1.05; letter-spacing: -0.025em; color: var(--navy-900);
 }
 html[dir="rtl"] .display { line-height: 1.25; letter-spacing: 0; }
-.h2 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 600; letter-spacing: -0.02em; }
+.h2 { font-size: clamp(2.2rem, 4.2vw, 3.4rem); font-weight: 600; letter-spacing: -0.02em; }
 .h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
 .italic-accent { font-style: italic; font-weight: 400; color: var(--navy-600); }
 .lead {
@@ -149,12 +153,12 @@ html[dir="rtl"] .display { line-height: 1.25; letter-spacing: 0; }
 html[dir="rtl"] .lead { font-family: var(--font-ar); }
 .muted { color: var(--muted); }
 
-/* Justified body copy (client request). Per HOWF note, fall back to natural
-   alignment below the tablet breakpoint to avoid uneven word spacing on
-   narrow screens. */
-.muted, .prose p { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
-.center .muted, .center .prose p, .center p { text-align: center; hyphens: none; }
-@media (max-width: 768px) { .muted, .prose p { text-align: start; hyphens: none; } }
+/* Justified body copy and intros (client request), on every breakpoint.
+   Automatic hyphenation keeps word spacing tight so lines stay even.
+   Centered contexts opt out so headings/subtitles stay centered. */
+.muted, .prose p, .prose li, .lead { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
+.center .muted, .center .prose p, .center .lead, .center p { text-align: center; hyphens: none; }
+html[dir="rtl"] .muted, html[dir="rtl"] .prose p, html[dir="rtl"] .prose li, html[dir="rtl"] .lead { text-align: justify; }
 .center { text-align: center; }
 .center .lead, .center .eyebrow { margin-inline: auto; }
 .center .eyebrow { justify-content: center; }
@@ -166,7 +170,7 @@ html[dir="rtl"] .lead { font-family: var(--font-ar); }
 .section-head.center { margin-inline: auto; }
 .marker {
   display: inline-block; font-family: var(--font-serif); font-style: italic;
-  font-size: 1.05rem; color: var(--gold-600); margin-bottom: 10px; letter-spacing: 0;
+  font-size: 1.25rem; color: var(--gold-600); margin-bottom: 12px; letter-spacing: 0;
 }
 .rule { height: 1px; background: var(--line); border: 0; margin: 0; }
 .rule-accent { height: 2px; width: 54px; background: var(--gold); border: 0; }
@@ -287,10 +291,15 @@ html[dir="rtl"] .nav a { font-family: var(--font-ar); }
 .logo { display: inline-flex; align-items: center; gap: 14px; color: var(--navy); }
 .logo-mark { flex: none; height: 44px; width: auto; }
 .logo-word { display: flex; flex-direction: column; line-height: 1.05; }
-.logo-word .l1, .logo-word .l2 { font-family: var(--font-sans); font-weight: 700; font-size: 1.04rem; letter-spacing: -0.01em; color: var(--navy-900); font-style: normal; }
-.logo.on-navy .logo-word .l1, .logo.on-navy .logo-word .l2 { color: #fff; }
+/* Logo keeps its own geometric sans wordmark (Plus Jakarta Sans, still loaded
+   as --font-sans-src) and an italic serif "Civil Co." line — independent of the
+   site's Times New Roman body font, per client request. */
+.logo-word .l1 { font-family: var(--font-sans-src), "Segoe UI", system-ui, sans-serif; font-weight: 700; font-size: 1.04rem; letter-spacing: -0.01em; color: var(--navy-900); }
+.logo-word .l2 { font-family: Georgia, "Iowan Old Style", "Liberation Serif", serif; font-style: italic; font-weight: 400; font-size: 0.78rem; letter-spacing: 0; color: var(--gold-600); }
+.logo.on-navy .logo-word .l1 { color: #fff; }
+.logo.on-navy .logo-word .l2 { color: #9db2d6; }
 .logo.on-navy .logo-mark { color: #fff; }
-@media (max-width: 460px) { .logo-word .l1, .logo-word .l2 { font-size: 0.95rem; } }
+@media (max-width: 460px) { .logo-word .l1 { font-size: 0.95rem; } }
 
 /* ---------- HERO (editorial) ---------- */
 .hero { position: relative; overflow: hidden; background: var(--paper); border-bottom: 1px solid var(--line); }
