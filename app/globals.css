@@ -691,7 +691,12 @@ html.js .reveal-stagger:not(.is-visible) > * { opacity: 0; transform: translateY
 .reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 0.54s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+  /* Keep a gentle opacity fade-in on reveals (no movement) so the page still
+     feels alive for visitors who ask their OS to reduce motion. */
+  html.js .reveal:not(.is-visible),
+  html.js .reveal-stagger:not(.is-visible) > * { transform: none !important; }
+  .reveal, .reveal-stagger > * { transition: opacity 0.5s ease !important; }
+  /* All movement-based animation stays off (vestibular-safe). */
   .hero-bg .blob { animation: none; }
   .hero-figure img, .page-hero-media img, .figure img { animation: none !important; }
   .hero-cine-media { transform: none !important; }
