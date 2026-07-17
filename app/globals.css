@@ -153,12 +153,18 @@ html[dir="rtl"] .display { line-height: 1.25; letter-spacing: 0; }
 html[dir="rtl"] .lead { font-family: var(--font-ar); }
 .muted { color: var(--muted); }
 
-/* Justified body copy and intros (client request), on every breakpoint.
-   Automatic hyphenation keeps word spacing tight so lines stay even.
-   Centered contexts opt out so headings/subtitles stay centered. */
-.muted, .prose p, .prose li, .lead { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
-.center .muted, .center .prose p, .center .lead, .center p { text-align: center; hyphens: none; }
-html[dir="rtl"] .muted, html[dir="rtl"] .prose p, html[dir="rtl"] .prose li, html[dir="rtl"] .lead { text-align: justify; }
+/* Justify EVERY body paragraph and list item site-wide (client request), on
+   every breakpoint. Automatic hyphenation keeps word spacing tight so lines
+   stay even. Justification never affects a single-line paragraph, so short
+   labels/taglines look unchanged; only wrapping copy gets flush edges.
+   Genuinely centered elements opt back out just below. */
+p, .prose li { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
+.center p, .center .muted, .center .lead, .center .prose p, .center .prose li,
+.pullquote, .cred-strip .cap, .dotline {
+  text-align: center; text-justify: auto; hyphens: none;
+}
+html[dir="rtl"] p, html[dir="rtl"] .prose li { text-align: justify; }
+html[dir="rtl"] .center p, html[dir="rtl"] .pullquote, html[dir="rtl"] .dotline { text-align: center; }
 .center { text-align: center; }
 .center .lead, .center .eyebrow { margin-inline: auto; }
 .center .eyebrow { justify-content: center; }
