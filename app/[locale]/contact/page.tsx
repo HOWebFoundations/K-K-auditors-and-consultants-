@@ -31,9 +31,9 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         title={c.title}
         subtitle={c.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.contact }]}
-        image="/images/beirut-hero.jpg"
+        image="/images/badaro-contact.jpg"
         imageAlt={c.title}
-        video="/videos/hero-beirut.mp4"
+        video="/videos/contact-badaro.mp4"
       />
 
       <section className="section">
