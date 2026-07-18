@@ -61,7 +61,13 @@ export default function ClientsPage({ params }: { params: { locale: string } }) 
           <p className="dotline mt-4" style={{ justifyContent: 'center' }}>{c.moreTitle}</p>
           <div className="flex wrap gap-sm mt-3" style={{ justifyContent: 'center' }}>
             {c.industries.map((ind) => (
-              <span className="chip" key={ind}>{ind}</span>
+              <Link
+                href={href(locale, `clients/industries/${ind.slug}`)}
+                className="chip chip-link"
+                key={ind.slug}
+              >
+                {ind.title}
+              </Link>
             ))}
           </div>
         </div>

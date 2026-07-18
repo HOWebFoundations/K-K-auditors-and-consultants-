@@ -188,6 +188,13 @@ export interface Sector {
   offerings: string[];
   considerations: string[];
 }
+export interface IndustryItem {
+  slug: string;
+  title: string;
+  intro: string[];
+  offerings: string[];
+  considerations: string[];
+}
 export interface ClientsDict {
   eyebrow: string;
   title: string;
@@ -202,10 +209,11 @@ export interface ClientsDict {
   sectorExploreLabel: string;
   sectorRelatedTitle: string;
   sectorIntroKicker: string;
+  industryKicker: string;
   moreTitle: string;
   industriesTitle: string;
   industriesSubtitle: string;
-  industries: string[];
+  industries: IndustryItem[];
   proofTitle: string;
   proofBody: string;
 }

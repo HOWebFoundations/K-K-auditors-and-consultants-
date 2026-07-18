@@ -1,0 +1,149 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { locales, Locale, isLocale } from '@/lib/i18n';
+import { getDictionary } from '@/lib/content';
+import { href } from '@/lib/nav';
+import { site } from '@/lib/site';
+import { PageHero } from '@/components/blocks';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/schema';
+import { IconArrow } from '@/components/icons';
+import en from '@/content/en';
+
+// Reuse the existing photography library, mapped per industry.
+const industryImg: Record<string, string> = {
+  manufacturing: '/images/finance-data.jpg',
+  'real-estate': '/images/building-light.jpg',
+  healthcare: '/images/finance-review.jpg',
+  ngos: '/images/team-office.jpg',
+  'professional-services': '/images/advisory.jpg',
+  entertainment: '/images/interior-lobby.jpg',
+  'brokers-dealers': '/images/finance-desk.jpg',
+  distributors: '/images/tax-still.jpg',
+  'engineering-design': '/images/building-light.jpg',
+  'financial-services': '/images/finance-desk.jpg',
+  franchisees: '/images/advisory.jpg',
+  'holding-companies': '/images/tax-compliance.jpg',
+  'offshore-companies': '/images/tax-compliance.jpg',
+  'hotels-resorts': '/images/interior-lobby.jpg',
+  contractors: '/images/building-light.jpg',
+  'retail-trade': '/images/tax-still.jpg',
+  'gas-stations': '/images/finance-data.jpg',
+  pharmaceuticals: '/images/finance-review.jpg',
+  'representation-offices': '/images/tax-compliance.jpg',
+  'pet-companies': '/images/advisory.jpg',
+};
+
+export function generateStaticParams() {
+  const out: { locale: string; slug: string }[] = [];
+  for (const locale of locales) {
+    for (const i of en.clients.industries) out.push({ locale, slug: i.slug });
+  }
+  return out;
+}
+
+export function generateMetadata({
+  params,
+}: {
+  params: { locale: string; slug: string };
+}): Metadata {
+  const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
+  const d = getDictionary(locale);
+  const i = d.clients.industries.find((x) => x.slug === params.slug);
+  if (!i) return {};
+  return {
+    title: `${i.title} | ${d.nav.clients}`,
+    description: i.intro[0],
+  };
+}
+
+export default function IndustryDetail({
+  params,
+}: {
+  params: { locale: string; slug: string };
+}) {
+  const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
+  const d = getDictionary(locale);
+  const c = d.clients;
+  const ind = c.industries.find((x) => x.slug === params.slug);
+  if (!ind) notFound();
+
+  const others = c.industries.filter((x) => x.slug !== ind.slug).slice(0, 8);
+
+  return (
+    <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: d.common.home, url: `${site.url}/${locale}` },
+            { name: d.nav.clients, url: `${site.url}/${locale}/clients` },
+            { name: ind.title, url: `${site.url}/${locale}/clients/industries/${ind.slug}` },
+          ]),
+        ]}
+      />
+      <PageHero
+        eyebrow={c.industryKicker}
+        title={ind.title}
+        subtitle={ind.intro[0]}
+        image={industryImg[ind.slug] || '/images/advisory.jpg'}
+        imageAlt={ind.title}
+        crumbs={[
+          { name: d.common.home, href: href(locale) },
+          { name: d.nav.clients, href: href(locale, 'clients') },
+          { name: ind.title },
+        ]}
+      />
+
+      <section className="section">
+        <div className="container grid-sidebar">
+          <div className="prose">
+            {ind.intro.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+
+            <h2>{c.sectorOfferingsTitle}</h2>
+            <ul className="ticks">
+              {ind.offerings.map((it) => (
+                <li key={it}>{it}</li>
+              ))}
+            </ul>
+
+            <h2>{c.sectorConsiderationsTitle}</h2>
+            <ul className="ticks">
+              {ind.considerations.map((it) => (
+                <li key={it}>{it}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Sidebar */}
+          <aside className="sticky-side" style={{ position: 'sticky', top: 96, display: 'grid', gap: 20 }}>
+            <div className="card" style={{ background: 'var(--navy-900)', color: '#dbe4f2', borderColor: 'transparent' }}>
+              <h3 style={{ color: '#fff' }}>{d.common.needHelp}</h3>
+              <p style={{ color: '#c3cee2' }}>{d.common.needHelpBody}</p>
+              <Link className="btn btn-gold mt-1" href={href(locale, 'contact')} style={{ width: '100%' }}>
+                {d.common.bookConsultation}
+                <IconArrow className="arrow" />
+              </Link>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      {/* Other industries */}
+      <section className="section bg-soft">
+        <div className="container">
+          <h2 className="h2">{c.industriesTitle}</h2>
+          <div className="flex wrap gap-sm mt-3">
+            {others.map((o) => (
+              <Link key={o.slug} href={href(locale, `clients/industries/${o.slug}`)} className="chip chip-link">
+                {o.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

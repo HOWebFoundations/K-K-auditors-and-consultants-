@@ -256,6 +256,8 @@ html[dir="rtl"] .badge { font-family: var(--font-ar); }
   transition: border-color 0.15s, color 0.15s;
 }
 .chip:hover { border-color: var(--navy); }
+a.chip-link { cursor: pointer; transition: border-color 0.15s, color 0.15s, background 0.15s, transform 0.15s; }
+a.chip-link:hover { border-color: var(--navy); color: var(--navy); background: var(--paper-2); transform: translateY(-1px); }
 
 /* ---------- Header ---------- */
 .site-header {
