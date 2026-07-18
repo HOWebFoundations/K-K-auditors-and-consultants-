@@ -98,7 +98,7 @@ export default function Footer({
       </div>
 
       <div className="container">
-        <p className="footer-desc" style={{ maxWidth: '100%', fontSize: '0.82rem', paddingBottom: 8 }}>
+        <p className="footer-desc footer-disclaimer" style={{ maxWidth: '100%', fontSize: '0.82rem', paddingBottom: 8 }}>
           {footer.disclaimer}
         </p>
       </div>

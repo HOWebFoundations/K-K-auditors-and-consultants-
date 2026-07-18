@@ -812,6 +812,7 @@ const ar: DeepPartial<Dictionary> = {
     emailLabel: "البريد الإلكتروني",
     mapTitle: "اعثر على مكتبنا في بدارو، بيروت",
     moreServices: ["الضمان الاجتماعي", "استشارات"],
+    allServicesLabel: "جميع الخدمات",
   },
 
   careers: {

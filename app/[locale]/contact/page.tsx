@@ -46,6 +46,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
               <ContactForm
                 labels={c.labels}
                 services={[
+                  { slug: 'all-services', title: c.allServicesLabel },
                   ...d.services.items.map((s) => ({ slug: s.slug, title: s.title })),
                   ...c.moreServices.map((t, i) => ({ slug: `more-${i}`, title: t })),
                 ]}

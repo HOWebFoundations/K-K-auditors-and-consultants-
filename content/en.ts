@@ -1268,6 +1268,7 @@ const en: Dictionary = {
     emailLabel: 'Email',
     mapTitle: 'Find our office in Badaro, Beirut',
     moreServices: ['NSSF', 'Consultancy'],
+    allServicesLabel: 'All Services',
   },
 
   careers: {

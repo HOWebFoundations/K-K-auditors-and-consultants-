@@ -127,7 +127,6 @@ export default function HomePage({ params }: { params: { locale: string } }) {
             marker={h.whyEyebrow}
             title={h.whyTitle}
             subtitle={h.whySubtitle}
-            center
           />
           <Reveal stagger className="grid grid-4 mt-4">
             {h.why.map((w, i) => {

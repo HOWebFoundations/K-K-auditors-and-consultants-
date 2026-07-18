@@ -257,6 +257,7 @@ export interface ContactDict {
   emailLabel: string;
   mapTitle: string;
   moreServices: string[];
+  allServicesLabel: string;
 }
 
 export interface CareersDict {

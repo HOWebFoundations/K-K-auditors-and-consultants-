@@ -136,7 +136,8 @@ ul, ol { margin: 0 0 1rem; padding-inline-start: 1.2rem; }
   color: var(--gold-600); margin-bottom: 18px;
 }
 html[dir="rtl"] .eyebrow { letter-spacing: 0.05em; font-family: var(--font-ar); }
-.eyebrow::before { content: ""; width: 42px; height: 2px; background: var(--gold); }
+/* Accent dash removed at client request; eyebrow is now text only. */
+.eyebrow::before { content: none; }
 
 .display {
   font-size: clamp(2.5rem, 5.6vw, 4.6rem);
@@ -144,6 +145,12 @@ html[dir="rtl"] .eyebrow { letter-spacing: 0.05em; font-family: var(--font-ar); 
 }
 html[dir="rtl"] .display { line-height: 1.25; letter-spacing: 0; }
 .h2 { font-size: clamp(2.2rem, 4.2vw, 3.4rem); font-weight: 600; letter-spacing: -0.02em; }
+/* Title Case for major English headings (client request). Scoped to English
+   so French sentence-case and Arabic (no case) are untouched. */
+html[lang="en"] .display,
+html[lang="en"] .h2,
+html[lang="en"] .hero h1,
+html[lang="en"] .page-hero h1 { text-transform: capitalize; }
 .h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
 .italic-accent { font-style: italic; font-weight: 400; color: var(--navy-600); }
 .lead {
@@ -610,6 +617,8 @@ html[dir="rtl"] .site-footer h4 { font-family: var(--font-ar); letter-spacing: 0
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-block: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 0.88rem; color: #7e90b0; }
 .footer-bottom a { color: #7e90b0; }
 .footer-bottom .fnav { display: flex; flex-wrap: wrap; gap: 20px; }
+/* Bold from the contact details down to the very bottom (client request). */
+.footer-contact, .footer-contact .row, .footer-disclaimer, .footer-bottom, .footer-bottom a, .footer-bottom span { font-weight: 700; }
 
 /* ---------- CTA band (image-backed) ---------- */
 .cta-band { position: relative; border-radius: var(--radius-lg); padding: clamp(40px, 6vw, 76px); color: #fff; overflow: hidden; background: var(--navy-950); }

@@ -1272,6 +1272,7 @@ const fr: DeepPartial<Dictionary> = {
     emailLabel: "E-mail",
     mapTitle: "Trouver notre bureau à Badaro, Beyrouth",
     moreServices: ["CNSS", "Conseil"],
+    allServicesLabel: "Tous les services",
   },
 
   careers: {
