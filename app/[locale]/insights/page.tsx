@@ -32,7 +32,7 @@ export default function InsightsPage({ params }: { params: { locale: string } })
         title={d.insights.title}
         subtitle={d.insights.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.insights }]}
-        image="/images/beirut-night.jpg"
+        image="/images/hero-towers.jpg"
         imageAlt={d.insights.title}
       />
       <section className="section">

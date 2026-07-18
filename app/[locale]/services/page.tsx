@@ -23,7 +23,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
         title={d.services.title}
         subtitle={d.services.subtitle}
         crumbs={[{ name: d.common.home, href: href(locale) }, { name: d.nav.services }]}
-        image="/images/team-office.jpg"
+        image="/images/boardroom.jpg"
         imageAlt={d.services.title}
       />
       <section className="section">

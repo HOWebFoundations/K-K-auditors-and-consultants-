@@ -11,28 +11,28 @@ import { breadcrumbSchema } from '@/lib/schema';
 import { IconArrow } from '@/components/icons';
 import en from '@/content/en';
 
-// Reuse the existing photography library, mapped per industry.
+// Each industry has its own dedicated photograph.
 const industryImg: Record<string, string> = {
-  manufacturing: '/images/finance-data.jpg',
-  'real-estate': '/images/building-light.jpg',
-  healthcare: '/images/finance-review.jpg',
-  ngos: '/images/team-office.jpg',
-  'professional-services': '/images/advisory.jpg',
-  entertainment: '/images/interior-lobby.jpg',
-  'brokers-dealers': '/images/finance-desk.jpg',
-  distributors: '/images/tax-still.jpg',
-  'engineering-design': '/images/building-light.jpg',
-  'financial-services': '/images/finance-desk.jpg',
-  franchisees: '/images/advisory.jpg',
-  'holding-companies': '/images/tax-compliance.jpg',
-  'offshore-companies': '/images/tax-compliance.jpg',
-  'hotels-resorts': '/images/interior-lobby.jpg',
-  contractors: '/images/building-light.jpg',
-  'retail-trade': '/images/tax-still.jpg',
-  'gas-stations': '/images/finance-data.jpg',
-  pharmaceuticals: '/images/finance-review.jpg',
-  'representation-offices': '/images/tax-compliance.jpg',
-  'pet-companies': '/images/advisory.jpg',
+  manufacturing: '/images/ind-manufacturing.jpg',
+  'real-estate': '/images/ind-real-estate.jpg',
+  healthcare: '/images/ind-healthcare.jpg',
+  ngos: '/images/ind-ngos.jpg',
+  'professional-services': '/images/ind-professional-services.jpg',
+  entertainment: '/images/ind-entertainment.jpg',
+  'brokers-dealers': '/images/ind-brokers-dealers.jpg',
+  distributors: '/images/ind-distributors.jpg',
+  'engineering-design': '/images/ind-engineering-design.jpg',
+  'financial-services': '/images/ind-financial-services.jpg',
+  franchisees: '/images/ind-franchisees.jpg',
+  'holding-companies': '/images/ind-holding-companies.jpg',
+  'offshore-companies': '/images/ind-offshore-companies.jpg',
+  'hotels-resorts': '/images/ind-hotels-resorts.jpg',
+  contractors: '/images/ind-contractors.jpg',
+  'retail-trade': '/images/ind-retail-trade.jpg',
+  'gas-stations': '/images/ind-gas-stations.jpg',
+  pharmaceuticals: '/images/ind-pharmaceuticals.jpg',
+  'representation-offices': '/images/ind-representation-offices.jpg',
+  'pet-companies': '/images/ind-pet-companies.jpg',
 };
 
 export function generateStaticParams() {

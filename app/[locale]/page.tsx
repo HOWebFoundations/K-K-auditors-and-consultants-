@@ -23,8 +23,8 @@ export default function HomePage({ params }: { params: { locale: string } }) {
   const h = d.home;
 
   const teasers = [
-    { img: '/images/team-office.jpg', title: d.nav.about, line: d.about.subtitle, to: 'about' },
-    { img: '/images/advisory.jpg', title: d.nav.services, line: d.services.subtitle, to: 'services' },
+    { img: '/images/people-team.jpg', title: d.nav.about, line: d.about.subtitle, to: 'about' },
+    { img: '/images/meeting-glass.jpg', title: d.nav.services, line: d.services.subtitle, to: 'services' },
     { img: '/images/tax-still.jpg', title: d.nav.resources, line: d.resources.subtitle, to: 'resources' },
     { img: '/images/beirut-heritage.jpg', title: d.nav.insights, line: d.insights.subtitle, to: 'insights' },
   ];
