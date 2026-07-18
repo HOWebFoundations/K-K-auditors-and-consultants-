@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { IconArrow } from './icons';
 
@@ -35,6 +35,10 @@ export default function HeroCinematic({
   const mediaRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  // The video only becomes visible once it is genuinely playing. If autoplay is
+  // blocked (iOS Low Power Mode, reduced-motion, data saver) it stays hidden and
+  // the poster shows through, so no native play button is ever presented.
+  const [videoOn, setVideoOn] = useState(false);
 
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -47,6 +51,13 @@ export default function HeroCinematic({
       // Respect the setting: hold on the still, no drift, no autoplay.
       vid?.pause();
       return;
+    }
+
+    if (vid) {
+      const p = vid.play();
+      if (p && typeof p.then === 'function') {
+        p.then(() => setVideoOn(true)).catch(() => setVideoOn(false));
+      }
     }
 
     if (!root || !media) return;
@@ -77,23 +88,26 @@ export default function HeroCinematic({
   return (
     <section className="hero-cine" ref={rootRef}>
       <div className="hero-cine-media" ref={mediaRef} aria-hidden>
+        {/* Poster always paints; the video fades in over it only once playing. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={poster} alt="" className="hero-cine-poster" />
         {video ? (
           <video
             ref={videoRef}
-            className="hero-cine-video"
+            className={`hero-cine-video${videoOn ? ' is-on' : ''}`}
             autoPlay
             muted
             loop
             playsInline
-            poster={poster}
             preload="auto"
+            tabIndex={-1}
+            disablePictureInPicture
+            onPlaying={() => setVideoOn(true)}
+            onTimeUpdate={() => setVideoOn(true)}
           >
             <source src={video} type="video/mp4" />
           </video>
-        ) : (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={poster} alt="" />
-        )}
+        ) : null}
       </div>
       <div className="hero-cine-scrim" aria-hidden />
 

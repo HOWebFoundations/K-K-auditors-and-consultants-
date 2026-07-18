@@ -69,7 +69,7 @@ export default function IndustryDetail({
   const ind = c.industries.find((x) => x.slug === params.slug);
   if (!ind) notFound();
 
-  const others = c.industries.filter((x) => x.slug !== ind.slug).slice(0, 8);
+  const others = c.industries.filter((x) => x.slug !== ind.slug);
 
   return (
     <>

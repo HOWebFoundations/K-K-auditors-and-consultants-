@@ -366,8 +366,13 @@ html[dir="rtl"] .nav a { font-family: var(--font-ar); }
 }
 .hero-cine-media { position: absolute; inset: 0; z-index: 0; will-change: transform; }
 .hero-cine-media video, .hero-cine-media img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
 }
+/* Video sits on top of the poster and only reveals once it is actually
+   playing, so a blocked autoplay never shows a native play button. */
+.hero-cine-poster { z-index: 0; }
+.hero-cine-video { z-index: 1; opacity: 0; transition: opacity 0.7s ease; pointer-events: none; }
+.hero-cine-video.is-on { opacity: 1; }
 .hero-cine-scrim {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
@@ -457,9 +462,16 @@ html[dir="rtl"] .scroll-progress span { transform-origin: 100% 50%; }
 /* ---------- Page hero with feature media ---------- */
 .page-hero.has-media .container { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: clamp(30px, 5vw, 60px); align-items: center; }
 @media (max-width: 860px) { .page-hero.has-media .container { grid-template-columns: 1fr; } }
-.page-hero-media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4 / 3; }
+.page-hero-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4 / 3; }
 .page-hero-media img { width: 100%; height: 100%; object-fit: cover; }
 .page-hero-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Background video with a poster layer: the video only reveals once playing,
+   so a blocked autoplay (Low Power Mode) never shows a native play button. */
+.page-hero-media .bg-video-poster,
+.page-hero-media .bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.page-hero-media .bg-video-poster { z-index: 0; }
+.page-hero-media .bg-video { z-index: 1; opacity: 0; transition: opacity 0.7s ease; pointer-events: none; }
+.page-hero-media .bg-video.is-on { opacity: 1; }
 
 /* ---------- Credentials strip ---------- */
 .cred-strip { border-block: 1px solid var(--line); background: var(--paper); }
