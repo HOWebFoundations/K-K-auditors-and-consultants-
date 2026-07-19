@@ -1759,6 +1759,7 @@ const fr: DeepPartial<Dictionary> = {
       "Les informations de ce site constituent une information générale, et non un conseil fiscal ou juridique. Les taux et les règles évoluent, confirmez votre situation auprès de K&K ou de l'autorité compétente.",
     privacy: "Confidentialité et cookies",
     followUs: "Suivez-nous",
+    builtBy: "par",
   },
 };
 

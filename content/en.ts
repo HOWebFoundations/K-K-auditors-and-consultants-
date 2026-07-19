@@ -1758,6 +1758,7 @@ const en: Dictionary = {
       'The guidance on this site is general information, not tax or legal advice. Rates and rules change, confirm your position with K&K or the relevant authority.',
     privacy: 'Privacy & Cookies',
     followUs: 'Follow us',
+    builtBy: 'by',
   },
 };
 

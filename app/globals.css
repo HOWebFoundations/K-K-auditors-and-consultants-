@@ -631,6 +631,9 @@ html[dir="rtl"] .site-footer h4 { font-family: var(--font-ar); letter-spacing: 0
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-block: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 0.88rem; color: #7e90b0; }
 .footer-bottom a { color: #7e90b0; }
 .footer-bottom .fnav { display: flex; flex-wrap: wrap; gap: 20px; }
+/* Builder credit — links out to Habib Obeid Web Foundations (thehowf.com). */
+.footer-credit { transition: color 0.15s ease; }
+.footer-credit:hover { color: #fff; text-decoration: underline; }
 /* Bold from the contact details down to the very bottom (client request). */
 .footer-contact, .footer-contact .row, .footer-disclaimer, .footer-bottom, .footer-bottom a, .footer-bottom span { font-weight: 700; }
 

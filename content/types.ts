@@ -315,6 +315,7 @@ export interface FooterDict {
   disclaimer: string;
   privacy: string;
   followUs: string;
+  builtBy: string;
 }
 
 export interface Dictionary {

@@ -110,6 +110,14 @@ export default function Footer({
         <span className="fnav">
           <Link href={href(locale, 'privacy')}>{footer.privacy}</Link>
           <span>{dict.meta.legalName}</span>
+          <a
+            className="footer-credit"
+            href="https://thehowf.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {footer.builtBy} Habib Obeid Web Foundations
+          </a>
         </span>
       </div>
     </footer>
