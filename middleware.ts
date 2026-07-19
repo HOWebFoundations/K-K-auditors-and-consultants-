@@ -34,6 +34,7 @@ export function middleware(request: NextRequest) {
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
+    pathname.startsWith('/admin') ||
     pathname.startsWith('/assets') ||
     pathname === '/favicon.ico' ||
     pathname === '/robots.txt' ||
@@ -54,5 +55,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|api|.*\\..*).*)'],
+  // Never run locale routing on Next internals, the API, or the Payload admin.
+  matcher: ['/((?!_next|api|admin|.*\\..*).*)'],
 };
