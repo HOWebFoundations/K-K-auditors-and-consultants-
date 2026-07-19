@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+import { SVGProps, ReactElement } from 'react';
 
 type IP = SVGProps<SVGSVGElement>;
 
@@ -221,7 +221,7 @@ export const IconLayers = (p: IP) => (
   </svg>
 );
 
-const SECTOR_ICONS: Record<string, (p: IP) => JSX.Element> = {
+const SECTOR_ICONS: Record<string, (p: IP) => ReactElement> = {
   manufacturing: IconFactory,
   realestate: IconBuilding,
   health: IconHealth,

@@ -19,11 +19,12 @@ export function generateStaticParams() {
   return out;
 }
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: string; slug: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: string; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const post = d.insights.posts.find((x) => x.slug === params.slug);
@@ -39,11 +40,12 @@ function fmt(iso: string, locale: Locale) {
   }
 }
 
-export default function PostDetail({
-  params,
-}: {
-  params: { locale: string; slug: string };
-}) {
+export default async function PostDetail(
+  props: {
+    params: Promise<{ locale: string; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const post = d.insights.posts.find((x) => x.slug === params.slug);

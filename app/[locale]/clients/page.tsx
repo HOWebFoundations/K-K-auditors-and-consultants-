@@ -7,13 +7,15 @@ import { PageHero, SectionHeader, CTABand } from '@/components/blocks';
 import Reveal from '@/components/Reveal';
 import { sectorIcon, IconArrow } from '@/components/icons';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   return { title: d.clients.title, description: d.clients.subtitle };
 }
 
-export default function ClientsPage({ params }: { params: { locale: string } }) {
+export default async function ClientsPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const c = d.clients;

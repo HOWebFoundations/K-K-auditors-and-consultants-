@@ -20,11 +20,12 @@ export function generateStaticParams() {
   return out;
 }
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: string; slug: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: string; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const r = d.resources.items.find((x) => x.slug === params.slug);
@@ -73,11 +74,12 @@ function SectionBlock({ s }: { s: ResourceSection }) {
   );
 }
 
-export default function ResourceDetail({
-  params,
-}: {
-  params: { locale: string; slug: string };
-}) {
+export default async function ResourceDetail(
+  props: {
+    params: Promise<{ locale: string; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const r = d.resources.items.find((x) => x.slug === params.slug);

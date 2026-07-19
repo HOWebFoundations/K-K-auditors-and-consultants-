@@ -10,13 +10,15 @@ import { iconFor, IconMail, IconArrow } from '@/components/icons';
 
 const areaIcons = ['audit', 'tax', 'accounting', 'advisory'];
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   return { title: d.careers.title, description: d.careers.subtitle };
 }
 
-export default function CareersPage({ params }: { params: { locale: string } }) {
+export default async function CareersPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const c = d.careers;

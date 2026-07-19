@@ -14,7 +14,8 @@ const partnerPhoto: Record<string, string> = {
   JK: '/images/partner-jihad.jpg',
 };
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   return {
@@ -23,7 +24,8 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   };
 }
 
-export default function AboutPage({ params }: { params: { locale: string } }) {
+export default async function AboutPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const a = d.about;
@@ -47,7 +49,6 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
         image="/images/interior-lobby.jpg"
         imageAlt={a.title}
       />
-
       {/* Leadership — photos at the top, with names, titles and credentials */}
       <section className="section">
         <div className="container">
@@ -58,7 +59,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
                 <div className="partner">
                   {partnerPhoto[p.initials] ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img className="avatar-photo" src={partnerPhoto[p.initials]} alt={p.name} loading="lazy" />
+                    (<img className="avatar-photo" src={partnerPhoto[p.initials]} alt={p.name} loading="lazy" />)
                   ) : (
                     <div className="avatar" aria-hidden>{p.initials}</div>
                   )}
@@ -84,7 +85,6 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           </div>
         </div>
       </section>
-
       {/* Story — text left, photo right */}
       <section className="section bg-soft">
         <div className="container split split-7-5">
@@ -100,7 +100,6 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           </Reveal>
         </div>
       </section>
-
       {/* Ethics pullquote */}
       <section className="section-tight">
         <div className="container center">
@@ -112,7 +111,6 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           <p className="dotline mt-2" style={{ justifyContent: 'center' }}>{a.ethicsBy}</p>
         </div>
       </section>
-
       {/* Values */}
       <section className="section">
         <div className="container">
@@ -127,7 +125,6 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           </div>
         </div>
       </section>
-
       {/* Credentials — photo left, text right (alternating layout) */}
       <section className="section bg-soft">
         <div className="container split split-5-7">
@@ -146,7 +143,6 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           </Reveal>
         </div>
       </section>
-
       {/* GMN — text left, photo right (alternating layout) */}
       <section className="section">
         <div className="container split split-7-5">
@@ -168,7 +164,6 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           </Reveal>
         </div>
       </section>
-
       <CTABand
         title={d.home.ctaTitle}
         body={d.home.ctaBody}

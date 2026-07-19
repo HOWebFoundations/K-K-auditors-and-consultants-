@@ -43,11 +43,12 @@ export function generateStaticParams() {
   return out;
 }
 
-export function generateMetadata({
-  params,
-}: {
-  params: { locale: string; slug: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: string; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const i = d.clients.industries.find((x) => x.slug === params.slug);
@@ -58,11 +59,12 @@ export function generateMetadata({
   };
 }
 
-export default function IndustryDetail({
-  params,
-}: {
-  params: { locale: string; slug: string };
-}) {
+export default async function IndustryDetail(
+  props: {
+    params: Promise<{ locale: string; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const c = d.clients;

@@ -17,7 +17,8 @@ import {
 
 const whyIcons = [IconShield, IconGlobe2, IconScale, IconBook];
 
-export default function HomePage({ params }: { params: { locale: string } }) {
+export default async function HomePage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const h = d.home;

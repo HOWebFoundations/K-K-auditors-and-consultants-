@@ -13,13 +13,15 @@ import {
   IconArrow,
 } from '@/components/icons';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   return { title: d.contact.title, description: d.contact.subtitle };
 }
 
-export default function ContactPage({ params }: { params: { locale: string } }) {
+export default async function ContactPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const c = d.contact;

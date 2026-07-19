@@ -4,13 +4,15 @@ import { getDictionary } from '@/lib/content';
 import { href } from '@/lib/nav';
 import { PageHero } from '@/components/blocks';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   return { title: d.privacy.title, description: d.privacy.subtitle, robots: { index: false, follow: true } };
 }
 
-export default function PrivacyPage({ params }: { params: { locale: string } }) {
+export default async function PrivacyPage(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const locale = (isLocale(params.locale) ? params.locale : 'en') as Locale;
   const d = getDictionary(locale);
   const p = d.privacy;
