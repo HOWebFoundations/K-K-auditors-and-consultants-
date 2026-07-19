@@ -66,12 +66,16 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'seeding disabled in production' }, { status: 403 });
   }
 
+  // ?user=0 skips creating the admin account (so the first user is created
+  // through the live /admin screen — no password transmitted).
+  const makeUser = new URL(req.url).searchParams.get('user') !== '0';
+
   const payload = await getPayload({ config });
   const log: string[] = [];
 
   // --- 1) First admin user (idempotent) -----------------------------------
   const users = await payload.count({ collection: 'users' });
-  if (users.totalDocs === 0) {
+  if (makeUser && users.totalDocs === 0) {
     await payload.create({
       collection: 'users',
       data: {

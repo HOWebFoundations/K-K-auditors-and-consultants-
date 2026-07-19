@@ -54,7 +54,19 @@ export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || 'DEV_INSECURE_SECRET_set_PAYLOAD_SECRET_in_env',
   typescript: { outputFile: path.resolve(dirname, 'payload-types.ts') },
   db: usePostgres
-    ? postgresAdapter({ pool: { connectionString: uri } })
+    ? postgresAdapter({
+        // Auto-create/sync the schema on init (so the DB provisions itself on
+        // first boot in the deploy environment). Set PAYLOAD_DB_PUSH=false once
+        // the schema is stable to move to managed migrations.
+        push: process.env.PAYLOAD_DB_PUSH !== 'false',
+        pool: {
+          connectionString: uri,
+          // Managed Postgres (Neon/Vercel) terminates TLS with a valid cert but
+          // node-postgres' new default is verify-full; relax to avoid chain
+          // validation failures over the pooler.
+          ssl: { rejectUnauthorized: false },
+        },
+      })
     : sqliteAdapter({ client: { url: uri } }),
   sharp,
   telemetry: false,
