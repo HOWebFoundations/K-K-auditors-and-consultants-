@@ -70,8 +70,20 @@ export async function GET(req: Request) {
   // through the live /admin screen — no password transmitted).
   const makeUser = new URL(req.url).searchParams.get('user') !== '0';
 
-  const payload = await getPayload({ config });
   const log: string[] = [];
+  try {
+  const payload = await getPayload({ config });
+
+  // The Postgres adapter skips auto-push in production and expects migrations;
+  // force a schema push here so the tables exist on the first run.
+  try {
+    process.env.PAYLOAD_FORCE_DRIZZLE_PUSH = 'true';
+    const { pushDevSchema } = await import('@payloadcms/drizzle');
+    await pushDevSchema(payload.db as never);
+    log.push('schema: pushed');
+  } catch (e) {
+    log.push('schema push failed: ' + (e instanceof Error ? e.message : String(e)));
+  }
 
   // --- 1) First admin user (idempotent) -----------------------------------
   const users = await payload.count({ collection: 'users' });
@@ -289,4 +301,10 @@ export async function GET(req: Request) {
   log.push('global: navigation');
 
   return NextResponse.json({ ok: true, log });
+  } catch (e) {
+    return NextResponse.json(
+      { ok: false, log, error: e instanceof Error ? e.stack || e.message : String(e) },
+      { status: 500 },
+    );
+  }
 }

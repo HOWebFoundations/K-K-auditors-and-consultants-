@@ -42,6 +42,9 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // drizzle-kit is require()'d at runtime by Payload's schema push; keep it
+  // external so it's loaded from node_modules rather than bundled.
+  serverExternalPackages: ['drizzle-kit'],
   // We hand-author our ESLint-free codebase; do not block production builds on lint.
   eslint: { ignoreDuringBuilds: true },
   async redirects() {
