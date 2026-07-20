@@ -63,8 +63,8 @@ export default buildConfig({
           connectionString: uri,
           // Managed Postgres (Neon/Vercel) terminates TLS with a valid cert but
           // node-postgres' new default is verify-full; relax to avoid chain
-          // validation failures over the pooler.
-          ssl: { rejectUnauthorized: false },
+          // validation failures over the pooler. Local Postgres has no TLS.
+          ssl: /localhost|127\.0\.0\.1/.test(uri) ? false : { rejectUnauthorized: false },
         },
       })
     : sqliteAdapter({ client: { url: uri } }),

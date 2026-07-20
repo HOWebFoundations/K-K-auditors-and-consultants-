@@ -14,6 +14,7 @@ import en from '@/content/en';
 import ar from '@/content/ar';
 import fr from '@/content/fr';
 import { site } from '@/lib/site';
+import { schemaSql } from '@/db/schema';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -74,18 +75,20 @@ export async function GET(req: Request) {
   try {
   const payload = await getPayload({ config });
 
-  // Force the Postgres schema to exist (production skips auto-push). The
-  // explicit `import('drizzle-kit/api')` makes Next's file tracer bundle
-  // drizzle-kit into this function — Payload otherwise reaches it via
-  // createRequire, which the tracer can't follow, so it was missing at runtime.
-  try {
-    await import('drizzle-kit/api');
-    process.env.PAYLOAD_FORCE_DRIZZLE_PUSH = 'true';
-    const { pushDevSchema } = await import('@payloadcms/drizzle');
-    await pushDevSchema(payload.db as never);
-    log.push('schema: pushed');
-  } catch (e) {
-    log.push('schema push failed: ' + (e instanceof Error ? e.message : String(e)));
+  // Provision the Postgres schema from committed DDL (dumped from the exact
+  // Payload schema). Idempotent — applied only when the tables are absent — so
+  // no drizzle-kit is needed at runtime.
+  {
+    const pool = (payload.db as unknown as {
+      pool: { query: (q: string) => Promise<{ rows: Array<{ t: string | null }> }> };
+    }).pool;
+    const check = await pool.query("select to_regclass('public.users') as t");
+    if (!check.rows[0]?.t) {
+      await pool.query(schemaSql);
+      log.push('schema: created');
+    } else {
+      log.push('schema: present');
+    }
   }
 
   // --- 1) First admin user (idempotent) -----------------------------------
