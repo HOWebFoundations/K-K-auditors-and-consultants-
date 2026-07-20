@@ -74,9 +74,12 @@ export async function GET(req: Request) {
   try {
   const payload = await getPayload({ config });
 
-  // The Postgres adapter skips auto-push in production and expects migrations;
-  // force a schema push here so the tables exist on the first run.
+  // Force the Postgres schema to exist (production skips auto-push). The
+  // explicit `import('drizzle-kit/api')` makes Next's file tracer bundle
+  // drizzle-kit into this function — Payload otherwise reaches it via
+  // createRequire, which the tracer can't follow, so it was missing at runtime.
   try {
+    await import('drizzle-kit/api');
     process.env.PAYLOAD_FORCE_DRIZZLE_PUSH = 'true';
     const { pushDevSchema } = await import('@payloadcms/drizzle');
     await pushDevSchema(payload.db as never);
