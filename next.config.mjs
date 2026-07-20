@@ -45,6 +45,16 @@ const nextConfig = {
   // drizzle-kit is require()'d at runtime by Payload's schema push; keep it
   // external so it's loaded from node_modules rather than bundled.
   serverExternalPackages: ['drizzle-kit'],
+  // Vercel's function tracer misses drizzle-kit (loaded via createRequire), so
+  // force it and its loader chain into the seed function that runs the push.
+  outputFileTracingIncludes: {
+    '/api/seed': [
+      './node_modules/drizzle-kit/**',
+      './node_modules/esbuild-register/**',
+      './node_modules/esbuild/**',
+      './node_modules/@esbuild/**',
+    ],
+  },
   // We hand-author our ESLint-free codebase; do not block production builds on lint.
   eslint: { ignoreDuringBuilds: true },
   async redirects() {
