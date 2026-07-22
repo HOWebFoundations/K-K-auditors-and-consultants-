@@ -5,7 +5,11 @@ import { stringList } from '../fields';
 export const Homepage: GlobalConfig = {
   slug: 'homepage',
   label: 'Homepage',
-  admin: { group: 'Site' },
+  admin: {
+    group: 'Global Settings',
+    description:
+      'The wording on the home page — the headline, the 20+/25+/2012 stats, the method steps, the “Why K&K” cards and the call-to-action.',
+  },
   access: { read: () => true, update: isEditor },
   fields: [
     {

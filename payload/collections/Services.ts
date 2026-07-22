@@ -8,8 +8,9 @@ export const Services: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'order', '_status'],
-    group: 'Content',
-    description: 'The firm’s service lines. Drag to reorder with the "order" field.',
+    group: 'Website Content',
+    description:
+      'Your service lines (Audit, Tax, Accounting, Advisory). Use the “Order” number to change the sequence shown on the site.',
   },
   versions: { drafts: true },
   access: { read: publishedOrStaff, create: isEditor, update: isEditor, delete: isEditor },

@@ -9,7 +9,8 @@ export const Sectors: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'order', '_status'],
-    group: 'Content',
+    group: 'Website Content',
+    description: 'The 8 headline client sectors shown as cards on the Clients page.',
   },
   versions: { drafts: true },
   access: { read: publishedOrStaff, create: isEditor, update: isEditor, delete: isEditor },

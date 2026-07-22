@@ -10,7 +10,10 @@ import { isEditor } from '../access';
 export const SiteSettings: GlobalConfig = {
   slug: 'site-settings',
   label: 'Site settings',
-  admin: { group: 'Site' },
+  admin: {
+    group: 'Global Settings',
+    description: 'Your contact details, address, phone/email, social links and footer text.',
+  },
   access: { read: () => true, update: isEditor },
   fields: [
     {

@@ -11,6 +11,7 @@ export const Users: CollectionConfig = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'email', 'role'],
     group: 'Administration',
+    description: 'Login accounts. Editors manage content; only HOWF (admin) manages users.',
   },
   access: {
     // Both roles may open the admin panel.

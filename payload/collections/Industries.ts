@@ -9,7 +9,8 @@ export const Industries: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', '_status'],
-    group: 'Content',
+    group: 'Website Content',
+    description: 'The 20 industries you serve, each with its own page. Edit the text for any of them here.',
   },
   versions: { drafts: true },
   access: { read: publishedOrStaff, create: isEditor, update: isEditor, delete: isEditor },

@@ -9,7 +9,8 @@ export const Resources: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'category', '_status'],
-    group: 'Content',
+    group: 'Website Content',
+    description: 'Evergreen “doing business in Lebanon” guides. Same idea as Insights, but not dated.',
   },
   versions: { drafts: true },
   access: { read: publishedOrStaff, create: isEditor, update: isEditor, delete: isEditor },

@@ -11,7 +11,10 @@ import { isEditor } from '../access';
 export const Media: CollectionConfig = {
   slug: 'media',
   labels: { singular: 'Media', plural: 'Media library' },
-  admin: { group: 'Content' },
+  admin: {
+    group: 'Website Content',
+    description: 'Every image and video used on the site lives here.',
+  },
   access: {
     read: () => true,
     create: isEditor,

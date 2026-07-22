@@ -9,7 +9,8 @@ export const Partners: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'role', 'order'],
-    group: 'Content',
+    group: 'Website Content',
+    description: 'Leadership profiles shown on the About page.',
   },
   access: { read: () => true, create: isEditor, update: isEditor, delete: isEditor },
   fields: [

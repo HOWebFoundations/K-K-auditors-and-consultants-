@@ -8,7 +8,10 @@ import { isEditor } from '../access';
 export const Navigation: GlobalConfig = {
   slug: 'navigation',
   label: 'Navigation labels',
-  admin: { group: 'Site' },
+  admin: {
+    group: 'Global Settings',
+    description: 'The words in the top menu. You can rename them; the menu structure itself is fixed.',
+  },
   access: { read: () => true, update: isEditor },
   fields: [
     { name: 'home', type: 'text', localized: true },

@@ -14,7 +14,9 @@ export const Insights: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'category', 'date', '_status'],
-    group: 'Content',
+    group: 'Website Content',
+    description:
+      'News and circular briefings. Click “Create New”, write it in English, add Arabic/French if you like, then “Publish”.',
   },
   versions: { drafts: true },
   access: {

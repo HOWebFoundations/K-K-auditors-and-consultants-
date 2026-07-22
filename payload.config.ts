@@ -36,11 +36,15 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     meta: {
-      titleSuffix: ' — K&K Auditors CMS',
+      titleSuffix: ' — K&K Content Manager',
+    },
+    components: {
+      beforeDashboard: ['/payload/components/BeforeDashboard#BeforeDashboard'],
+      beforeLogin: ['/payload/components/BeforeLogin#BeforeLogin'],
     },
   },
   editor: lexicalEditor(),
-  collections: [Users, Media, Insights, Resources, Services, Industries, Sectors, Partners],
+  collections: [Media, Insights, Resources, Services, Industries, Sectors, Partners, Users],
   globals: [SiteSettings, Homepage, Navigation],
   localization: {
     locales: [
