@@ -602,6 +602,7 @@ html[dir="rtl"] .file-btn { font-family: var(--font-ar); }
 .info-row .k { font-family: var(--font-serif); font-size: 1.1rem; color: var(--navy-900); margin-bottom: 2px; }
 .info-row .k::after { content: ":"; }
 .info-row .v { color: var(--muted); }
+.info-row a.v { display: block; }
 .info-row a.v:hover { color: var(--navy); }
 .map-embed { width: 100%; border: 0; border-radius: var(--radius-lg); min-height: 340px; box-shadow: var(--shadow-sm); filter: grayscale(0.2); }
 

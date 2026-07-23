@@ -79,7 +79,8 @@ export default async function ContactPage(props: { params: Promise<{ locale: str
               <div>
                 <div className="k">{c.phoneLabel}</div>
                 <a className="v" href={`tel:${site.phoneHref}`}>{site.phone}</a>
-                <div className="v">{site.phoneSecondary} · {site.mobile}</div>
+                <a className="v" href={`tel:${site.phoneSecondary.replace(/\s+/g, '')}`}>{site.phoneSecondary}</a>
+                <a className="v" href={`tel:${site.mobile.replace(/\s+/g, '')}`}>{site.mobile}</a>
               </div>
             </div>
 
