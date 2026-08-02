@@ -37,7 +37,13 @@ export default async function HomePage(props: { params: Promise<{ locale: string
         eyebrow=""
         title={d.hero.title}
         subtitle={d.hero.subtitle}
-        badges={d.hero.badges}
+        // Row one: LACPA + 25 years. Row two: GMN, linking to their site.
+        badges={[d.hero.badges[0], d.hero.badges[2]].filter(Boolean)}
+        linkBadge={
+          d.hero.badges[1]
+            ? { label: d.hero.badges[1], href: 'https://www.gmni.com' }
+            : undefined
+        }
         primary={{ label: d.common.requestProposal, href: href(locale, 'contact') }}
         secondary={{ label: d.common.viewAllServices, href: href(locale, 'services') }}
         poster="/images/beirut-hero.jpg"

@@ -303,18 +303,25 @@ html[dir="rtl"] .nav a { font-family: var(--font-ar); }
 .lang-menu .native { color: var(--muted); font-size: 0.85rem; }
 
 /* ---------- Logo (text-based) ---------- */
-.logo { display: inline-flex; align-items: center; gap: 14px; color: var(--navy); }
-.logo-mark { flex: none; height: 44px; width: auto; }
+.logo { display: inline-flex; align-items: center; gap: 16px; color: var(--navy); }
+.logo-mark { flex: none; height: 58px; width: auto; }
 .logo-word { display: flex; flex-direction: column; line-height: 1.05; }
 /* Logo keeps its own geometric sans wordmark (Plus Jakarta Sans, still loaded
    as --font-sans-src) and an italic serif "Civil Co." line — independent of the
    site's Times New Roman body font, per client request. */
-.logo-word .l1 { font-family: var(--font-sans-src), "Segoe UI", system-ui, sans-serif; font-weight: 700; font-size: 1.04rem; letter-spacing: -0.01em; color: var(--navy-900); }
-.logo-word .l2 { font-family: Georgia, "Iowan Old Style", "Liberation Serif", serif; font-style: italic; font-weight: 400; font-size: 0.78rem; letter-spacing: 0; color: var(--gold-600); }
+.logo-word .l1 { font-family: var(--font-sans-src), "Segoe UI", system-ui, sans-serif; font-weight: 700; font-size: 1.26rem; letter-spacing: -0.01em; color: var(--navy-900); }
+.logo-word .l2 { font-family: Georgia, "Iowan Old Style", "Liberation Serif", serif; font-style: italic; font-weight: 400; font-size: 0.92rem; letter-spacing: 0; color: var(--gold-600); }
 .logo.on-navy .logo-word .l1 { color: #fff; }
 .logo.on-navy .logo-word .l2 { color: #9db2d6; }
 .logo.on-navy .logo-mark { color: #fff; }
-@media (max-width: 460px) { .logo-word .l1 { font-size: 0.95rem; } }
+/* Header spans the full viewport so the logo sits hard left (client request). */
+.site-header .container { max-width: 100%; padding-inline: 22px; }
+@media (max-width: 460px) {
+  .logo-word .l1 { font-size: 1.02rem; }
+  .logo-word .l2 { font-size: 0.8rem; }
+  .logo-mark { height: 46px; }
+  .site-header .container { padding-inline: 16px; }
+}
 
 /* ---------- HERO (editorial) ---------- */
 .hero { position: relative; overflow: hidden; background: var(--paper); border-bottom: 1px solid var(--line); }
@@ -419,6 +426,7 @@ html[dir="rtl"] .hero-cine-scrim { background:
 .btn-ghost-light { color: #fff; border: 1px solid rgba(255,255,255,0.55); background: rgba(255,255,255,0.04); }
 .btn-ghost-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
 .chip-light { color: #e7eefb; border-color: rgba(255,255,255,0.30); background: rgba(255,255,255,0.06); }
+a.chip-light:hover { background: rgba(255,255,255,0.20); border-color: rgba(255,255,255,0.55); text-decoration: underline; }
 
 /* Parallax layers */
 [data-parallax] { will-change: transform; }

@@ -202,6 +202,8 @@ const en: Dictionary = {
           'Forensic Audit Diploma',
           'Business Valuation Diploma',
           'MSc Management & Organisation, Lyon 3',
+          'Certificate in Artificial Intelligence, KANZ AI Training Hackathon, LAU Academy of Continuing Education (2026)',
+          'Fraud Prevention and Detection Techniques in Finance, Avantis (2026)',
         ],
         memberships: [
           'Lebanese Association of CPAs (LACPA)',

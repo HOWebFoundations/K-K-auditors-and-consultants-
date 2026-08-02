@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { IconArrow } from './icons';
 
 type CTA = { label: string; href: string };
+type LinkBadge = { label: string; href: string };
 
 /**
  * Full-bleed cinematic hero: a looping Beirut skyline clip behind the headline,
@@ -17,6 +18,7 @@ export default function HeroCinematic({
   title,
   subtitle,
   badges,
+  linkBadge,
   primary,
   secondary,
   poster,
@@ -26,6 +28,8 @@ export default function HeroCinematic({
   title: string;
   subtitle: string;
   badges: string[];
+  /** A credential chip that links out (e.g. GMN International), on its own row. */
+  linkBadge?: LinkBadge;
   primary: CTA;
   secondary: CTA;
   poster: string;
@@ -132,6 +136,18 @@ export default function HeroCinematic({
             </span>
           ))}
         </div>
+        {linkBadge ? (
+          <div className="flex wrap gap-sm hero-cine-chips" style={{ marginTop: 10 }}>
+            <a
+              className="chip chip-light"
+              href={linkBadge.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {linkBadge.label}
+            </a>
+          </div>
+        ) : null}
       </div>
     </section>
   );

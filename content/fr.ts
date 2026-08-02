@@ -206,6 +206,8 @@ const fr: DeepPartial<Dictionary> = {
           "Diplôme d'audit judiciaire",
           "Diplôme d'évaluation d'entreprise",
           "MSc Management et Organisation, Lyon 3",
+          "Certificat en intelligence artificielle, hackathon de formation KANZ AI, LAU Academy of Continuing Education (2026)",
+          "Techniques de prévention et de détection de la fraude en finance, Avantis (2026)",
         ],
         memberships: [
           "Association libanaise des experts-comptables (LACPA)",
