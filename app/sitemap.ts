@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...en.services.items.map((s) => `services/${s.slug}`),
     ...en.resources.items.map((r) => `resources/${r.slug}`),
     ...en.insights.posts.map((p) => `insights/${p.slug}`),
+    ...en.clients.sectors.map((s) => `clients/${s.slug}`),
+    ...en.clients.industries.map((i) => `clients/industries/${i.slug}`),
   ];
   const allPaths = [...staticPaths, ...dynamicPaths];
 
@@ -20,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     entries.push({
       url: `${site.url}/en${path ? `/${path}` : ''}`,
-      lastModified: new Date('2026-07-14'),
+      lastModified: new Date('2026-08-03'),
       changeFrequency: path === '' || path === 'insights' ? 'weekly' : 'monthly',
       priority: path === '' ? 1 : path.includes('/') ? 0.6 : 0.8,
       alternates: { languages },

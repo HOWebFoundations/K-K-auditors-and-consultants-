@@ -10,7 +10,7 @@ const fr: DeepPartial<Dictionary> = {
     legalName: "K&K Auditors & Consultants Civil Co.",
     tagline: "Cabinet d'audit, de fiscalité et de conseil à Beyrouth, Liban",
     description:
-      "K&K Auditors & Consultants est un cabinet d'audit, de comptabilité, de fiscalité et de conseil à service complet situé à Badaro, Beyrouth. Experts-comptables assermentés, membres de la LACPA et représentant exclusif au Liban de GMN International.",
+      "Cabinet d'audit, de comptabilité, de fiscalité et de conseil à Badaro, Beyrouth. Experts-comptables assermentés, membre exclusif de GMN International au Liban.",
   },
 
   nav: {

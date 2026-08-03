@@ -6,7 +6,7 @@ const en: Dictionary = {
     legalName: 'K&K Auditors & Consultants Civil Co.',
     tagline: 'Audit, Tax & Advisory Firm in Beirut, Lebanon',
     description:
-      'K&K Auditors & Consultants is a full-service audit, accounting, tax and advisory firm in Badaro, Beirut. Sworn CPAs, LACPA members and the exclusive Lebanon representative of GMN International.',
+      'Full-service audit, accounting, tax and advisory firm in Badaro, Beirut. Sworn CPAs, LACPA members and the exclusive Lebanon member of GMN International.',
   },
 
   nav: {
