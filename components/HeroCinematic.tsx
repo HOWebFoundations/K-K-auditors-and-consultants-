@@ -94,7 +94,7 @@ export default function HeroCinematic({
       <div className="hero-cine-media" ref={mediaRef} aria-hidden>
         {/* Poster always paints; the video fades in over it only once playing. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={poster} alt="" className="hero-cine-poster" />
+        <img src={poster} alt="" className="hero-cine-poster" fetchPriority="high" />
         {video ? (
           <video
             ref={videoRef}
